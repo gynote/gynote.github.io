@@ -151,7 +151,7 @@
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/default/review_paper.html">
-            <time datetime="2018-08-06T11:06:07.000Z" itemprop="datePublished">2018-08-06</time>
+            <time datetime="2018-08-26T12:24:24.000Z" itemprop="datePublished">2018-08-26</time>
         </a>
     </div>
 
@@ -185,7 +185,7 @@ This paper presents algorithms for two oracles answering counting queries: the n
 
 </div>
 
-    <a data-url="https://guyong.xyz/default/review_paper.html" data-id="cjki67aem000wjbpyui1ejx38" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/default/review_paper.html" data-id="cjlatt0va000wu4pyn3oar6ht" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -261,47 +261,19 @@ This paper presents algorithms for two oracles answering counting queries: the n
 
 
 
-    <article id="post-about" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-ideas" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/about.html">About</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fas fa-calendar-alt"></i>
-        <a href="/about.html">
-            <time datetime="2018-08-06T11:06:07.000Z" itemprop="datePublished">2018-08-06</time>
-        </a>
-    </div>
-
-
-                        
-                        
-                    </div>
-                
-            </header>
         
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p>About this site
-Motivation
-Keep writing, reading, practicing, and thinking.
+            <p>游戏设计
 
-It’s one of my dreams to make a personal website since I came into the internet world.
-
-I’m neither interesting nor good at writing. However, from time to time there are some ideas that come to my mind and die away since I </p>
+ * 突显个人特色，不能复制他人的经验和教程
+ * 赛马，预测</p>
             <p class="article-more-link">
-                <a href="/about.html#more">Read More</a>
+                <a href="/ideas.html#more">Read More</a>
             </p>
         
         </div>
@@ -312,7 +284,7 @@ I’m neither interesting nor good at writing. However, from time to time there 
 
 </div>
 
-    <a data-url="https://guyong.xyz/about.html" data-id="cjki67a8m0000jbpy733azfoa" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/ideas.html" data-id="cjlatt0nh0001u4pyovdmh001" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -406,7 +378,7 @@ I’m neither interesting nor good at writing. However, from time to time there 
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/links.html">
-            <time datetime="2018-08-06T11:06:07.000Z" itemprop="datePublished">2018-08-06</time>
+            <time datetime="2018-08-26T12:24:24.000Z" itemprop="datePublished">2018-08-26</time>
         </a>
     </div>
 
@@ -434,132 +406,7 @@ Stickers</p>
 
 </div>
 
-    <a data-url="https://guyong.xyz/links.html" data-id="cjki67a940004jbpyzw7ct75w" class="article-share-link"><i class="fas fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer> -->
-    </div>
-    
-</article>
-
-
-
-    <article id="post-stickers" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/stickers.html">Stickers</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fas fa-calendar-alt"></i>
-        <a href="/stickers.html">
-            <time datetime="2018-08-06T11:06:07.000Z" itemprop="datePublished">2018-08-06</time>
-        </a>
-    </div>
-
-
-                        
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p>Keep writing, reviewing, exercising, and thinking.
-
-2017-08-23
-
-透过表象看本质，抓住本质找规律，运用规律改变世界</p>
-            <p class="article-more-link">
-                <a href="/stickers.html#more">Read More</a>
-            </p>
-        
-        </div>
-        <!--<footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://guyong.xyz/stickers.html" data-id="cjki67a970005jbpyk714z5i4" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/links.html" data-id="cjlatt0nr0003u4pyoqzttoov" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -653,7 +500,7 @@ Stickers</p>
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/site-building.html">
-            <time datetime="2018-08-06T11:06:07.000Z" itemprop="datePublished">2018-08-06</time>
+            <time datetime="2018-08-26T12:24:24.000Z" itemprop="datePublished">2018-08-26</time>
         </a>
     </div>
 
@@ -695,7 +542,132 @@ npm un hexo-render</p>
 
 </div>
 
-    <a data-url="https://guyong.xyz/site-building.html" data-id="cjki67a980006jbpynsgepl62" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/site-building.html" data-id="cjlatt0nw0004u4pya9w5yzx5" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer> -->
+    </div>
+    
+</article>
+
+
+
+    <article id="post-stickers" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/stickers.html">Stickers</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/stickers.html">
+            <time datetime="2018-08-26T12:24:24.000Z" itemprop="datePublished">2018-08-26</time>
+        </a>
+    </div>
+
+
+                        
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p>Keep writing, reviewing, exercising, and thinking.
+
+2017-08-23
+
+透过表象看本质，抓住本质找规律，运用规律改变世界</p>
+            <p class="article-more-link">
+                <a href="/stickers.html#more">Read More</a>
+            </p>
+        
+        </div>
+        <!--<footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://guyong.xyz/stickers.html" data-id="cjlatt0nz0005u4pyjwgfl7wa" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -794,151 +766,7 @@ I/O Models and event loop in javascript</p>
 
 </div>
 
-    <a data-url="https://guyong.xyz/Collection/articles.html" data-id="cjki67ad00007jbpy83ewf6mi" class="article-share-link"><i class="fas fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer> -->
-    </div>
-    
-</article>
-
-
-
-    <article id="post-Collection/tools" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/Collection/tools.html">tools</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fas fa-calendar-alt"></i>
-        <a href="/Collection/tools.html">
-            <time datetime="2018-08-06T11:06:07.000Z" itemprop="datePublished">2018-08-06</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/Collection/">Collection</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/tags/original/">original</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p>Zotero
-Jetbrains
-VSCode
-Quiver
-Trello
-Hackmd
-sharelatex
-TexStudio
-Ipe
-ideone.com
-slant
-alternativeto.net
-github -> wiki/gist
-listary, everything, wox</p>
-            <p class="article-more-link">
-                <a href="/Collection/tools.html#more">Read More</a>
-            </p>
-        
-        </div>
-        <!--<footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://guyong.xyz/Collection/tools.html" data-id="cjki67ad30008jbpyrhji02qy" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/Collection/articles.html" data-id="cjlatt0sz0007u4pyp94pcbrd" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1032,7 +860,7 @@ listary, everything, wox</p>
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/Collection/books.html">
-            <time datetime="2018-08-06T11:06:07.000Z" itemprop="datePublished">2018-08-06</time>
+            <time datetime="2018-08-26T12:24:24.000Z" itemprop="datePublished">2018-08-26</time>
         </a>
     </div>
 
@@ -1068,7 +896,7 @@ listary, everything, wox</p>
 
 </div>
 
-    <a data-url="https://guyong.xyz/Collection/books.html" data-id="cjki67ad60009jbpy9ocfgmri" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/Collection/books.html" data-id="cjlatt0t50008u4pyy4ugfl9r" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1162,7 +990,7 @@ listary, everything, wox</p>
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/algorithms/CLRS solutions.html">
-            <time datetime="2018-08-06T11:06:07.000Z" itemprop="datePublished">2018-08-06</time>
+            <time datetime="2018-08-26T12:24:24.000Z" itemprop="datePublished">2018-08-26</time>
         </a>
     </div>
 
@@ -1195,7 +1023,151 @@ First check wheter $(d,\pi)$ compose an $s$-rooted tree.(i.e. they satisfy prope
 
 </div>
 
-    <a data-url="https://guyong.xyz/algorithms/CLRS solutions.html" data-id="cjki67adg000bjbpyf6mksjua" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/algorithms/CLRS solutions.html" data-id="cjlatt0t70009u4py261g6ne5" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer> -->
+    </div>
+    
+</article>
+
+
+
+    <article id="post-Collection/tools" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/Collection/tools.html">tools</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/Collection/tools.html">
+            <time datetime="2018-08-26T12:24:24.000Z" itemprop="datePublished">2018-08-26</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fas fa-folder"></i>
+        <a class="article-category-link" href="/categories/Collection/">Collection</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/original/">original</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p>Zotero
+Jetbrains
+VSCode
+Quiver
+Trello
+Hackmd
+sharelatex
+TexStudio
+Ipe
+ideone.com
+slant
+alternativeto.net
+github -> wiki/gist
+listary, everything, wox</p>
+            <p class="article-more-link">
+                <a href="/Collection/tools.html#more">Read More</a>
+            </p>
+        
+        </div>
+        <!--<footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://guyong.xyz/Collection/tools.html" data-id="cjlatt0tb000au4pyohqixyga" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1289,7 +1261,7 @@ First check wheter $(d,\pi)$ compose an $s$-rooted tree.(i.e. they satisfy prope
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/algorithms/basics.html">
-            <time datetime="2018-08-06T11:06:07.000Z" itemprop="datePublished">2018-08-06</time>
+            <time datetime="2018-08-26T12:24:24.000Z" itemprop="datePublished">2018-08-26</time>
         </a>
     </div>
 
@@ -1329,7 +1301,7 @@ Let $V$ donote the fixed set of e</p>
 
 </div>
 
-    <a data-url="https://guyong.xyz/algorithms/basics.html" data-id="cjki67adi000cjbpyqkz9a7jc" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/algorithms/basics.html" data-id="cjlatt0tg000bu4pyjipwn3kx" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1417,7 +1389,7 @@ Let $V$ donote the fixed set of e</p>
     <div class="widget-wrap">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Collection/">Collection</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/algorithms/">algorithms</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cpp/">cpp</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/default/">default</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/dev/">dev</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/english/">english</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/math/">math</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/reading/">reading</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/research/">research</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/">web</a><span class="category-list-count">13</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Collection/">Collection</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/algorithms/">algorithms</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cpp/">cpp</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/default/">default</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/dev/">dev</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/english/">english</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/math/">math</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/reading/">reading</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/research/">research</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/">web</a><span class="category-list-count">13</span></li></ul>
         </div>
     </div>
 
@@ -1426,7 +1398,7 @@ Let $V$ donote the fixed set of e</p>
     <div class="widget-wrap">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">56</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">57</span></li></ul>
         </div>
     </div>
 
