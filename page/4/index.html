@@ -22,9 +22,6 @@
         <link rel="icon" href="/css/images/favicon.png" />
     
 
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lora" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
-
     <link rel="stylesheet" href="/libs/font-awesome5/css/fontawesome.min.css">
     <link rel="stylesheet" href="/libs/font-awesome5/css/fa-brands.min.css">
     <link rel="stylesheet" href="/libs/font-awesome5/css/fa-solid.min.css">
@@ -136,7 +133,7 @@
         <div class="outer">
             
             <section id="main">
-    <article id="post-cpp/c declarations" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-dev/misc" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -144,7 +141,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/cpp/c declarations.html">C Declaration</a>
+            <a class="article-title" href="/dev/misc.html">Misc</a>
         </h1>
     
 
@@ -153,8 +150,8 @@
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <a href="/cpp/c declarations.html">
-            <time datetime="2018-08-26T13:24:33.000Z" itemprop="datePublished">2018-08-26</time>
+        <a href="/dev/misc.html">
+            <time datetime="2018-09-01T14:58:36.000Z" itemprop="datePublished">2018-09-01</time>
         </a>
     </div>
 
@@ -162,7 +159,7 @@
                         
     <div class="article-category">
     	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/cpp/">cpp</a>
+        <a class="article-category-link" href="/categories/dev/">dev</a>
     </div>
 
                         
@@ -173,22 +170,9 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p>How to scramble a declaration
-In C, a type T can be one of the follows:
-
- 1. Base Type BT
-    BT x;
-    Base type BT ca be primitive types (int, double) and composite types (struct, union)
- 2. Array of type AT
-    AT x[];
- 3. Function returning type FT
-    FT x()
- 4. Pointer to type PT
-    PT *x;
-
-B</p>
+            <p>常见指令时间 https://zhuanlan.zhihu.com/p/30742986</p>
             <p class="article-more-link">
-                <a href="/cpp/c declarations.html#more">Read More</a>
+                <a href="/dev/misc.html#more">Read More</a>
             </p>
         
         </div>
@@ -199,7 +183,7 @@ B</p>
 
 </div>
 
-    <a data-url="https://guyong.xyz/cpp/c declarations.html" data-id="cjlj3q86n000yxbpysmdovwpv" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/dev/misc.html" data-id="cjljjyf0f000yk7pyaprwlc0k" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -275,7 +259,7 @@ B</p>
 
 
 
-    <article id="post-cpp/index" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-dev/线程同步机制" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -283,7 +267,7 @@ B</p>
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/cpp/index.html">Index</a>
+            <a class="article-title" href="/dev/线程同步机制.html">线程同步机制</a>
         </h1>
     
 
@@ -292,8 +276,8 @@ B</p>
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <a href="/cpp/index.html">
-            <time datetime="2018-08-26T13:24:33.000Z" itemprop="datePublished">2018-08-26</time>
+        <a href="/dev/线程同步机制.html">
+            <time datetime="2018-09-01T14:58:36.000Z" itemprop="datePublished">2018-09-01</time>
         </a>
     </div>
 
@@ -301,7 +285,7 @@ B</p>
                         
     <div class="article-category">
     	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/cpp/">cpp</a>
+        <a class="article-category-link" href="/categories/dev/">dev</a>
     </div>
 
                         
@@ -312,23 +296,21 @@ B</p>
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p>Basics
-Building Process of C++
-Functions
-Initialization
+            <p>线程基础知识
+线程同步的底层支持包括：
 
-Classes
- 1. Three programing patterns * procedual programing
-     * abstract data
-     * object oriented
-     * general programing
-    
-    
- 2. Main features of object oriented programing * Incapsulation
-     * Inheritance
-     * Polymorphism</p>
+ 1. TSL （或其它）原子操作
+ 2. 中断服务
+
+互斥锁Mutex
+最基本的同步机制是锁（Lock），包括 互斥锁(Mutex), Read-Write 锁, 空转锁。以Mutex为例：
+
+ * 对Mutex状态的判断及修改是通过机器提供的原子性指令完成的。
+ * 每个Mutex上有一个等待队列（waiting list)
+ * Lock()操作在”locked” 情况下会被挂起，实际上是先空转（spin）一小会再挡土挂起（yield），当前线程会加入到Mutex的waiting list中。
+ * 挂起是指将线程置于”睡眠“状态，并调用线程调试</p>
             <p class="article-more-link">
-                <a href="/cpp/index.html#more">Read More</a>
+                <a href="/dev/线程同步机制.html#more">Read More</a>
             </p>
         
         </div>
@@ -339,7 +321,7 @@ Classes
 
 </div>
 
-    <a data-url="https://guyong.xyz/cpp/index.html" data-id="cjlj3q86r000zxbpyxkllxcib" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/dev/线程同步机制.html" data-id="cjljjyf0g000zk7pyrcvww6ll" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -415,7 +397,7 @@ Classes
 
 
 
-    <article id="post-cpp/misc" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-english/mood" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -423,7 +405,7 @@ Classes
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/cpp/misc.html">Misc</a>
+            <a class="article-title" href="/english/mood.html">Mood</a>
         </h1>
     
 
@@ -432,8 +414,8 @@ Classes
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <a href="/cpp/misc.html">
-            <time datetime="2018-08-26T13:24:33.000Z" itemprop="datePublished">2018-08-26</time>
+        <a href="/english/mood.html">
+            <time datetime="2018-09-01T14:58:36.000Z" itemprop="datePublished">2018-09-01</time>
         </a>
     </div>
 
@@ -441,7 +423,7 @@ Classes
                         
     <div class="article-category">
     	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/cpp/">cpp</a>
+        <a class="article-category-link" href="/categories/english/">english</a>
     </div>
 
                         
@@ -452,12 +434,20 @@ Classes
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p>LLVM (low level virtual machine) 是一系列binary和tools的集合，可以用来构造编译器。clang 是用LLVM 构造的应用于c/c++, objective c/c++等语言的编译器，clang是前端，LLVM是后端。llvm-gcc是一个modified version of gcc，使用了llvm作为后端（而不是gcc的后端），现在已经deprecated.
-从编译器使用者的角度看，clang基本兼容gcc, 但在诸如compile commands、link、extensions等方面有些小差异。
-https://clang.llvm.org
-ht</p>
+            <p>语气（Moods）
+语气是利用动词变化来表达“真、假”口吻的方式。依各种不同程度的“真、假”口吻，可以细分为四种语气：
+
+ * 叙述事实语气（Indicative）：表示所说的是真的
+ * 条件语气（Conditional）：表示真假还不能确定
+ * 假设语气（Subjunctive）：说反话，表示所说的与事实相反
+ * 祈使语气（Imperative）：表示希望能成真，但尚未实现
+
+叙述事实语气
+一般的英语句子都是这种语气，在时态部分所学的现在式、过去式、未来式等等也都是属于叙述事实语气，所以不必多作解释。其中只有未来式要说明一下：
+
+ 1. I’ll go to the U.S. next</p>
             <p class="article-more-link">
-                <a href="/cpp/misc.html#more">Read More</a>
+                <a href="/english/mood.html#more">Read More</a>
             </p>
         
         </div>
@@ -468,7 +458,7 @@ ht</p>
 
 </div>
 
-    <a data-url="https://guyong.xyz/cpp/misc.html" data-id="cjlj3q86u0010xbpyd3m7s3zp" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/english/mood.html" data-id="cjljjyf0i0010k7pyu8js0gwo" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -544,7 +534,7 @@ ht</p>
 
 
 
-    <article id="post-cpp/initialization" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-english/words_and_phrases" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -552,7 +542,7 @@ ht</p>
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/cpp/initialization.html">Initialization</a>
+            <a class="article-title" href="/english/words_and_phrases.html">Words and Phrases</a>
         </h1>
     
 
@@ -561,8 +551,8 @@ ht</p>
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <a href="/cpp/initialization.html">
-            <time datetime="2018-08-26T13:24:33.000Z" itemprop="datePublished">2018-08-26</time>
+        <a href="/english/words_and_phrases.html">
+            <time datetime="2018-09-01T14:58:36.000Z" itemprop="datePublished">2018-09-01</time>
         </a>
     </div>
 
@@ -570,7 +560,7 @@ ht</p>
                         
     <div class="article-category">
     	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/cpp/">cpp</a>
+        <a class="article-category-link" href="/categories/english/">english</a>
     </div>
 
                         
@@ -581,16 +571,14 @@ ht</p>
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p>Initialization
-For each declarator, the initializer may be one of the following:
-
- * ( expression-list )
-   comma-separated list of arbitrary expressions and braced-init-lists in parentheses
- * = expression
- * { Initializer-list }
-   braced-init-list: possibly empty, comma-separated list of expressi</p>
+            <p>词汇与短语笔记
+ 1.  in the wake of “在…之后，紧跟”
+ 2.  all in all “总之”
+ 3.  “Not choice, but habit rules the unreflecting herd.” William Wordsworth said in the 19th century.
+     1）unreflecting 意为“缺乏思考的”。2) herd 常见意思是“畜群，牧群”，这里指“民众，百姓”，常含贬义。
+ 4.  Among the most popular: paternity and kinship testing. Which adop</p>
             <p class="article-more-link">
-                <a href="/cpp/initialization.html#more">Read More</a>
+                <a href="/english/words_and_phrases.html#more">Read More</a>
             </p>
         
         </div>
@@ -601,7 +589,7 @@ For each declarator, the initializer may be one of the following:
 
 </div>
 
-    <a data-url="https://guyong.xyz/cpp/initialization.html" data-id="cjlj3q86x0011xbpyy9hzsfpn" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/english/words_and_phrases.html" data-id="cjljjyf0k0011k7pybzlp0z6c" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -677,7 +665,7 @@ For each declarator, the initializer may be one of the following:
 
 
 
-    <article id="post-cpp/stl" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-english/writing" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -685,7 +673,7 @@ For each declarator, the initializer may be one of the following:
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/cpp/stl.html">STL</a>
+            <a class="article-title" href="/english/writing.html">Writing</a>
         </h1>
     
 
@@ -694,8 +682,8 @@ For each declarator, the initializer may be one of the following:
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <a href="/cpp/stl.html">
-            <time datetime="2018-08-26T13:24:33.000Z" itemprop="datePublished">2018-08-26</time>
+        <a href="/english/writing.html">
+            <time datetime="2018-09-01T14:58:36.000Z" itemprop="datePublished">2018-09-01</time>
         </a>
     </div>
 
@@ -703,7 +691,7 @@ For each declarator, the initializer may be one of the following:
                         
     <div class="article-category">
     	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/cpp/">cpp</a>
+        <a class="article-category-link" href="/categories/english/">english</a>
     </div>
 
                         
@@ -714,27 +702,10 @@ For each declarator, the initializer may be one of the following:
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p>The C++ standard library contains mainly:
-
- * Input/Output
-   
-   
- * Containers
-   
-   
- * Iterators
-   
-   
- * Algorithms
-   
-   
-
-The most fundamental property of any algorithm is the list of operations it requires from its iterator(s).
-Iterator categories
-
- * Input iterator (e.g. istream_iterato</p>
+            <p>To simplify the ::ensuing:: presentation, …
+Had there been that if …</p>
             <p class="article-more-link">
-                <a href="/cpp/stl.html#more">Read More</a>
+                <a href="/english/writing.html#more">Read More</a>
             </p>
         
         </div>
@@ -745,7 +716,7 @@ Iterator categories
 
 </div>
 
-    <a data-url="https://guyong.xyz/cpp/stl.html" data-id="cjlj3q8720012xbpyepmrbza7" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/english/writing.html" data-id="cjljjyf0o0012k7py1ompyuwn" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -821,7 +792,7 @@ Iterator categories
 
 
 
-    <article id="post-cpp/summary" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-math/alg" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -829,7 +800,7 @@ Iterator categories
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/cpp/summary.html">Summary</a>
+            <a class="article-title" href="/math/alg.html">Alg</a>
         </h1>
     
 
@@ -838,8 +809,8 @@ Iterator categories
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <a href="/cpp/summary.html">
-            <time datetime="2018-08-26T13:24:33.000Z" itemprop="datePublished">2018-08-26</time>
+        <a href="/math/alg.html">
+            <time datetime="2018-09-01T14:58:36.000Z" itemprop="datePublished">2018-09-01</time>
         </a>
     </div>
 
@@ -847,7 +818,7 @@ Iterator categories
                         
     <div class="article-category">
     	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/cpp/">cpp</a>
+        <a class="article-category-link" href="/categories/math/">math</a>
     </div>
 
                         
@@ -858,20 +829,11 @@ Iterator categories
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p>Books and tutorials
-The Definitive C++ Book Guide and List
-
- * Accelerated C++
- * Essential C++
- * Inside the C++ Object Model
- * The Annotated C++ Reference Manual
- * The C++ Standard (INCITS/ISO/IEC 14882-2011)
- * The C++ Programming Language (Bjarne Stroustrup)
-
-Useful references and terms
-rvalue</p>
+            <p>Recurrence
+Master Theorem
+Akra–Bazzi Method</p>
             <p class="article-more-link">
-                <a href="/cpp/summary.html#more">Read More</a>
+                <a href="/math/alg.html#more">Read More</a>
             </p>
         
         </div>
@@ -882,7 +844,7 @@ rvalue</p>
 
 </div>
 
-    <a data-url="https://guyong.xyz/cpp/summary.html" data-id="cjlj3q8750013xbpy6gn1j9dq" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/math/alg.html" data-id="cjljjyf0r0013k7py361wevf0" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -958,7 +920,7 @@ rvalue</p>
 
 
 
-    <article id="post-cpp/tools" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-math/index" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -966,7 +928,7 @@ rvalue</p>
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/cpp/tools.html">Tools</a>
+            <a class="article-title" href="/math/index.html">Index</a>
         </h1>
     
 
@@ -975,8 +937,8 @@ rvalue</p>
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <a href="/cpp/tools.html">
-            <time datetime="2018-08-26T13:24:33.000Z" itemprop="datePublished">2018-08-26</time>
+        <a href="/math/index.html">
+            <time datetime="2018-09-01T14:58:36.000Z" itemprop="datePublished">2018-09-01</time>
         </a>
     </div>
 
@@ -984,7 +946,7 @@ rvalue</p>
                         
     <div class="article-category">
     	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/cpp/">cpp</a>
+        <a class="article-category-link" href="/categories/math/">math</a>
     </div>
 
                         
@@ -995,12 +957,16 @@ rvalue</p>
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p>Commands
+            <p>Math Foundation
+Calculus
+如何更好地理解并记忆泰勒展开式 — by 知乎
 
- 1. nm
- 2. c++filt</p>
+在圆上用极坐标积分（二元积分），对面积微分时为什么要用$\rho,d\rho,d\theta$ ？
+
+ * 一种简单的理解是： 扇形的面积 $S=1/2\rho^2\theta$, $dS = \frac{d S}{d\theta d\rho} d\theta d\rho = \frac{\partial S}{\partial\theta \partial\rho} d\theta d\rho = \rho d\rho d\theta$
+ * 一种错解是 $dS=d(1/2\rho^2\the</p>
             <p class="article-more-link">
-                <a href="/cpp/tools.html#more">Read More</a>
+                <a href="/math/index.html#more">Read More</a>
             </p>
         
         </div>
@@ -1011,7 +977,7 @@ rvalue</p>
 
 </div>
 
-    <a data-url="https://guyong.xyz/cpp/tools.html" data-id="cjlj3q8760014xbpyox8tf2xu" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/math/index.html" data-id="cjljjyf0u0014k7py4p8ujpy9" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1087,7 +1053,7 @@ rvalue</p>
 
 
 
-    <article id="post-cpp/参考资料" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-math/probability" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -1095,7 +1061,7 @@ rvalue</p>
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/cpp/参考资料.html">参考资料</a>
+            <a class="article-title" href="/math/probability.html">Probability</a>
         </h1>
     
 
@@ -1104,8 +1070,8 @@ rvalue</p>
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <a href="/cpp/参考资料.html">
-            <time datetime="2018-08-26T13:24:33.000Z" itemprop="datePublished">2018-08-26</time>
+        <a href="/math/probability.html">
+            <time datetime="2018-09-01T14:58:36.000Z" itemprop="datePublished">2018-09-01</time>
         </a>
     </div>
 
@@ -1113,7 +1079,7 @@ rvalue</p>
                         
     <div class="article-category">
     	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/cpp/">cpp</a>
+        <a class="article-category-link" href="/categories/math/">math</a>
     </div>
 
                         
@@ -1124,22 +1090,14 @@ rvalue</p>
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p>1. 入门基础
-    C++ Primer (5th)
-    The C++ Programming Language (4th)
- 2. 实战技术
-    Effective C++
-    Effective Modern C++
-    Effective STL
- 3. 中级教程
-    More Effective C++
-    Exceptional C++
-    More Exceptional C++
-    Exceptional C++ Style
-    C++ Coding Standards
-    C++ Templates</p>
+            <p>大数定理（频率收敛于概率）
+设$X_1,…,X_n$为独立同分布的随机变量，记它们的公共均值为$a$, 方差存在并记为$\sigma^2$. 则对任意给定的$\epsilon$, 有 $$\lim_{n\rightarrow\infty} P(|\overline{X_n}-a|\ge\epsilon) = 0$$
+
+中心极限定理
+在很一般的情况下，$X_1+X_2+…+X_n$的极限分布就是正态分布。中心极限定理指的是一类定理，以下为其最简单的一种：
+设$X_1,…,X_n$为独立同分布的随机变量，记它们的公共均值为$a$, 方差存在并记为$\sigma^2$. 则对任何实数$x$, 有$$</p>
             <p class="article-more-link">
-                <a href="/cpp/参考资料.html#more">Read More</a>
+                <a href="/math/probability.html#more">Read More</a>
             </p>
         
         </div>
@@ -1150,7 +1108,7 @@ rvalue</p>
 
 </div>
 
-    <a data-url="https://guyong.xyz/cpp/参考资料.html" data-id="cjlj3q8770015xbpybqmdrbv9" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/math/probability.html" data-id="cjljjyf0w0015k7pyh93teihx" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1255,7 +1213,7 @@ In each iteration of for i in a:, i get a copy of the current element
 
 </div>
 
-    <a data-url="https://guyong.xyz/python/notes for flunet python.html" data-id="cjlj3q8790016xbpyvskp6esm" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/python/notes for flunet python.html" data-id="cjljjyf0z0016k7pytwwl5dyh" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1349,7 +1307,7 @@ In each iteration of for i in a:, i get a copy of the current element
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/python/python async.html">
-            <time datetime="2018-08-26T13:24:33.000Z" itemprop="datePublished">2018-08-26</time>
+            <time datetime="2018-09-01T14:58:36.000Z" itemprop="datePublished">2018-09-01</time>
         </a>
     </div>
 
@@ -1385,7 +1343,7 @@ python中的select module中有针对不同平台的系统函数来完成IO复�
 
 </div>
 
-    <a data-url="https://guyong.xyz/python/python async.html" data-id="cjlj3q87a0017xbpyy88z7t8y" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/python/python async.html" data-id="cjljjyf120017k7pylw4a43lt" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1465,6 +1423,65 @@ python中的select module中有针对不同平台的系统函数来完成IO复�
         <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
     </nav>
 </section>
+            
+                
+<aside id="sidebar">
+   
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Collection/">Collection</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/algorithms/">algorithms</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cpp/">cpp</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/default/">default</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/dev/">dev</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/english/">english</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/math/">math</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/reading/">reading</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/research/">research</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/">web</a><span class="category-list-count">13</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">57</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/original/">original</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/original/" style="font-size: 10px;">original</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://github.com/gynote/gynote.github.io">Github</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fas fa-angle-up"></div>
+</aside>
+
             
         </div>
         <footer id="footer">

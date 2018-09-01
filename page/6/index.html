@@ -22,9 +22,6 @@
         <link rel="icon" href="/css/images/favicon.png" />
     
 
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lora" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
-
     <link rel="stylesheet" href="/libs/font-awesome5/css/fontawesome.min.css">
     <link rel="stylesheet" href="/libs/font-awesome5/css/fa-brands.min.css">
     <link rel="stylesheet" href="/libs/font-awesome5/css/fa-solid.min.css">
@@ -154,7 +151,7 @@
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/web/js_others.html">
-            <time datetime="2018-08-26T13:24:33.000Z" itemprop="datePublished">2018-08-26</time>
+            <time datetime="2018-09-01T14:58:36.000Z" itemprop="datePublished">2018-09-01</time>
         </a>
     </div>
 
@@ -188,7 +185,7 @@
 
 </div>
 
-    <a data-url="https://guyong.xyz/web/js_others.html" data-id="cjlj3q883001ixbpy1vi6dxew" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/web/js_others.html" data-id="cjljjyf1n001ik7pyqp06zsfu" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -282,7 +279,7 @@
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/web/js_promise.html">
-            <time datetime="2018-08-26T13:24:33.000Z" itemprop="datePublished">2018-08-26</time>
+            <time datetime="2018-09-01T14:58:36.000Z" itemprop="datePublished">2018-09-01</time>
         </a>
     </div>
 
@@ -320,7 +317,7 @@ It’s just a syntactical sugar f</p>
 
 </div>
 
-    <a data-url="https://guyong.xyz/web/js_promise.html" data-id="cjlj3q884001jxbpyfi4yrsea" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/web/js_promise.html" data-id="cjljjyf1o001jk7pyfpksxaey" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -414,7 +411,7 @@ It’s just a syntactical sugar f</p>
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/web/markdown.html">
-            <time datetime="2018-08-26T13:24:33.000Z" itemprop="datePublished">2018-08-26</time>
+            <time datetime="2018-09-01T14:58:36.000Z" itemprop="datePublished">2018-09-01</time>
         </a>
     </div>
 
@@ -449,135 +446,7 @@ The overriding design goal for Markdown’s formatting syntax is to make it as r
 
 </div>
 
-    <a data-url="https://guyong.xyz/web/markdown.html" data-id="cjlj3q886001kxbpykq4cg4n8" class="article-share-link"><i class="fas fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer> -->
-    </div>
-    
-</article>
-
-
-
-    <article id="post-web/misc" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/web/misc.html">Misc</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fas fa-calendar-alt"></i>
-        <a href="/web/misc.html">
-            <time datetime="2018-08-26T13:24:33.000Z" itemprop="datePublished">2018-08-26</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/web/">web</a>
-    </div>
-
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p>What Every Programmer Absolutely, Positively Needs To Know About Encodings And Character Sets To Work With Text
-
-I/O Models and event loop in javascript</p>
-            <p class="article-more-link">
-                <a href="/web/misc.html#more">Read More</a>
-            </p>
-        
-        </div>
-        <!--<footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://guyong.xyz/web/misc.html" data-id="cjlj3q888001lxbpyqrzzugxr" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/web/markdown.html" data-id="cjljjyf1q001kk7pyf72ovyym" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -671,7 +540,7 @@ I/O Models and event loop in javascript</p>
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/web/md_cheatsheet.html">
-            <time datetime="2018-08-26T13:24:33.000Z" itemprop="datePublished">2018-08-26</time>
+            <time datetime="2018-09-01T14:58:36.000Z" itemprop="datePublished">2018-09-01</time>
         </a>
     </div>
 
@@ -723,7 +592,135 @@ Container blocks
 
 </div>
 
-    <a data-url="https://guyong.xyz/web/md_cheatsheet.html" data-id="cjlj3q88c001mxbpyrj3ycl1e" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/web/md_cheatsheet.html" data-id="cjljjyf1r001lk7py41f4mehc" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer> -->
+    </div>
+    
+</article>
+
+
+
+    <article id="post-web/misc" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/web/misc.html">Misc</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/web/misc.html">
+            <time datetime="2018-09-01T14:58:36.000Z" itemprop="datePublished">2018-09-01</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fas fa-folder"></i>
+        <a class="article-category-link" href="/categories/web/">web</a>
+    </div>
+
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p>What Every Programmer Absolutely, Positively Needs To Know About Encodings And Character Sets To Work With Text
+
+I/O Models and event loop in javascript</p>
+            <p class="article-more-link">
+                <a href="/web/misc.html#more">Read More</a>
+            </p>
+        
+        </div>
+        <!--<footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://guyong.xyz/web/misc.html" data-id="cjljjyf1t001mk7pyglzskgc4" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -817,7 +814,7 @@ Container blocks
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/web/node.html">
-            <time datetime="2018-08-26T13:24:33.000Z" itemprop="datePublished">2018-08-26</time>
+            <time datetime="2018-09-01T14:58:36.000Z" itemprop="datePublished">2018-09-01</time>
         </a>
     </div>
 
@@ -854,7 +851,7 @@ This article illustrate how promi</p>
 
 </div>
 
-    <a data-url="https://guyong.xyz/web/node.html" data-id="cjlj3q88g001nxbpy3q4xoq1k" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/web/node.html" data-id="cjljjyf1w001nk7py4gnxyf2h" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -948,7 +945,7 @@ This article illustrate how promi</p>
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/web/node_basics.html">
-            <time datetime="2018-08-26T13:24:33.000Z" itemprop="datePublished">2018-08-26</time>
+            <time datetime="2018-09-01T14:58:36.000Z" itemprop="datePublished">2018-09-01</time>
         </a>
     </div>
 
@@ -986,7 +983,7 @@ nodejs official reference about module
 
 </div>
 
-    <a data-url="https://guyong.xyz/web/node_basics.html" data-id="cjlj3q88j001oxbpy9dx7dnu8" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/web/node_basics.html" data-id="cjljjyf1y001ok7pypmlhbjgc" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1066,6 +1063,65 @@ nodejs official reference about module
         <a class="extend prev" rel="prev" href="/page/5/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span>
     </nav>
 </section>
+            
+                
+<aside id="sidebar">
+   
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Collection/">Collection</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/algorithms/">algorithms</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cpp/">cpp</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/default/">default</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/dev/">dev</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/english/">english</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/math/">math</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/reading/">reading</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/research/">research</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/">web</a><span class="category-list-count">13</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">57</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/original/">original</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/original/" style="font-size: 10px;">original</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://github.com/gynote/gynote.github.io">Github</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fas fa-angle-up"></div>
+</aside>
+
             
         </div>
         <footer id="footer">
