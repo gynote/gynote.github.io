@@ -133,7 +133,7 @@
         <div class="outer">
             
             <section id="main">
-    <article id="post-cpp/misc" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-cpp/stl" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -141,7 +141,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/cpp/misc.html">Misc</a>
+            <a class="article-title" href="/cpp/stl.html">STL</a>
         </h1>
     
 
@@ -150,8 +150,8 @@
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <a href="/cpp/misc.html">
-            <time datetime="2018-09-01T15:50:13.000Z" itemprop="datePublished">2018-09-01</time>
+        <a href="/cpp/stl.html">
+            <time datetime="2018-09-01T16:16:24.000Z" itemprop="datePublished">2018-09-02</time>
         </a>
     </div>
 
@@ -170,12 +170,27 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p>LLVM (low level virtual machine) 是一系列binary和tools的集合，可以用来构造编译器。clang 是用LLVM 构造的应用于c/c++, objective c/c++等语言的编译器，clang是前端，LLVM是后端。llvm-gcc是一个modified version of gcc，使用了llvm作为后端（而不是gcc的后端），现在已经deprecated.
-从编译器使用者的角度看，clang基本兼容gcc, 但在诸如compile commands、link、extensions等方面有些小差异。
-https://clang.llvm.org
-ht</p>
+            <p>The C++ standard library contains mainly:
+
+ * Input/Output
+   
+   
+ * Containers
+   
+   
+ * Iterators
+   
+   
+ * Algorithms
+   
+   
+
+The most fundamental property of any algorithm is the list of operations it requires from its iterator(s).
+Iterator categories
+
+ * Input iterator (e.g. istream_iterato</p>
             <p class="article-more-link">
-                <a href="/cpp/misc.html#more">Read More</a>
+                <a href="/cpp/stl.html#more">Read More</a>
             </p>
         
         </div>
@@ -186,7 +201,7 @@ ht</p>
 
 </div>
 
-    <a data-url="https://guyong.xyz/cpp/misc.html" data-id="cjljlsrr4000o6spyrrccuqiy" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/cpp/stl.html" data-id="cjljmqgq6000oh3py3uw25zgj" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -262,7 +277,7 @@ ht</p>
 
 
 
-    <article id="post-cpp/stl" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-cpp/initialization" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -270,7 +285,7 @@ ht</p>
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/cpp/stl.html">STL</a>
+            <a class="article-title" href="/cpp/initialization.html">Initialization</a>
         </h1>
     
 
@@ -279,8 +294,8 @@ ht</p>
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <a href="/cpp/stl.html">
-            <time datetime="2018-09-01T15:50:13.000Z" itemprop="datePublished">2018-09-01</time>
+        <a href="/cpp/initialization.html">
+            <time datetime="2018-09-01T16:16:24.000Z" itemprop="datePublished">2018-09-02</time>
         </a>
     </div>
 
@@ -299,27 +314,16 @@ ht</p>
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p>The C++ standard library contains mainly:
+            <p>Initialization
+For each declarator, the initializer may be one of the following:
 
- * Input/Output
-   
-   
- * Containers
-   
-   
- * Iterators
-   
-   
- * Algorithms
-   
-   
-
-The most fundamental property of any algorithm is the list of operations it requires from its iterator(s).
-Iterator categories
-
- * Input iterator (e.g. istream_iterato</p>
+ * ( expression-list )
+   comma-separated list of arbitrary expressions and braced-init-lists in parentheses
+ * = expression
+ * { Initializer-list }
+   braced-init-list: possibly empty, comma-separated list of expressi</p>
             <p class="article-more-link">
-                <a href="/cpp/stl.html#more">Read More</a>
+                <a href="/cpp/initialization.html#more">Read More</a>
             </p>
         
         </div>
@@ -330,7 +334,7 @@ Iterator categories
 
 </div>
 
-    <a data-url="https://guyong.xyz/cpp/stl.html" data-id="cjljlsrr5000p6spyq07abvyi" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/cpp/initialization.html" data-id="cjljmqgqa000ph3pycl8xbeiy" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -424,7 +428,7 @@ Iterator categories
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/cpp/summary.html">
-            <time datetime="2018-09-01T15:50:13.000Z" itemprop="datePublished">2018-09-01</time>
+            <time datetime="2018-09-01T16:16:24.000Z" itemprop="datePublished">2018-09-02</time>
         </a>
     </div>
 
@@ -467,7 +471,7 @@ rvalue</p>
 
 </div>
 
-    <a data-url="https://guyong.xyz/cpp/summary.html" data-id="cjljlsrr7000q6spyvo10qiiq" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/cpp/summary.html" data-id="cjljmqgqc000qh3pypr8vq7mu" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -561,7 +565,7 @@ rvalue</p>
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/cpp/tools.html">
-            <time datetime="2018-09-01T15:50:13.000Z" itemprop="datePublished">2018-09-01</time>
+            <time datetime="2018-09-01T16:16:24.000Z" itemprop="datePublished">2018-09-02</time>
         </a>
     </div>
 
@@ -596,7 +600,7 @@ rvalue</p>
 
 </div>
 
-    <a data-url="https://guyong.xyz/cpp/tools.html" data-id="cjljlsrr8000r6spyrhf9i0vv" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/cpp/tools.html" data-id="cjljmqgqf000rh3py4rmofwoj" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -690,7 +694,7 @@ rvalue</p>
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/cpp/参考资料.html">
-            <time datetime="2018-09-01T15:50:13.000Z" itemprop="datePublished">2018-09-01</time>
+            <time datetime="2018-09-01T16:16:24.000Z" itemprop="datePublished">2018-09-02</time>
         </a>
     </div>
 
@@ -735,7 +739,7 @@ rvalue</p>
 
 </div>
 
-    <a data-url="https://guyong.xyz/cpp/参考资料.html" data-id="cjljlsrr9000s6spyihzosoli" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/cpp/参考资料.html" data-id="cjljmqgqh000sh3pyfoeoq4r3" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -829,7 +833,7 @@ rvalue</p>
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/default/ICALP ppt.html">
-            <time datetime="2018-09-01T15:50:13.000Z" itemprop="datePublished">2018-09-01</time>
+            <time datetime="2018-09-01T16:16:24.000Z" itemprop="datePublished">2018-09-02</time>
         </a>
     </div>
 
@@ -868,7 +872,7 @@ Now, our goal is to compute the minimum last edge weight of any NDP between </p>
 
 </div>
 
-    <a data-url="https://guyong.xyz/default/ICALP ppt.html" data-id="cjljlsrrb000t6spykikfnsz8" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/default/ICALP ppt.html" data-id="cjljmqgqk000th3pyqxh3ez19" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -962,7 +966,7 @@ Now, our goal is to compute the minimum last edge weight of any NDP between </p>
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/default/daily.html">
-            <time datetime="2018-09-01T15:50:13.000Z" itemprop="datePublished">2018-09-01</time>
+            <time datetime="2018-09-01T16:16:24.000Z" itemprop="datePublished">2018-09-02</time>
         </a>
     </div>
 
@@ -1000,7 +1004,7 @@ Now, our goal is to compute the minimum last edge weight of any NDP between </p>
 
 </div>
 
-    <a data-url="https://guyong.xyz/default/daily.html" data-id="cjljlsrrc000u6spytybjwkm6" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/default/daily.html" data-id="cjljmqgqn000uh3py78bsg8k5" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1094,7 +1098,7 @@ Now, our goal is to compute the minimum last edge weight of any NDP between </p>
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/default/draft.html">
-            <time datetime="2018-09-01T15:50:13.000Z" itemprop="datePublished">2018-09-01</time>
+            <time datetime="2018-09-01T16:16:24.000Z" itemprop="datePublished">2018-09-02</time>
         </a>
     </div>
 
@@ -1136,7 +1140,7 @@ GFM doesn’t support:
 
 </div>
 
-    <a data-url="https://guyong.xyz/default/draft.html" data-id="cjljlsrre000v6spycf3j9hub" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/default/draft.html" data-id="cjljmqgqp000vh3pyq13irdpj" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1235,7 +1239,7 @@ GFM doesn’t support:
 
 </div>
 
-    <a data-url="https://guyong.xyz/ideas.html" data-id="cjljlsrji00016spym5e5srst" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/ideas.html" data-id="cjljmqgn50002h3py0qj19hju" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1329,7 +1333,7 @@ GFM doesn’t support:
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/dev/design patterns.html">
-            <time datetime="2018-09-01T15:50:13.000Z" itemprop="datePublished">2018-09-01</time>
+            <time datetime="2018-09-01T16:16:24.000Z" itemprop="datePublished">2018-09-02</time>
         </a>
     </div>
 
@@ -1371,7 +1375,7 @@ Fi</p>
 
 </div>
 
-    <a data-url="https://guyong.xyz/dev/design patterns.html" data-id="cjljlsrrh000x6spyjmg0z9u1" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/dev/design patterns.html" data-id="cjljmqgqt000xh3py50goiw0w" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
