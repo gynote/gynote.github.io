@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="GYNote">
 <meta property="og:description" content="Disjoint Set Data Structure: Union-Find The problem We want to maintain a set of disjoint sets, in which elements are fixed. Only union is supported, while spliting is not. Sepcifically, we support fo">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-03T06:53:43.000Z">
+<meta property="og:updated_time" content="2018-09-03T14:32:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="basics">
 <meta name="twitter:description" content="Disjoint Set Data Structure: Union-Find The problem We want to maintain a set of disjoint sets, in which elements are fixed. Only union is supported, while spliting is not. Sepcifically, we support fo">
@@ -154,7 +154,7 @@
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/algorithms/basics.html">
-            <time datetime="2018-09-03T06:53:43.000Z" itemprop="datePublished">2018-09-03</time>
+            <time datetime="2018-09-03T14:32:15.000Z" itemprop="datePublished">2018-09-03</time>
         </a>
     </div>
 
@@ -174,8 +174,8 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h1>Disjoint Set Data Structure: Union-Find</h1>
-<h2>The problem</h2>
+            <h1 id="disjoint-set-data-structure%3A-union-find">Disjoint Set Data Structure: Union-Find</h1>
+<h2 id="the-problem">The problem</h2>
 <p>We want to maintain a set of disjoint sets, in which elements are fixed. Only union is supported, while spliting is not. Sepcifically, we support following three operations.</p>
 <ul>
 <li>MakeSet(u)</li>
@@ -183,10 +183,10 @@
 <li>Union(u,v)</li>
 </ul>
 <p>Let $V$ donote the fixed set of elements, whose size is $n$. Generally, we want to estimate the total time of a sequence of $m$ operations, in which the first $n$ operation is <strong>MakeSet</strong> for each element.</p>
-<h2>Linked-list</h2>
+<h2 id="linked-list">Linked-list</h2>
 <p>We can represent each set by a linked list, with each element additionally pointing to its head.<br>
 The worst-case time for <strong>Union</strong> is $O(n)$, and we can find a sequence of $m$ operations which needs $O(n^2)$ time in total.</p>
-<h3>a weighted-union heuristic</h3>
+<h3 id="a-weighted-union-heuristic">a weighted-union heuristic</h3>
 <p>We can improve it by a little trick. In the <strong>Union</strong> operation, we can rename the small set (say B) to the larger set (say A), i.e. make all the elements of B point to the head of A. The worst-case time of <strong>Union</strong> is stilll $O(n)$, while its amortized time becomes $O(\log n)$.</p>
 <table>
 <thead>
@@ -219,7 +219,7 @@ The worst-case time for <strong>Union</strong> is $O(n)$, and we can find a sequ
 </tr>
 </tbody>
 </table>
-<h2>Forest</h2>
+<h2 id="forest">Forest</h2>
 <p>Wite rooted trees, <strong>Union</strong> costs $O(1)$, while <strong>Find</strong> may cost <strong>O(n)</strong> in worst-case. It can also be improved to $O(\log n)$ using the same weighted-union heuristic: Union-by-rank. Actually, Union-by-size works as well. The total time is also $O(m\log n)$<br>
 Using another heuristic “path compression”, we can amortize the time of <strong>Find</strong> and <strong>Union</strong> to $O(\alpha(n))$, which results $O(m\alpha(n))$ time in total.</p>
 <table>
@@ -268,7 +268,7 @@ Using another heuristic “path compression”, we can amortize the time of <str
 
 </div>
 
-    <a data-url="https://guyong.xyz/algorithms/basics.html" data-id="cjllxij67000cpipyzz6e9h8u" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/algorithms/basics.html" data-id="cjlmdw7au000c6vpye46i96yj" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

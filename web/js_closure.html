@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="GYNote">
 <meta property="og:description" content="Closure How do JavaScript closures work under the hood[1]  This is the best article I’ve read that illustrats how “closures” works and what is going on behind the scene when they’re used.  1. scope ob">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-03T06:53:43.000Z">
+<meta property="og:updated_time" content="2018-09-03T14:32:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Js Closures">
 <meta name="twitter:description" content="Closure How do JavaScript closures work under the hood[1]  This is the best article I’ve read that illustrats how “closures” works and what is going on behind the scene when they’re used.  1. scope ob">
@@ -154,7 +154,7 @@
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/web/js_closure.html">
-            <time datetime="2018-09-03T06:53:43.000Z" itemprop="datePublished">2018-09-03</time>
+            <time datetime="2018-09-03T14:32:15.000Z" itemprop="datePublished">2018-09-03</time>
         </a>
     </div>
 
@@ -174,14 +174,14 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2>Closure</h2>
+            <h2 id="closure">Closure</h2>
 <p><a href="https://dmitryfrank.com/articles/js_closures" target="_blank" rel="noopener">How do JavaScript closures work under the hood</a><sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
 <p>This is the best article I’ve read that illustrats how “closures” works and what is going on behind the scene when they’re used.</p>
-<h3>1. scope objects</h3>
+<h3 id="1.-scope-objects">1. scope objects</h3>
 <p>Each function object has a “scope” property that points to the scope the function is defined. Whenever a function is called, a corresponding scope is created. (If same function is called multiple times, then multiple seprate scope object are created.) This new created scope object has a pointer pointing to its parent scope object, which is the scope property of the function object, resulting in a scope chain.</p>
 <p>Scope chain works as same as prototype chain, except that <code>ReferenceError</code> is throwed rather than <code>undefiend</code> is returned.</p>
 <p>Whenever there is a reference to it, a scope exists, even if the corresponding function is returned. Otherwise, it will be garbage-collected on occasion.</p>
-<h3>2. this</h3>
+<h3 id="2.-this">2. this</h3>
 <p><code>this</code> is not saved as a part of the scope chain. Instead, value of <code>this</code> depends on the “function invocation pattern”.</p>
 <ul>
 <li>method invocation pattern</li>
@@ -212,7 +212,7 @@ Function.prototype.apply/call/bind/</li>
 
 </div>
 
-    <a data-url="https://guyong.xyz/web/js_closure.html" data-id="cjllxij8f001gpipy3fn6hsr1" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/web/js_closure.html" data-id="cjlmdw7cu001g6vpys2oq5e3x" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

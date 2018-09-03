@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="GYNote">
 <meta property="og:description" content="1. Basics  * scripting language (interpreted, not complied)  * object-oriented (inheritance, encapsulation, polymorphism)  * prototype-based (also called classless, prototype-oriented, or instance-bas">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-03T06:53:43.000Z">
+<meta property="og:updated_time" content="2018-09-03T14:32:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Js Basis">
 <meta name="twitter:description" content="1. Basics  * scripting language (interpreted, not complied)  * object-oriented (inheritance, encapsulation, polymorphism)  * prototype-based (also called classless, prototype-oriented, or instance-bas">
@@ -154,7 +154,7 @@
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/web/js_basics.html">
-            <time datetime="2018-09-03T06:53:43.000Z" itemprop="datePublished">2018-09-03</time>
+            <time datetime="2018-09-03T14:32:15.000Z" itemprop="datePublished">2018-09-03</time>
         </a>
     </div>
 
@@ -174,7 +174,7 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2>1. Basics</h2>
+            <h2 id="1.-basics">1. Basics</h2>
 <ul>
 <li>scripting language (interpreted, not complied)</li>
 <li>object-oriented (inheritance, encapsulation, polymorphism)</li>
@@ -182,13 +182,13 @@
 prototype is essentially object, which can be modified dynamically, while “class” can’t</li>
 <li>dynamic-typing (type of variable are not fixed)</li>
 </ul>
-<h2>2. How to use it ?</h2>
+<h2 id="2.-how-to-use-it-%3F">2. How to use it ?</h2>
 <p>In order to be executed by a browser, js scripts should be used by embeding it in a html file.<br>
 You can directly place js source code in html with <code>&lt;script&gt;</code> tag<br>
 <code>&lt;script&gt;...&lt;/script&gt;</code><br>
 or place it in a seperate js file then include it in the html file using <code>&lt;script src=&quot;/path/to/js&quot;&gt;&lt;/script&gt;</code><br>
 Js script can be placed anywhere in html file. Usually it is placed in <code>&lt;head&gt;</code>. Placing it at the bottom of page can avoid possible loading delay.</p>
-<h2>3. Data types</h2>
+<h2 id="3.-data-types">3. Data types</h2>
 <p>JavaScript has six data types. Five data types are primitives:</p>
 <ul>
 <li>string</li>
@@ -206,16 +206,16 @@ Js script can be placed anywhere in html file. Usually it is placed in <code>&lt
 <p>You can consider it a bug in JavaScript that typeof null is an object. It should be null.</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="literal">undefined</span>             <span class="comment">// undefined</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">null</span>                  <span class="comment">// object</span></span><br><span class="line"><span class="literal">null</span> === <span class="literal">undefined</span>           <span class="comment">// false</span></span><br><span class="line"><span class="literal">null</span> == <span class="literal">undefined</span>            <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
-<h2>4. Declaration</h2>
+<h2 id="4.-declaration">4. Declaration</h2>
 <p>There are three types of declarations (since ES6):</p>
 <ul>
 <li>var: global variable or function level variable.</li>
 <li>let: block level local variable.</li>
 <li>const: read-only constant. Itself can’t be assigned while it’s properties can. Must be initialized. It’s scope is the same as ‘let’</li>
 </ul>
-<h3>value</h3>
+<h3 id="value">value</h3>
 <p>variables declared by ‘let’ and ‘var’ with no initial value has the value “undefined”</p>
-<h3>variable scope</h3>
+<h3 id="variable-scope">variable scope</h3>
 <ul>
 <li>
 <p>global: declared outside of function</p>
@@ -228,11 +228,11 @@ function level</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if (true) &#123;</span><br><span class="line">  let y = 5;</span><br><span class="line">&#125;</span><br><span class="line">console.log(y);  // ReferenceError: y is not defined</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3>variable hositing and function hoisting</h3>
+<h3 id="variable-hositing-and-function-hoisting">variable hositing and function hoisting</h3>
 <p>Variables in JavaScript are in a sense “hoisted” or lifted to the top of the function or statement. However, variables that are hoisted will return a value of undefined. In ECMAScript 2015, let (const) will not hoist the variable to the top of the block.<br>
 For functions, only function declaration gets hoisted to the top and not the function expression.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Function declaration */</span></span><br><span class="line"></span><br><span class="line">foo(); <span class="comment">// "bar"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"bar"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/* Function expression */</span></span><br><span class="line"></span><br><span class="line">baz(); <span class="comment">// TypeError: baz is not a function</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> baz = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"bar2"</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h3>global variables</h3>
+<h3 id="global-variables">global variables</h3>
 <p>Global variables are in fact properties of the global object. In web pages the global object is window</p>
 
         
@@ -244,7 +244,7 @@ For functions, only function declaration gets hoisted to the top and not the fun
 
 </div>
 
-    <a data-url="https://guyong.xyz/web/js_basics.html" data-id="cjllxij8d001fpipyd8lzo3m3" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/web/js_basics.html" data-id="cjlmdw7cs001f6vpyuvsw99vo" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

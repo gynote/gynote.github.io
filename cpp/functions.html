@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="GYNote">
 <meta property="og:description" content="Overloading  1. type of parameters ( conversion )  2. number of parateters  3. const keyword   * C++ allows member methods to be overloaded on the basis of const type. Overloading on the basis of cons">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-03T06:53:43.000Z">
+<meta property="og:updated_time" content="2018-09-03T14:32:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Function">
 <meta name="twitter:description" content="Overloading  1. type of parameters ( conversion )  2. number of parateters  3. const keyword   * C++ allows member methods to be overloaded on the basis of const type. Overloading on the basis of cons">
@@ -154,7 +154,7 @@
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/cpp/functions.html">
-            <time datetime="2018-09-03T06:53:43.000Z" itemprop="datePublished">2018-09-03</time>
+            <time datetime="2018-09-03T14:32:15.000Z" itemprop="datePublished">2018-09-03</time>
         </a>
     </div>
 
@@ -174,7 +174,7 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2>Overloading</h2>
+            <h2 id="overloading">Overloading</h2>
 <ol>
 <li>type of parameters ( conversion )</li>
 <li>number of parateters</li>
@@ -184,12 +184,12 @@
 <li>C++ allows member methods to be overloaded on the basis of const type. Overloading on the basis of const type can be useful when a function return reference or pointer.</li>
 <li>C++ allows functions to be overloaded on the basis of const-ness of parameters only if the const parameter is a reference or a pointer.</li>
 </ul>
-<h2>Argument Passing</h2>
-<h3>Reference Arguments</h3>
-<h3>Array Arguments</h3>
-<h3>List Arguments</h3>
-<h3>Unspecified number of Arguments</h3>
-<h3>Default Arguments</h3>
+<h2 id="argument-passing">Argument Passing</h2>
+<h3 id="reference-arguments">Reference Arguments</h3>
+<h3 id="array-arguments">Array Arguments</h3>
+<h3 id="list-arguments">List Arguments</h3>
+<h3 id="unspecified-number-of-arguments">Unspecified number of Arguments</h3>
+<h3 id="default-arguments">Default Arguments</h3>
 <p>A general function often needs more arguments than are necessary to handle simple cases. In particular, functions that construct objects (§16.2.5) often provide several options for flexibility. Consider the <strong>complex</strong> class:</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">complex</span> &#123;</span></span><br><span class="line">    <span class="keyword">double</span> re, im;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">complex</span>(<span class="keyword">double</span> r, <span class="keyword">double</span> i) :re&#123;r&#125;, im&#123;i&#125; &#123;&#125; <span class="comment">// construct complex from two scalars</span></span><br><span class="line">    <span class="keyword">complex</span>(<span class="keyword">double</span> r) :re&#123;r&#125;, im&#123;<span class="number">0</span>&#125; &#123;&#125; <span class="comment">// construct complex from one scalar</span></span><br><span class="line">    <span class="keyword">complex</span>() :re&#123;<span class="number">0</span>&#125;, im&#123;<span class="number">0</span>&#125; &#123;&#125; <span class="comment">// default complex: &#123;0,0&#125;</span></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>We could deal with the repetitiveness by considering one of the constructors “the real one” and forward to that (§17.4.3):</p>
@@ -220,7 +220,7 @@ declaration in the same scope.</li>
 
 </div>
 
-    <a data-url="https://guyong.xyz/cpp/functions.html" data-id="cjllxij6p000lpipyl2ax4p48" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/cpp/functions.html" data-id="cjlmdw7bg000m6vpypt0k78g7" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -295,19 +295,19 @@ declaration in the same scope.</li>
         
 <nav id="article-nav">
     
-        <a href="/cpp/c declarations.html" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/cpp/index.html" id="article-nav-newer" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Newer</strong>
             <div class="article-nav-title">
                 
-                    C Declaration
+                    Index
                 
             </div>
         </a>
     
     
-        <a href="/cpp/index.html" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/cpp/initialization.html" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">Index</div>
+            <div class="article-nav-title">Initialization</div>
         </a>
     
 </nav>

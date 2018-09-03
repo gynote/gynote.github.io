@@ -13,7 +13,7 @@
 <meta property="og:description" content="Object oriented Object Every variable can be used as a object, except for undefined and null . Even number literal has its dot operation if the dot is not parsed as float point.  1 2 3 4   2.toString(">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://guyong.xyz/assets/js-object_oriented_1.png">
-<meta property="og:updated_time" content="2018-09-03T06:53:43.000Z">
+<meta property="og:updated_time" content="2018-09-03T14:32:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Js Object oriented">
 <meta name="twitter:description" content="Object oriented Object Every variable can be used as a object, except for undefined and null . Even number literal has its dot operation if the dot is not parsed as float point.  1 2 3 4   2.toString(">
@@ -156,7 +156,7 @@
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/web/js_object_oriented.html">
-            <time datetime="2018-09-03T06:53:43.000Z" itemprop="datePublished">2018-09-03</time>
+            <time datetime="2018-09-03T14:32:15.000Z" itemprop="datePublished">2018-09-03</time>
         </a>
     </div>
 
@@ -176,8 +176,8 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h1>Object oriented</h1>
-<h2>Object</h2>
+            <h1 id="object-oriented">Object oriented</h1>
+<h2 id="object">Object</h2>
 <p>Every variable can be used as a object, except for <strong>undefined</strong> and <strong>null</strong> . Even number literal has its dot operation if the dot is not parsed as float point.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">2.toString(); // SyntaxError</span><br><span class="line">2..toString(); // valid</span><br><span class="line">2 .toString(); // valid</span><br><span class="line">(2).toString(); //valid</span><br></pre></td></tr></table></figure>
 <p>However, javascript distinguish <strong>object</strong> data types (including function object and array object) from primary data types (Number, String, …)</p>
@@ -188,7 +188,7 @@
 <li>property name is a not valid variable name</li>
 </ul>
 <p>Objects created using {} are inherited form Object.prototype. A property can only be deleted using <code>delete</code> operation</p>
-<h2>Usage of this</h2>
+<h2 id="usage-of-this">Usage of this</h2>
 <p><em>this</em> can only be used inside of function, it always refers to the caller of this function.</p>
 <p><em>this</em> may refers to <em>global</em></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">　　alert(<span class="keyword">this</span>.x);</span><br><span class="line">&#125;</span><br><span class="line">test(); <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
@@ -196,7 +196,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">2</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">　　<span class="keyword">this</span>.x = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> o = <span class="keyword">new</span> test();</span><br><span class="line">alert(x); <span class="comment">//2　　</span></span><br><span class="line">alert(o.x); <span class="comment">//1</span></span><br></pre></td></tr></table></figure>
 <p><em>this</em> in bound function: apply, call</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">　　alert(<span class="keyword">this</span>.x);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> o = &#123;&#125;;</span><br><span class="line">o.x = <span class="number">1</span>;</span><br><span class="line">o.m = test;</span><br><span class="line">o.m.apply(); <span class="comment">//0</span></span><br><span class="line">o.m.apply(o); <span class="comment">//1</span></span><br></pre></td></tr></table></figure>
-<h2>Prototypal inheritance</h2>
+<h2 id="prototypal-inheritance">Prototypal inheritance</h2>
 <p>We distinguish <em>__proto__</em> from <em>prototype</em></p>
 <p>Every object (include function object) has an implicit <em>__proto__</em> property. It is this property that implements prototype chain.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getProperty</span>(<span class="params">obj, prop</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (obj.hasOwnProperty(prop))</span><br><span class="line">    <span class="keyword">return</span> obj[prop]</span><br><span class="line"></span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span> (obj.__proto__ !== <span class="literal">null</span>)</span><br><span class="line">    <span class="keyword">return</span> getProperty(obj.__proto__, prop)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">undefined</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -242,7 +242,7 @@ The class keyword is introduced in ES6, but is syntactical sugar, JavaScript rem
 
 </div>
 
-    <a data-url="https://guyong.xyz/web/js_object_oriented.html" data-id="cjllxij8i001ipipylhxi1rr5" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/web/js_object_oriented.html" data-id="cjlmdw7cx001i6vpyf1zee285" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

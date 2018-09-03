@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="GYNote">
 <meta property="og:description" content="24.3-4 First check wheter $(d,\pi)$ compose an $s$-rooted tree.(i.e. they satisfy properties 1 and 2 in page 647.) Then check that $d(s)=0$ and for all $v\in V$, $d(v) = \min_{u\in N(v)}{d(u)+w(u,v)}$">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-03T06:53:43.000Z">
+<meta property="og:updated_time" content="2018-09-03T14:32:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CLRS Solutions">
 <meta name="twitter:description" content="24.3-4 First check wheter $(d,\pi)$ compose an $s$-rooted tree.(i.e. they satisfy properties 1 and 2 in page 647.) Then check that $d(s)=0$ and for all $v\in V$, $d(v) = \min_{u\in N(v)}{d(u)+w(u,v)}$">
@@ -154,7 +154,7 @@
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/algorithms/CLRS solutions.html">
-            <time datetime="2018-09-03T06:53:43.000Z" itemprop="datePublished">2018-09-03</time>
+            <time datetime="2018-09-03T14:32:15.000Z" itemprop="datePublished">2018-09-03</time>
         </a>
     </div>
 
@@ -174,7 +174,7 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h3>24.3-4</h3>
+            <h3 id="24.3-4">24.3-4</h3>
 <p>First check wheter $(d,\pi)$ compose an <strong>$s$-rooted tree</strong>.(i.e. they satisfy properties 1 and 2 in page 647.) Then check that $d(s)=0$ and for all $v\in V$, $d(v) = \min_{u\in N(v)}{d(u)+w(u,v)}$ and $\pi(v)$ is the minimizer, where $N(v) = {u\in V\ |\ (u,v)\in E}$. If all are true, return true, otherwise return false. It can be easily seen that the total time is $O(m+n)$.</p>
 <p>Now to prove the correctness. For one direction, if $(d,\pi)$ match one <strong>shortest-paths tree</strong>, our algorithm must output true. For the other direction, suppose $(d,\pi)$ doesn’t match any such tree and the algorithm output true. Suppose $T’=(\pi’,\delta)$ is a <strong>shortest-paths tree</strong>. For all incorrect vertex $v$, we must have $d(v)&gt;\delta(v)$ since we can really find a path of length $d(v)$ from $s$ to $v$ according to $\pi$.<br>
 There must be at least one incorrect vertex. Let $v$ be an incorrect vertex closest to $s$ in $T’$. Then $u_1=\pi(v)$ and $u_2 = \pi’(v)$ exist since $v$ can not be $s$. Therefore we have $d(u_1)+w(u_1,v)=d(v)&gt;\delta(v)=d(u_2)+w(u_2,v)$ since $u_2$ is correct, which contradicts the fact that $u_1$ is the minimizer of $d(u)+w(u,v)$.</p>
@@ -191,7 +191,7 @@ There must be at least one incorrect vertex. Let $v$ be an incorrect vertex clos
 
 </div>
 
-    <a data-url="https://guyong.xyz/algorithms/CLRS solutions.html" data-id="cjllxij5v000apipy1ji1oehd" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/algorithms/CLRS solutions.html" data-id="cjlmdw7ao000a6vpyi1ffy924" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

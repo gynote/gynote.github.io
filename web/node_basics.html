@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="GYNote">
 <meta property="og:description" content="Module How does require() work ? require() 源码解读 by 阮一锋 nodejs official reference about module   1. Require statements are executed sychronously. That is, all the statements in the required module are">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-03T06:53:43.000Z">
+<meta property="og:updated_time" content="2018-09-03T14:32:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node Basics">
 <meta name="twitter:description" content="Module How does require() work ? require() 源码解读 by 阮一锋 nodejs official reference about module   1. Require statements are executed sychronously. That is, all the statements in the required module are">
@@ -154,7 +154,7 @@
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/web/node_basics.html">
-            <time datetime="2018-09-03T06:53:43.000Z" itemprop="datePublished">2018-09-03</time>
+            <time datetime="2018-09-03T14:32:15.000Z" itemprop="datePublished">2018-09-03</time>
         </a>
     </div>
 
@@ -174,25 +174,25 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2>Module</h2>
-<h3>How does <code>require()</code> work ?</h3>
+            <h2 id="module">Module</h2>
+<h3 id="how-does-require()-work-%3F">How does <code>require()</code> work ?</h3>
 <p><a href="http://www.ruanyifeng.com/blog/2015/05/require.html" target="_blank" rel="noopener">require() 源码解读 by 阮一锋</a><br>
 <a href="https://nodejs.org/api/modules.html#modules_modules" target="_blank" rel="noopener">nodejs official reference about module</a></p>
 <ol>
 <li>Require statements are executed sychronously. That is, all the statements in the required module are executed before continuing execute statements after the require statement.</li>
 <li>Required modules are cached. They can be viewed as single instance.</li>
 </ol>
-<h3>Basic modules</h3>
+<h3 id="basic-modules">Basic modules</h3>
 <p>fs<br>
 stream<br>
 https<br>
 path</p>
-<h3>Other common modules</h3>
+<h3 id="other-common-modules">Other common modules</h3>
 <p><a href="https://github.com/cheeriojs/cheerio" target="_blank" rel="noopener">cheerio</a>: for jquery<br>
 <a href="http://underscorejs.org" target="_blank" rel="noopener">underscore</a>: for underscore<br>
 <a href="http://bluebirdjs.com/docs/getting-started.html" target="_blank" rel="noopener">bluebird</a>: for Promise</p>
-<h2>Npm</h2>
-<h3>Install</h3>
+<h2 id="npm">Npm</h2>
+<h3 id="install">Install</h3>
 <p><code>npm install</code> installs all dependent packages (and those dependent on these packages, and…) specified in package.json.<br>
 <code>npm install &lt;package&gt;</code> installs ‘package’.</p>
 <p>options:</p>
@@ -201,7 +201,7 @@ path</p>
 <li>–save: save to <code>package.json</code> as dependency</li>
 <li>–save-dev: save to <code>package.json</code> as dependencyDev</li>
 </ul>
-<h3>Others</h3>
+<h3 id="others">Others</h3>
 <p>create a symlink on mac</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /path/to/origin /path/to/link</span><br></pre></td></tr></table></figure>
 
@@ -214,7 +214,7 @@ path</p>
 
 </div>
 
-    <a data-url="https://guyong.xyz/web/node_basics.html" data-id="cjllxij8y001ppipyxmhglh3l" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/web/node_basics.html" data-id="cjlmdw7dh001p6vpyskeqc686" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

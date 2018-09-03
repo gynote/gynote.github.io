@@ -5,27 +5,30 @@
     
     <title>Notes for Learning Python 5th | GYNote</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Types and Operations Objects are pieces of memory, with values and sets of associated operations. Everything we process in Python programs is a kind of obj  The Python Conceptual Hierarchy:   1. Progr">
+    <meta name="description" content="* Types and Operations * Core Types     * Numbers     * String     * Lists and Dictionaries     * Tuples, files and everything else          * Statements and Syntax * Assignments, Expressions, and Pri">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Notes for Learning Python 5th">
 <meta property="og:url" content="https://guyong.xyz/python/notes for learning python.html">
 <meta property="og:site_name" content="GYNote">
-<meta property="og:description" content="Types and Operations Objects are pieces of memory, with values and sets of associated operations. Everything we process in Python programs is a kind of obj  The Python Conceptual Hierarchy:   1. Progr">
+<meta property="og:description" content="* Types and Operations * Core Types     * Numbers     * String     * Lists and Dictionaries     * Tuples, files and everything else          * Statements and Syntax * Assignments, Expressions, and Pri">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://guyong.xyz/images/2018-09-03-12-05-36.png">
 <meta property="og:image" content="https://guyong.xyz/images/2018-09-03-12-09-34.png">
 <meta property="og:image" content="https://guyong.xyz/images/2018-09-03-12-10-38.png">
 <meta property="og:image" content="https://guyong.xyz/images/2018-09-03-12-13-34.png">
+<meta property="og:image" content="https://guyong.xyz/images/2018-09-03-16-34-23.png">
 <meta property="og:image" content="https://guyong.xyz/images/2018-09-03-12-14-52.png">
 <meta property="og:image" content="https://guyong.xyz/images/2018-09-03-12-17-54.png">
+<meta property="og:image" content="https://guyong.xyz/images/2018-09-03-16-35-48.png">
 <meta property="og:image" content="https://guyong.xyz/images/2018-09-03-12-18-20.png">
+<meta property="og:image" content="https://guyong.xyz/images/2018-09-03-16-36-56.png">
 <meta property="og:image" content="https://guyong.xyz/images/2018-09-03-12-18-57.png">
 <meta property="og:image" content="https://guyong.xyz/images/2018-09-03-12-03-26.png">
 <meta property="og:image" content="https://guyong.xyz/images/2018-09-03-13-40-51.png">
-<meta property="og:updated_time" content="2018-09-03T06:53:43.000Z">
+<meta property="og:updated_time" content="2018-09-03T14:32:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Notes for Learning Python 5th">
-<meta name="twitter:description" content="Types and Operations Objects are pieces of memory, with values and sets of associated operations. Everything we process in Python programs is a kind of obj  The Python Conceptual Hierarchy:   1. Progr">
+<meta name="twitter:description" content="* Types and Operations * Core Types     * Numbers     * String     * Lists and Dictionaries     * Tuples, files and everything else          * Statements and Syntax * Assignments, Expressions, and Pri">
 <meta name="twitter:image" content="https://guyong.xyz/images/2018-09-03-12-05-36.png">
     
 
@@ -165,7 +168,7 @@
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/python/notes for learning python.html">
-            <time datetime="2018-09-03T06:53:43.000Z" itemprop="datePublished">2018-09-03</time>
+            <time datetime="2018-09-03T14:32:15.000Z" itemprop="datePublished">2018-09-03</time>
         </a>
     </div>
 
@@ -185,7 +188,8 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h1>Types and Operations</h1>
+            <p><div class="table-of-contents"><ul><li><a href="#types-and-operations">Types and Operations</a><ul><li><a href="#core-types">Core Types</a></li><li><a href="#numbers">Numbers</a></li><li><a href="#string">String</a></li><li><a href="#lists-and-dictionaries">Lists and Dictionaries</a></li><li><a href="#tuples%2C-files-and-everything-else">Tuples, files and everything else</a></li></ul></li><li><a href="#statements-and-syntax">Statements and Syntax</a><ul><li><a href="#assignments%2C-expressions%2C-and-prints">Assignments, Expressions, and Prints</a></li><li><a href="#if-tests-and-syntax-rules">if Tests and Syntax Rules</a></li><li><a href="#while-and-for-loops">while and for Loops</a></li><li><a href="#iterations-and-comprehensions">Iterations and Comprehensions</a></li><li><a href="#documentation-interlude">Documentation Interlude</a></li></ul></li></ul></div></p>
+<h1 id="types-and-operations">Types and Operations</h1>
 <p>Objects are pieces of memory, with values and sets of associated operations. Everything we process in Python programs is a kind of obj</p>
 <p>The Python Conceptual Hierarchy:</p>
 <ol>
@@ -194,9 +198,9 @@
 <li>Statements contain expressions.</li>
 <li>Expressions create and process objects.</li>
 </ol>
-<p><img src="../images/2018-09-03-12-05-36.png" alt="Table 4-1"></p>
-<p>In formal terms, this means that Python is dynamically typed , a model that keeps track of types for you automatically instead of requiring declaration code, but it is also strongly typed, a constraint that means you can perform on an object only operations that are valid for its type.</p>
-<h2>Core Types</h2>
+<p><img src="../images/2018-09-03-12-05-36.png" alt="Table 4-1"><br>
+In formal terms, this means that Python is dynamically typed , a model that keeps track of types for you automatically instead of requiring declaration code, but it is also strongly typed, a constraint that means you can perform on an object only operations that are valid for its type.</p>
+<h2 id="core-types">Core Types</h2>
 <p>Immutable: number, string, tuple, bytes<br>
 Mutable: list, dictionary, set, bytearray</p>
 <p>Primitive: number<br>
@@ -219,7 +223,7 @@ Unicode encoding and decoding automatically when writing and reading data, while
 <p>Sets are unordered collections of unique and immutable objects.<br>
 Decimal, Fraction, booleans</p>
 <p>As you’ll learn, in Python, we code to object interfaces (operations supported), not to types.</p>
-<h2>Numbers</h2>
+<h2 id="numbers">Numbers</h2>
 <p><img src="../images/2018-09-03-12-09-34.png" alt="Table 5-1"></p>
 <p>Floating-point numbers are implemented as C “doubles” in standard CPython, and therefore get as much precision as the C compiler used to build the Python interpreter gives to doubles.</p>
 <p>built-in calls: hex(I), oct(I), bin(I), int(str,base), X.bit_length(),round(X), X.as_integer_ratio()</p>
@@ -254,9 +258,10 @@ If a[:], a[k] appears in left side of assignment, they referred to the original 
 <p>Because everything  seems to work by assignment and references<br>
 in Python, a basic understanding of this model is useful in many different contexts. As you’ll see, it works the same in assignment statements, function arguments, for  loop variables, module imports, class attributes, and more. The good news is that there is just one  assignment model in Python;</p>
 <p>weakref</p>
-<h2>String</h2>
-<p><img src="../images/2018-09-03-12-13-34.png" alt="Table 7-1"></p>
-<p>String literal forms:</p>
+<h2 id="string">String</h2>
+<p><img src="../images/2018-09-03-12-13-34.png" alt=""></p>
+<p><img src="../images/2018-09-03-16-34-23.png" alt="Table 7-1"><br>
+String literal forms:</p>
 <ul>
 <li>Single quotes: ‘spa&quot;m’</li>
 <li>Double quotes: “spa’m”</li>
@@ -289,9 +294,10 @@ The %  expressions tend to be a bit simpler and more concise; the format  meth
 <li>sequences</li>
 <li>mappings</li>
 </ul>
-<h2>Lists and Dictionaries</h2>
-<p><img src="../images/2018-09-03-12-17-54.png" alt="Table 8-1"></p>
-<p>Slice assignment, the last operation in the preceding example, replaces an entire section of a list in a single step. Because it can be a bit complex, it is perhaps best thought of as a combination of two steps:</p>
+<h2 id="lists-and-dictionaries">Lists and Dictionaries</h2>
+<p><img src="../images/2018-09-03-12-17-54.png" alt=""><br>
+<img src="../images/2018-09-03-16-35-48.png" alt="Table 8-1"><br>
+Slice assignment, the last operation in the preceding example, replaces an entire section of a list in a single step. Because it can be a bit complex, it is perhaps best thought of as a combination of two steps:</p>
 <ol>
 <li>Deletion. The slice you specify to the left of the = is deleted.</li>
 <li>Insertion. The new items contained in the iterable object to the right of the = are inserted into the list on the left, at the place where the old slice was deleted.<br>
@@ -318,8 +324,9 @@ are treated the same as their keys  views in this context:</p>
 sorted call (introduced in Chapter 4 and covered in this chapter) on either a keys view<br>
 or the dictionary itself:</p>
 <p>OrderedDict</p>
-<h2>Tuples, files and everything else</h2>
-<p><img src="../images/2018-09-03-12-18-57.png" alt="Table 9-1"></p>
+<h2 id="tuples%2C-files-and-everything-else">Tuples, files and everything else</h2>
+<p><img src="../images/2018-09-03-16-36-56.png" alt=""><br>
+<img src="../images/2018-09-03-12-18-57.png" alt="Table 9-1"></p>
 <p>As you can see, named tuples are a tuple/class/dictionary hybrid<br>
  (In short, named tuples build new classes that extend the tuple type, inserting a property  accessor method for each named field that maps the name to its position)<br>
  <br>
@@ -358,8 +365,8 @@ needed.</p>
 <p>If you remember that repetition, concatenation, and slicing copy only the top level of their operand objects, these sorts of cases make much more sense</p>
 <p>Beware of Cyclic  Data Structure</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>L = [<span class="string">'grail'</span>] <span class="comment"># Append reference to same object</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>L.append(L) <span class="comment"># Generates cycle in object: [...]</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>L</span><br><span class="line">[<span class="string">'grail'</span>, [...]]</span><br></pre></td></tr></table></figure>
-<h1>Statements and Syntax</h1>
-<h2>Assignments, Expressions, and Prints</h2>
+<h1 id="statements-and-syntax">Statements and Syntax</h1>
+<h2 id="assignments%2C-expressions%2C-and-prints">Assignments, Expressions, and Prints</h2>
 <ul>
 <li>Assignments create object references. (i.e. link a name with an object) They always create references to objects instead of copying the objects.</li>
 <li>Names are created when first assigned.</li>
@@ -391,12 +398,12 @@ assignment form works for function argument lists in Python 2.X (though not in 3
 <p>Although Python now supports statements like X += Y, it still does not<br>
 have C’s auto-increment/decrement operators (e.g., X++, −−X).</p>
 </blockquote>
-<h3>Naming</h3>
+<h3 id="naming">Naming</h3>
 <p>For portability, case also matters in the names of imported module files, even on platforms where the filesystems are case-insensitive.</p>
 <p>True, False, and None, are somewhat unusual in meaning—they also appear in the built-in scope of Python described in Chapter 17, and they are technically names assigned to objects.</p>
 <p>Names that begin with a single underscore (_X) are not imported by a from module import * statement</p>
 <p>Names that begin with two underscores and do not end with two more (__X) are localized (“mangled”) to enclosing classes.</p>
-<h3>Expression Statements</h3>
+<h3 id="expression-statements">Expression Statements</h3>
 <p>In Python, you can use an expression as a statement, too. Expressions are commonly used as statements in two situations:</p>
 <ul>
 <li>For calls to functions and methods</li>
@@ -407,7 +414,7 @@ have C’s auto-increment/decrement operators (e.g., X++, −−X).</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; L = L.append(4) # But append returns None, not L</span><br><span class="line">&gt;&gt;&gt; print(L) # So we lose our list!</span><br><span class="line">None</span><br></pre></td></tr></table></figure>
 <p>Normally, whether printed output is buffered in memory or not is determined by file; passing a true value to flush forcibly flushes the stream.</p>
 <p>Because the print statement just sends text to the sys.stdout.write method, you can capture printed text in your programs by assigning sys.stdout to an object whose write method processes the text in arbitrary ways</p>
-<h2>if Tests and Syntax Rules</h2>
+<h2 id="if-tests-and-syntax-rules">if Tests and Syntax Rules</h2>
 <p>There is no switch or case statement in Python</p>
 <ul>
 <li>Block and statement boundaries are detected automatically.</li>
@@ -421,7 +428,7 @@ pair.</p>
 <p>For <code>A = Y if X else Z</code>, Python runs expression Y only if X turns out to be true, and runs expression Z only if X turns out to be false.</p>
 <p>When defining classes, we can specify their Boolean nature with either the<br>
 <strong>bool</strong> or <strong>len</strong> methods.</p>
-<h2>while and for Loops</h2>
+<h2 id="while-and-for-loops">while and for Loops</h2>
 <p>The optional <strong>else</strong> block run if didn’t exit loop with <strong>break</strong></p>
 <p>Python doesn’t have what some languages call a “do until” loop statement. Python has no “go to” statement.</p>
 <p>Python 3.X (but not 2.X) allows ellipses coded as … (literally, three consecutive dots) to appear any place an expression can. Because ellipses do nothing by themselves, this can serve as an alternative to the pass statement,</p>
@@ -433,7 +440,7 @@ pair.</p>
 <p>built-in tools: range, zip, enumerate</p>
 <p>The zip function is more general than this example suggests. For instance,<br>
 it accepts any type of sequence (really, any iterable object, including files), and it accepts more than two arguments. Moreover, zip truncates result tuples at the length of the shortest sequence when the argument lengths differ.</p>
-<h2>Iterations and Comprehensions</h2>
+<h2 id="iterations-and-comprehensions">Iterations and Comprehensions</h2>
 <ul>
 <li>Iterator vs. Iterable  vs. Iteration tool/context</li>
 <li>Single scan vs. multiple scan</li>
@@ -447,7 +454,7 @@ instead of an iterable.</p>
 <p>One of the fundamental distinctions of Python 3.X is its stronger emphasis on iterators than 2.X. This, along with its Unicode model and mandated new-style classes, is one of 3.X’s most sweeping changes.</p>
 <p>Unlike <strong>range</strong>, <strong>map</strong>, <strong>zip</strong>, <strong>filter</strong> are their own iterators—after you step through their results once, they are exhausted.</p>
 <p>In Python 3.X the dictionary keys, values, and items methods return iterable view objects that generate result items one at a time.</p>
-<h2>Documentation Interlude</h2>
+<h2 id="documentation-interlude">Documentation Interlude</h2>
 <p>The PyDoc system covered here can render a module’s internal documentation as either plain text in a shell, or HTML in a web browser.</p>
 <p>The <strong>help</strong> function: press the space bar to move to the next page, Enter to go to the next line, and Q to quit:</p>
 <p>Sphinx</p>
@@ -461,7 +468,7 @@ instead of an iterable.</p>
 
 </div>
 
-    <a data-url="https://guyong.xyz/python/notes for learning python.html" data-id="cjllxij7x0017pipycals4jte" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/python/notes for learning python.html" data-id="cjlmdw7cg00176vpyq4hxoyxb" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

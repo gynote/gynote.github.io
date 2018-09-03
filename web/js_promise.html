@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="GYNote">
 <meta property="og:description" content="Promise Javascript promise, under the hood.  This article illustrate how promise works by writing its own promise library squab. It clearly shows what “promise” generally looks like.  A Promise repres">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-03T06:53:43.000Z">
+<meta property="og:updated_time" content="2018-09-03T14:32:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Js Promise">
 <meta name="twitter:description" content="Promise Javascript promise, under the hood.  This article illustrate how promise works by writing its own promise library squab. It clearly shows what “promise” generally looks like.  A Promise repres">
@@ -154,7 +154,7 @@
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/web/js_promise.html">
-            <time datetime="2018-09-03T06:53:43.000Z" itemprop="datePublished">2018-09-03</time>
+            <time datetime="2018-09-03T14:32:15.000Z" itemprop="datePublished">2018-09-03</time>
         </a>
     </div>
 
@@ -174,16 +174,16 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h1>Promise</h1>
+            <h1 id="promise">Promise</h1>
 <p><a href="https://medium.com/@ningxia/javascript-promises-under-the-hood-4ce853fcb2c9" target="_blank" rel="noopener">Javascript promise, under the hood.</a></p>
 <p>This article illustrate how promise works by writing its own promise library squab. It clearly shows what “promise” generally looks like.</p>
 <p>A Promise represents a value which may be available now, or in the future, or never.<br>
 It’s just a syntactical sugar for asynchronous function callback.<br>
 <a href="http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/0014345008539155e93fc16046d4bb7854943814c4f9dc2000" target="_blank" rel="noopener">Promise by 廖雪锋</a></p>
-<h2>Promise/A+</h2>
+<h2 id="promise%2Fa%2B">Promise/A+</h2>
 <p><a href="https://promisesaplus.com" target="_blank" rel="noopener">The official specification</a></p>
-<h5>1. A ‘promise’ is an object or function with a <code>then</code> method whose behavior conforms to this specification.</h5>
-<h5>2. A promise must be in one of three states: pending, fulfilled, or rejected.</h5>
+<h5 id="1.-a-%E2%80%98promise%E2%80%99-is-an-object-or-function-with-a-then-method-whose-behavior-conforms-to-this-specification.">1. A ‘promise’ is an object or function with a <code>then</code> method whose behavior conforms to this specification.</h5>
+<h5 id="2.-a-promise-must-be-in-one-of-three-states%3A-pending%2C-fulfilled%2C-or-rejected.">2. A promise must be in one of three states: pending, fulfilled, or rejected.</h5>
 <p>When pending, a promise:</p>
 <ul>
 <li>may transition to either the fulfilled or rejected state.</li>
@@ -197,7 +197,7 @@ When rejected, a promise:</li>
 <li>must have a reason, which must not change.</li>
 </ul>
 <p>Here, “must not change” means immutable identity (i.e. ===), but does not imply deep immutability.</p>
-<h5>3. A promise must provide a then method to access its current or eventual value or reason.</h5>
+<h5 id="3.-a-promise-must-provide-a-then-method-to-access-its-current-or-eventual-value-or-reason.">3. A promise must provide a then method to access its current or eventual value or reason.</h5>
 <p>A promise’s then method accepts two arguments (both are optional, non-function are ignored):</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">promise.then(onFulfilled, onRejected)</span><br></pre></td></tr></table></figure>
 <p><code>then</code> must return a promise</p>
@@ -214,7 +214,7 @@ When rejected, a promise:</li>
 
 </div>
 
-    <a data-url="https://guyong.xyz/web/js_promise.html" data-id="cjllxij8o001kpipy1vf1q6i4" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/web/js_promise.html" data-id="cjlmdw7d1001k6vpy7o001a06" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

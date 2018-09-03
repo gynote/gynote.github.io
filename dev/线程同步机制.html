@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="GYNote">
 <meta property="og:description" content="线程基础知识 线程同步的底层支持包括：   1. TSL （或其它）原子操作  2. 中断服务  互斥锁Mutex 最基本的同步机制是锁（Lock），包括 互斥锁(Mutex), Read-Write 锁, 空转锁。以Mutex为例：   * 对Mutex状态的判断及修改是通过机器提供的原子性指令完成的。  * 每个Mutex上有一个等待队列（waiting list)  * Lock()操作在”">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-03T06:53:43.000Z">
+<meta property="og:updated_time" content="2018-09-03T14:32:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线程同步机制">
 <meta name="twitter:description" content="线程基础知识 线程同步的底层支持包括：   1. TSL （或其它）原子操作  2. 中断服务  互斥锁Mutex 最基本的同步机制是锁（Lock），包括 互斥锁(Mutex), Read-Write 锁, 空转锁。以Mutex为例：   * 对Mutex状态的判断及修改是通过机器提供的原子性指令完成的。  * 每个Mutex上有一个等待队列（waiting list)  * Lock()操作在”">
@@ -154,7 +154,7 @@
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/dev/线程同步机制.html">
-            <time datetime="2018-09-03T06:53:43.000Z" itemprop="datePublished">2018-09-03</time>
+            <time datetime="2018-09-03T14:32:15.000Z" itemprop="datePublished">2018-09-03</time>
         </a>
     </div>
 
@@ -174,13 +174,13 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2>线程基础知识</h2>
+            <h2 id="%E7%BA%BF%E7%A8%8B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86">线程基础知识</h2>
 <p>线程同步的底层支持包括：</p>
 <ol>
 <li>TSL （或其它）原子操作</li>
 <li>中断服务</li>
 </ol>
-<h2>互斥锁Mutex</h2>
+<h2 id="%E4%BA%92%E6%96%A5%E9%94%81mutex">互斥锁Mutex</h2>
 <p>最基本的同步机制是锁（Lock），包括 互斥锁(Mutex), Read-Write 锁, 空转锁。以Mutex为例：</p>
 <ul>
 <li>对Mutex状态的判断及修改是通过机器提供的原子性指令完成的。</li>
@@ -189,7 +189,7 @@
 <li>挂起是指将线程置于”睡眠“状态，并调用线程调试函数切换到其它线程</li>
 <li>Unlock() 操作会释放锁, 并且唤醒waiting list中的一个（或所有）线程。</li>
 </ul>
-<h2>Condition Variables</h2>
+<h2 id="condition-variables">Condition Variables</h2>
 <p>pthread_join()解决的是多个线程等待同一个线程的结束。Condition variable解决的是多个线程等待某个条件发生。</p>
 <ul>
 <li>Condition主要用来实现通知/同步机制，内部也是由waiting list实现。实际上Mutex也有”通知唤醒“功能，但Mutex功能过于简单，用来实现通知/同步功能时容易出问题：每个线程需要不断的试图获取Mutex锁并检查条件是否发生，从而浪费大量资源。（python的condition内部就是用多个waiter lock实现的。）</li>
@@ -198,10 +198,10 @@
 <li>notify() 会唤唤醒waiting list中的线程</li>
 <li>检测条件状态要用while, 发信号要在临界区</li>
 </ul>
-<h2>Semaphore 信号量</h2>
+<h2 id="semaphore-%E4%BF%A1%E5%8F%B7%E9%87%8F">Semaphore 信号量</h2>
 <p>semaphore是进程间PV，可以理解为带计数器的Condition variable</p>
-<h2>Python中的Event, Queue</h2>
-<h2>References</h2>
+<h2 id="python%E4%B8%AD%E7%9A%84event%2C-queue">Python中的Event, Queue</h2>
+<h2 id="references">References</h2>
 <p><a href="http://blog.csdn.net/goondrift/article/details/19044361" target="_blank" rel="noopener">操作系统如何实现mutex</a><br>
 <a href="https://casatwy.com/pthreadde-ge-chong-tong-bu-ji-zhi.html" target="_blank" rel="noopener">pthread的各种同步机制</a><br>
 <a href="https://stackoverflow.com/questions/12551341/when-is-a-condition-variable-needed-isnt-a-mutex-enough" target="_blank" rel="noopener">When is a condition variable needed, isn’t a mutex enough?</a><br>
@@ -218,7 +218,7 @@
 
 </div>
 
-    <a data-url="https://guyong.xyz/dev/线程同步机制.html" data-id="cjllxij7f000zpipyv9yoi9hd" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/dev/线程同步机制.html" data-id="cjlmdw7c3000z6vpy69ag5d76" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

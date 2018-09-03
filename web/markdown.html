@@ -14,7 +14,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://cloud.githubusercontent.com/assets/1908863/14398210/0e408954-fda8-11e5-9eb4-562d7c0ca431.gif">
 <meta property="og:image" content="http://i.imgur.com/rwIPIA8.gif">
-<meta property="og:updated_time" content="2018-09-03T06:53:43.000Z">
+<meta property="og:updated_time" content="2018-09-03T14:32:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Markdown">
 <meta name="twitter:description" content="1. Introduction Markdown is a plain text format for writing structured documents.  The overriding design goal for Markdown’s formatting syntax is to make it as readable as possible. The idea is that a">
@@ -157,7 +157,7 @@
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/web/markdown.html">
-            <time datetime="2018-09-03T06:53:43.000Z" itemprop="datePublished">2018-09-03</time>
+            <time datetime="2018-09-03T14:32:15.000Z" itemprop="datePublished">2018-09-03</time>
         </a>
     </div>
 
@@ -177,15 +177,15 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2>1. Introduction</h2>
+            <h2 id="1.-introduction">1. Introduction</h2>
 <p>Markdown is a plain text format for writing structured documents.</p>
 <blockquote>
 <p>The overriding design goal for Markdown’s formatting syntax is to make it as readable as possible. The idea is that a Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions.</p>
 </blockquote>
 <p>John Gruber’s <a href="http://daringfireball.net/projects/markdown/syntax" target="_blank" rel="noopener">canonical description of Markdown’s syntax</a> does not specify the syntax unambiguously. A group of fans of Markdown propose a standard unambiguous syntax specification for Markdown: the <a href="http://commonmark.org" target="_blank" rel="noopener">CommonMark</a> sepc.</p>
-<h2>2. Prlimilaries of CommonMark</h2>
+<h2 id="2.-prlimilaries-of-commonmark">2. Prlimilaries of CommonMark</h2>
 <p>Below are some important points, for detail refer to <a href="http://spec.commonmark.org/" target="_blank" rel="noopener">http://spec.commonmark.org/</a></p>
-<h3>Blocks and inlines</h3>
+<h3 id="blocks-and-inlines">Blocks and inlines</h3>
 <ul>
 <li>
 <p>We can think of a document as a sequence of <strong>blocks</strong>—structural elements like paragraphs, block quotations, lists, headings, rules, and code blocks. Some blocks (like block quotes and list items) contain other blocks; others (like headings and paragraphs) contain <strong>inline</strong> content—text, links, emphasized text, images, code, and so on.</p>
@@ -235,7 +235,7 @@ Leaf blocks includes:</p>
 </ul>
 </li>
 </ul>
-<h3>Parsing strategy</h3>
+<h3 id="parsing-strategy">Parsing strategy</h3>
 <p>Parsing has two phases:</p>
 <ul>
 <li>
@@ -247,7 +247,7 @@ Leaf blocks includes:</p>
 </ul>
 <p>At each point in processing, the document is represented as a tree of blocks. The root of the tree is a document block. The document may have any number of other blocks as children. These children may, in turn, have other blocks as children.</p>
 <p>In phase 1, the last child of a block is normally considered open, meaning that subsequent lines of input can alter its contents. (Blocks that are not open are closed.) Once all of the input has been parsed, all open blocks are closed. Then in phase 2, We “walk the tree,” visiting every node, and parse raw string contents of paragraphs and headings as inlines.</p>
-<h2>Github flavored Markdown</h2>
+<h2 id="github-flavored-markdown">Github flavored Markdown</h2>
 <p><a href="https://help.github.com/categories/writing-on-github/" target="_blank" rel="noopener">GFM info page</a><br>
 <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank" rel="noopener">GFM cheatsheet</a><br>
 Below are some features not included in CommonMark spec.</p>
@@ -274,10 +274,10 @@ Below are some features not included in CommonMark spec.</p>
 </ul>
 </li>
 </ol>
-<h2>Remarkable</h2>
+<h2 id="remarkable">Remarkable</h2>
 <p>Refer to <a href="https://github.com/jonschlinkert/remarkable" target="_blank" rel="noopener">remarkable on github</a> for details.<br>
 Supports the CommonMark spec + syntax extensions + sugar (URL autolinking, typographer).</p>
-<h3>Syntax extensions</h3>
+<h3 id="syntax-extensions">Syntax extensions</h3>
 <p>Enabled by default:</p>
 <ul>
 <li><a href="http://johnmacfarlane.net/pandoc/README.html#footnotes" target="_blank" rel="noopener">Footnotes</a></li>
@@ -294,7 +294,7 @@ Supports the CommonMark spec + syntax extensions + sugar (URL autolinking, typog
 <li><strong>&lt;mark&gt;</strong> - <code>==marked text==</code> (experimental)</li>
 </ul>
 <p><strong>HEADS UP!</strong>: Experimental extensions can be changed later for something like <a href="http://criticmarkup.com/" target="_blank" rel="noopener">Critic Markup</a>, but you will still be able to use old-style rules via external plugins if you prefer.</p>
-<h2>Markdown-preview-enhanced</h2>
+<h2 id="markdown-preview-enhanced">Markdown-preview-enhanced</h2>
 <p>Refer to <a href="https://atom.io/packages/markdown-preview-enhanced" target="_blank" rel="noopener">Markdown Preview Enhanced</a> for details.<br>
 This atom plugin uses <strong>remarkable</strong> to render markdown. Here is how it works:</p>
 <ul>
@@ -347,7 +347,7 @@ In addition, it fetaures:</li>
 <li>Task list (GFM)</li>
 <li>Front matter</li>
 </ul>
-<h2>regex in c++</h2>
+<h2 id="regex-in-c%2B%2B">regex in c++</h2>
 <p>js regex -&gt; c++ regex 转换规则:</p>
 <ol>
 <li>所有的\变成\，除了: \u</li>
@@ -373,7 +373,7 @@ In addition, it fetaures:</li>
 
 </div>
 
-    <a data-url="https://guyong.xyz/web/markdown.html" data-id="cjllxij8q001lpipy2smey1vi" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/web/markdown.html" data-id="cjlmdw7d3001l6vpyivrc66g8" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding

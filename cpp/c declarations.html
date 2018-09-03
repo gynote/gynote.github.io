@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="GYNote">
 <meta property="og:description" content="How to scramble a declaration In C, a type T can be one of the follows:   1. Base Type BT     BT x;     Base type BT ca be primitive types (int, double) and composite types (struct, union)  2. Array o">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-03T06:53:43.000Z">
+<meta property="og:updated_time" content="2018-09-03T14:32:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C Declaration">
 <meta name="twitter:description" content="How to scramble a declaration In C, a type T can be one of the follows:   1. Base Type BT     BT x;     Base type BT ca be primitive types (int, double) and composite types (struct, union)  2. Array o">
@@ -154,7 +154,7 @@
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/cpp/c declarations.html">
-            <time datetime="2018-09-03T06:53:43.000Z" itemprop="datePublished">2018-09-03</time>
+            <time datetime="2018-09-03T14:32:15.000Z" itemprop="datePublished">2018-09-03</time>
         </a>
     </div>
 
@@ -176,10 +176,10 @@
             
                 <div id="toc" class="toc-article">
                 <strong class="toc-title">Catalogue</strong>
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">How to scramble a declaration</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.</span> <span class="toc-text">Basic rules for legal declarations</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.2.</span> <span class="toc-text">Precedence rule</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.3.</span> <span class="toc-text">Unscramble steps</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.4.</span> <span class="toc-text">References</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#how-to-scramble-a-declaration"><span class="toc-number">1.</span> <span class="toc-text">How to scramble a declaration</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#basic-rules-for-legal-declarations"><span class="toc-number">1.1.</span> <span class="toc-text">Basic rules for legal declarations</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#precedence-rule"><span class="toc-number">1.2.</span> <span class="toc-text">Precedence rule</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#unscramble-steps"><span class="toc-number">1.3.</span> <span class="toc-text">Unscramble steps</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#references"><span class="toc-number">1.4.</span> <span class="toc-text">References</span></a></li></ol></li></ol>
                 </div>
             
-            <h2>How to scramble a declaration</h2>
+            <h2 id="how-to-scramble-a-declaration">How to scramble a declaration</h2>
 <p>In C, a <strong>type T</strong> can be one of the follows:</p>
 <ol>
 <li>Base Type BT<br>
@@ -192,7 +192,7 @@ Base type <code>BT</code> ca be primitive types (int, double) and composite type
 <li>Pointer to type PT<br>
 <code>PT *x</code>;</li>
 </ol>
-<h3>Basic rules for legal declarations</h3>
+<h3 id="basic-rules-for-legal-declarations">Basic rules for legal declarations</h3>
 <ul>
 <li>a function can’t return a function, so you’ll never see <code>foo()()</code></li>
 <li>a function can’t return an array, so you’ll never see <code>foo()[]</code></li>
@@ -203,7 +203,7 @@ Base type <code>BT</code> ca be primitive types (int, double) and composite type
 <li>AT can’t be FT</li>
 <li>FT can’t be AT, FT</li>
 </ul>
-<h3>Precedence rule</h3>
+<h3 id="precedence-rule">Precedence rule</h3>
 <p>To unscramble a declaration, we also need the <strong>precedence rule</strong>:</p>
 <ol>
 <li>parentheses grouping together parts of a declaration</li>
@@ -230,7 +230,7 @@ Base type <code>BT</code> ca be primitive types (int, double) and composite type
 <blockquote>
 <p>Note that there can be grouping parentheses, as well as <code>const</code> and  <code>voatile</code>. We ignore them above.</p>
 </blockquote>
-<h3>Unscramble steps</h3>
+<h3 id="unscramble-steps">Unscramble steps</h3>
 <ol>
 <li>Go to the leftmost identifier, say “<em>identifier</em> is”</li>
 <li>Look at the next token to the right. If it is a square bracket, for each pair, say “array of”. Go to step 4</li>
@@ -239,7 +239,7 @@ Base type <code>BT</code> ca be primitive types (int, double) and composite type
 <li>If the token to the left is any of <code>const</code>, <code>volatile</code>, <code>*</code>, keep reading tokens to the left, until it’s not one of these three. Go to step 4.</li>
 <li>The tokens that remain form the basic type of the declaration.</li>
 </ol>
-<h3>References</h3>
+<h3 id="references">References</h3>
 <ol>
 <li><a href="https://book.douban.com/subject/1784687/" target="_blank" rel="noopener">Expert C programming</a></li>
 </ol>
@@ -253,7 +253,7 @@ Base type <code>BT</code> ca be primitive types (int, double) and composite type
 
 </div>
 
-    <a data-url="https://guyong.xyz/cpp/c declarations.html" data-id="cjllxij6n000kpipyvi4zh0ys" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/cpp/c declarations.html" data-id="cjlmdw7ba000j6vpyp1np8e4r" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -328,19 +328,19 @@ Base type <code>BT</code> ca be primitive types (int, double) and composite type
         
 <nav id="article-nav">
     
-        <a href="/cpp/building-Process-of-Cpp.html" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/cpp/Target: reference.html" id="article-nav-newer" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Newer</strong>
             <div class="article-nav-title">
                 
-                    Building Process
+                    Target:references
                 
             </div>
         </a>
     
     
-        <a href="/cpp/functions.html" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/cpp/building-Process-of-Cpp.html" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">Function</div>
+            <div class="article-nav-title">Building Process</div>
         </a>
     
 </nav>

@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="GYNote">
 <meta property="og:description" content="lvalues, rvalues  * lvalues/rvalues are expression types, used to tell compiler whether it’s eligible to be moved from.  * rvalues are eligible to be moved from, but not guaranted. const rvalues are n">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-03T06:53:43.000Z">
+<meta property="og:updated_time" content="2018-09-03T14:32:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Target:references">
 <meta name="twitter:description" content="lvalues, rvalues  * lvalues/rvalues are expression types, used to tell compiler whether it’s eligible to be moved from.  * rvalues are eligible to be moved from, but not guaranted. const rvalues are n">
@@ -154,7 +154,7 @@
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/cpp/Target: reference.html">
-            <time datetime="2018-09-03T06:53:43.000Z" itemprop="datePublished">2018-09-03</time>
+            <time datetime="2018-09-03T14:32:15.000Z" itemprop="datePublished">2018-09-03</time>
         </a>
     </div>
 
@@ -174,7 +174,7 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2>lvalues, rvalues</h2>
+            <h2 id="lvalues%2C-rvalues">lvalues, rvalues</h2>
 <ul>
 <li>lvalues/rvalues are expression types, used to tell compiler whether it’s eligible to be moved from.</li>
 <li>rvalues are eligible to be moved from, but not guaranted. <em>const rvalues</em> are not eligible.</li>
@@ -187,7 +187,7 @@ So, a variable name is an “owner” of the object it stands for. A pointer is 
 An lvalue reference returned by a function has an “owner” (e.g. [] operator), hence it’s an lvalue.<br>
 An rvalue reference returned by a function doesn’t have an “owner” (e.g. std::move）, hence it’s an rvalue. However, if it’s afterwards binded to a variable name, it has a “owner”.</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">function <span class="title">f</span><span class="params">(Widget&amp; w)</span></span>&#123;</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function">function <span class="title">f</span><span class="params">(Widget&amp;&amp; w)</span></span>&#123;</span><br><span class="line">  <span class="comment">//...    // w is an lvalue, one reason to consider w to be an "owner" is that w may be used multiple times in the function body. We need to assume w can access its undestructed value.</span></span><br><span class="line">&#125;</span><br><span class="line">Widget w;</span><br><span class="line">f(<span class="built_in">std</span>::move(w));  <span class="comment">// std::move(w) is an rvalue, so the move version of f is called</span></span><br></pre></td></tr></table></figure>
-<h2>reference</h2>
+<h2 id="reference">reference</h2>
 <ol>
 <li>
 <p>For effiency, pointers to large objects are used. However, pointers have some annoy features:</p>
@@ -216,17 +216,17 @@ An rvalue reference returned by a function doesn’t have an “owner” (e.g. s
 <p>The first two are both called <em>lvalue reference</em>.</p>
 </li>
 </ol>
-<h2>lvalue reference</h2>
+<h2 id="lvalue-reference">lvalue reference</h2>
 <p>The initializer for a “plain” <strong>T&amp;</strong> must be an lvalue of type <strong>T</strong><br>
 The initializer for a <strong>const T&amp;</strong> need not be an lvalue or even of type <strong>T</strong>. In such cases, a temporary object is created and implicit conversion is applied if necessary and it points to the temporary object. (otherwise it points to the initializer object)</p>
-<h2>rvalue reference</h2>
+<h2 id="rvalue-reference">rvalue reference</h2>
 <p>An rvalue reference can bind to an rvalue, but not to an lvalue.<br>
 Both a const lvalue reference and an rvalue reference can bind to an rvalue. However, the purposes will be fundamentally different:</p>
 <ul>
 <li>We use rvalue references to implement a “destructive read” for optimization of what would otherwise have required a copy.</li>
 <li>We use a <strong>const</strong> lvalue reference to prevent modification of an argument.</li>
 </ul>
-<h2>reference binding</h2>
+<h2 id="reference-binding">reference binding</h2>
 <ol>
 <li>lvalue references</li>
 <li>const lvalue reference</li>
@@ -238,12 +238,12 @@ const lvalue may binds to #2<br>
 rvalue may binds to #3, #4, #2<br>
 const rvalue may binds to #4, #2</p>
 <p>The binding order is used in function overloading.</p>
-<h2>reference collapse</h2>
+<h2 id="reference-collapse">reference collapse</h2>
 <p>In <strong>reference collapse</strong>, lvalue reference always wins.<br>
 Reference to reference can only happen as the result of an alias or a template type argument. (i.e. when the compiler “calculate” a reference type)</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> &amp;&amp; &amp;r - i;  <span class="comment">//error</span></span><br></pre></td></tr></table></figure>
-<h2>Universal reference</h2>
-<h2>std::move and std::forward</h2>
+<h2 id="universal-reference">Universal reference</h2>
+<h2 id="std%3A%3Amove-and-std%3A%3Aforward">std::move and std::forward</h2>
 <ul>
 <li><strong>std::move</strong> performs an unconditional cast to an rvalue. In and of itself, it doesn’t move anything.</li>
 <li><strong>std::forward</strong> casts its argument to an rvalue only if that argument is bound to an rvalue.</li>
@@ -260,7 +260,7 @@ Reference to reference can only happen as the result of an alias or a template t
 
 </div>
 
-    <a data-url="https://guyong.xyz/cpp/Target: reference.html" data-id="cjllxij6j000ipipytr22br5v" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/cpp/Target: reference.html" data-id="cjlmdw7b9000i6vpyemo47m32" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -345,9 +345,9 @@ Reference to reference can only happen as the result of an alias or a template t
         </a>
     
     
-        <a href="/cpp/building-Process-of-Cpp.html" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/cpp/c declarations.html" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">Building Process</div>
+            <div class="article-nav-title">C Declaration</div>
         </a>
     
 </nav>

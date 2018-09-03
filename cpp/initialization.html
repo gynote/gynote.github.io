@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="GYNote">
 <meta property="og:description" content="Initialization For each declarator, the initializer may be one of the following:   * ( expression-list )    comma-separated list of arbitrary expressions and braced-init-lists in parentheses  * = expr">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-03T06:53:43.000Z">
+<meta property="og:updated_time" content="2018-09-03T14:32:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Initialization">
 <meta name="twitter:description" content="Initialization For each declarator, the initializer may be one of the following:   * ( expression-list )    comma-separated list of arbitrary expressions and braced-init-lists in parentheses  * = expr">
@@ -154,7 +154,7 @@
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/cpp/initialization.html">
-            <time datetime="2018-09-03T06:53:43.000Z" itemprop="datePublished">2018-09-03</time>
+            <time datetime="2018-09-03T14:32:15.000Z" itemprop="datePublished">2018-09-03</time>
         </a>
     </div>
 
@@ -176,10 +176,10 @@
             
                 <div id="toc" class="toc-article">
                 <strong class="toc-title">Catalogue</strong>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">Initialization</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.0.1.</span> <span class="toc-text">Non-local variables</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.0.2.</span> <span class="toc-text">Static local variables</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.</span> <span class="toc-text">One Initializer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.2.</span> <span class="toc-text">Missing Initializers</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.3.</span> <span class="toc-text">Initializer Lists</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.3.1.</span> <span class="toc-text">{}-lists</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">Class Object Initialization</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.1.</span> <span class="toc-text">Initialization Without (used-declared) Constructors</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.2.</span> <span class="toc-text">Initialization Using Constructors</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#initialization"><span class="toc-number">1.</span> <span class="toc-text">Initialization</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#non-local-variables"><span class="toc-number">1.0.1.</span> <span class="toc-text">Non-local variables</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#static-local-variables"><span class="toc-number">1.0.2.</span> <span class="toc-text">Static local variables</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#one-initializer"><span class="toc-number">1.1.</span> <span class="toc-text">One Initializer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#missing-initializers"><span class="toc-number">1.2.</span> <span class="toc-text">Missing Initializers</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#initializer-lists"><span class="toc-number">1.3.</span> <span class="toc-text">Initializer Lists</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%7B%7D-lists"><span class="toc-number">1.3.1.</span> <span class="toc-text">{}-lists</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#class-object-initialization"><span class="toc-number">2.</span> <span class="toc-text">Class Object Initialization</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#initialization-without-(used-declared)-constructors"><span class="toc-number">2.1.</span> <span class="toc-text">Initialization Without (used-declared) Constructors</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#initialization-using-constructors"><span class="toc-number">2.2.</span> <span class="toc-text">Initialization Using Constructors</span></a></li></ol></li></ol>
                 </div>
             
-            <h1>Initialization</h1>
+            <h1 id="initialization">Initialization</h1>
 <p>For each declarator, the initializer may be one of the following:</p>
 <ul>
 <li>( <em>expression-list</em> )<br>
@@ -199,13 +199,13 @@ braced-init-list: possibly empty, comma-separated list of expressions and other 
 </ul>
 <p>If no initializer is provided, the rules of default initialization apply.<br>
 constant initialization</p>
-<h3>Non-local variables</h3>
+<h3 id="non-local-variables">Non-local variables</h3>
 <ul>
 <li>Static initialization: constant/zero initialization</li>
 <li>Dynamic initialization</li>
 </ul>
-<h3>Static local variables</h3>
-<h2>One Initializer</h2>
+<h3 id="static-local-variables">Static local variables</h3>
+<h2 id="one-initializer">One Initializer</h2>
 <p>If an initializer is specified for an object, that initializer determines the initial value of an object. An initializer can use one of four syntactic styles:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">X a1 &#123;v&#125;;   // &#123;&#125; initialization (since c++11)</span><br><span class="line">X a2 = &#123;v&#125;;</span><br><span class="line">X a3 = v;</span><br><span class="line">X a4(v);  // invoke constructor explictly</span><br></pre></td></tr></table></figure>
 <p>Of these, only the first can be used in every context, and I strongly recommend its use. The two forms using = are what you use in C. Old habits die hard, so I sometimes (inconsistently) use = when initializing a simple variable with a simple value.</p>
@@ -231,7 +231,7 @@ There is no advantage to using {} initialization, and one trap, when using auto 
 <li>Classes: §17.3.1 (not using constructors), §17.3.2 (using constructors), §17.3.3 (default), §17.4 (member and base), §17.5 (copy and move)</li>
 <li>User-defined containers: §17.3.4</li>
 </ul>
-<h2>Missing Initializers</h2>
+<h2 id="missing-initializers">Missing Initializers</h2>
 <p>For many types, including all built-in types, it is possible to leave out the initializer. If you do that – and that has unfortunately been common – the situation is more complicated. If you don’t like the complications, just initialize consistently. The only really good case for an uninitialized variable is a large input buffer.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">constexpr int max = 1024*1024;</span><br><span class="line">char buf[max];</span><br><span class="line">some_stream.get(buf,max); // read at most max characters into buf</span><br></pre></td></tr></table></figure>
 <p>We could easily have initialized buf:</p>
@@ -240,7 +240,7 @@ There is no advantage to using {} initialization, and one trap, when using auto 
 <p>If no initializer is specified, a global (§6.3.4), namespace (§14.3.1), local static (§12.1.8), or static member (§16.2.12) (collectively called static objects) is initialized to {} of the appropriate type. For example:</p>
 <p>Local variables and objects created on the free store (sometimes called dynamic objects or heap objects; §11.2) are not initialized by default unless they are of user-defined types with a default constructor (§17.3.3). For example:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">int a; // global, means &quot;int a&#123;&#125;;&quot; so that a becomes 0</span><br><span class="line">void f() &#123;</span><br><span class="line">static int b; // local static, means &quot;static int b&#123;&#125;;&quot; so that b becomes 0</span><br><span class="line">int x; // x does not have a well-defined value</span><br><span class="line">char buf[1024];  // buf[i] does not have a well-defined value</span><br><span class="line">int* p &#123;new int&#125;; // *p does not have a well-defined value</span><br><span class="line">char* q &#123;new char[1024]&#125;; // q[i] does not have a well-defined value</span><br><span class="line">string s; // s==&quot;&quot; because of string&apos;s default constructor</span><br><span class="line">vector&lt;char&gt; v; // v==&#123;&#125; because of vector&apos;s default constructor</span><br><span class="line">string* ps &#123;new string&#125;; // *ps is &quot;&quot; because of string&apos;s default constructor</span><br><span class="line">// ... &#125;</span><br></pre></td></tr></table></figure>
-<h2>Initializer Lists</h2>
+<h2 id="initializer-lists">Initializer Lists</h2>
 <p>More complicated objects can require more than one value as an initializer. This is primarily handled by initializer lists delimited by { and }. For example:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int a[] = &#123; 1, 2 &#125;; // array initializer</span><br><span class="line">struct S &#123; int x, string s &#125;;</span><br><span class="line">S s = &#123; 1, &quot;Helios&quot; &#125;;  // struct initializer</span><br><span class="line">complex&lt;double&gt; z = &#123; 0, pi &#125;; // use constructor</span><br><span class="line">vector&lt;double&gt; v = &#123; 0.0, 1.1, 2.2, 3.3 &#125;; // use list constructor</span><br></pre></td></tr></table></figure>
 <p>In the cases above, the = is redundant. However, some prefer to add it to emphasize that a set of values are used to initialize a set of member variables.</p>
@@ -250,17 +250,17 @@ There is no advantage to using {} initialization, and one trap, when using auto 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">complex&lt;double&gt; z1(1,2); // function-style initializer (initialization by constructor)</span><br><span class="line">complex&lt;double&gt; f1(); //function declaration</span><br><span class="line">complex&lt;double&gt; z2 &#123;1,2&#125;; // initialization by constructor to &#123;1,2&#125;</span><br><span class="line">complex&lt;double&gt; f2 &#123;&#125;; //initialization by constructor to the default value &#123;0,0&#125;</span><br></pre></td></tr></table></figure>
 <p>Note that initialization using the {} notation does not narrow (§6.3.5). When using auto, a {}-list has its type deduced to<br>
 std::initializer_list<t>.</t></p>
-<h3>{}-lists</h3>
+<h3 id="%7B%7D-lists">{}-lists</h3>
 <p>A {}-list is used to construct an object of some type, so the number of elements and their types must be what is required to construct an object of that type.</p>
 <p>In addition to their use for initializing named variables (§6.3.5.2), {}-lists can be used as expressions in many (but not all) places. They can appear in two forms:<br>
 [1] Qualified by a type, T{…}, meaning “create an object of type T initialized by T{…}”; §11.3.2<br>
 [2] Unqualified {…}, for which the the type must be determined from the context of use; §11.3.3</p>
-<h1>Class Object Initialization</h1>
+<h1 id="class-object-initialization">Class Object Initialization</h1>
 <p>Problems:</p>
 <ul>
 <li>copy initialization vs. copy constructors vs. copy assignment</li>
 </ul>
-<h2>Initialization Without (used-declared) Constructors</h2>
+<h2 id="initialization-without-(used-declared)-constructors">Initialization Without (used-declared) Constructors</h2>
 <p>We cannot define a constructor for a built-in type, yet we can initialize it with a value of suitable type. For example:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int a &#123;1&#125;;</span><br><span class="line">char* p &#123;nullptr&#125;;</span><br></pre></td></tr></table></figure>
 <p>Similarly, we can initialize objects of a class for which we have not defined a constructor using</p>
@@ -284,7 +284,7 @@ The reason for this complication is to improve performance in rare critical case
 </li>
 </ul>
 <p>Naturally, memberwise initialization works only if we can access the members.</p>
-<h2>Initialization Using Constructors</h2>
+<h2 id="initialization-using-constructors">Initialization Using Constructors</h2>
 <p>When a class has a constructor, all objects of that class will be initialized by a constructor call. If the constructor requires arguments, these arguments must be supplied:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Date today = Date(23,6,1983);</span><br><span class="line">Date xmas(25,12,1990); // abbreviated form</span><br><span class="line">Date my_birthday; // error: initializer missing</span><br><span class="line">Date release1_0(10,12); // error: third argument missing</span><br></pre></td></tr></table></figure>
 <p>When a class has no user-defined constructor, a default constructor is provided by compiler.</p>
@@ -305,7 +305,7 @@ The reason for this complication is to improve performance in rare critical case
 
 </div>
 
-    <a data-url="https://guyong.xyz/cpp/initialization.html" data-id="cjllxij6t000npipyh16f72d1" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/cpp/initialization.html" data-id="cjlmdw7bi000n6vpyyr7jphd5" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -380,11 +380,11 @@ The reason for this complication is to improve performance in rare critical case
         
 <nav id="article-nav">
     
-        <a href="/cpp/index.html" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/cpp/functions.html" id="article-nav-newer" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Newer</strong>
             <div class="article-nav-title">
                 
-                    Index
+                    Function
                 
             </div>
         </a>
