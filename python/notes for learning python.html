@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Notes for Learning Python 5th | GYNote</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Types and Operations Objects are pieces of memory, with values and sets of associated operations. Everything we process in Python programs is a kind of obj  The Python Conceptual Hierarchy:   1. Progr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Notes for Learning Python 5th">
+<meta property="og:url" content="https://guyong.xyz/python/notes for learning python.html">
+<meta property="og:site_name" content="GYNote">
+<meta property="og:description" content="Types and Operations Objects are pieces of memory, with values and sets of associated operations. Everything we process in Python programs is a kind of obj  The Python Conceptual Hierarchy:   1. Progr">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://guyong.xyz/images/2018-09-03-12-05-36.png">
+<meta property="og:image" content="https://guyong.xyz/images/2018-09-03-12-09-34.png">
+<meta property="og:image" content="https://guyong.xyz/images/2018-09-03-12-10-38.png">
+<meta property="og:image" content="https://guyong.xyz/images/2018-09-03-12-13-34.png">
+<meta property="og:image" content="https://guyong.xyz/images/2018-09-03-12-14-52.png">
+<meta property="og:image" content="https://guyong.xyz/images/2018-09-03-12-17-54.png">
+<meta property="og:image" content="https://guyong.xyz/images/2018-09-03-12-18-20.png">
+<meta property="og:image" content="https://guyong.xyz/images/2018-09-03-12-18-57.png">
+<meta property="og:image" content="https://guyong.xyz/images/2018-09-03-12-03-26.png">
+<meta property="og:image" content="https://guyong.xyz/images/2018-09-03-13-40-51.png">
+<meta property="og:updated_time" content="2018-09-03T06:53:43.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Notes for Learning Python 5th">
+<meta name="twitter:description" content="Types and Operations Objects are pieces of memory, with values and sets of associated operations. Everything we process in Python programs is a kind of obj  The Python Conceptual Hierarchy:   1. Progr">
+<meta name="twitter:image" content="https://guyong.xyz/images/2018-09-03-12-05-36.png">
+    
+
+    
+        <link rel="alternate" href="/" title="GYNote" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/css/images/favicon.png" />
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome5/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/libs/font-awesome5/css/fa-brands.min.css">
+    <link rel="stylesheet" href="/libs/font-awesome5/css/fa-solid.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">GYNote</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/categories">Categories</a>
+                
+                    <a class="main-nav-link" href="/tags">Tags</a>
+                
+                    <a class="main-nav-link" href="/archives">Archives</a>
+                
+                    <a class="main-nav-link" href="/links.html">Links</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fas fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/categories">Categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">Tags</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">Archives</a></td>
+                
+                    <td><a class="main-nav-link" href="/links.html">Links</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            <section id="main"><article id="post-python/notes for learning python" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+            Notes for Learning Python 5th
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/python/notes for learning python.html">
+            <time datetime="2018-09-03T06:53:43.000Z" itemprop="datePublished">2018-09-03</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fas fa-folder"></i>
+        <a class="article-category-link" href="/categories/python/">python</a>
+    </div>
+
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h1>Types and Operations</h1>
+<p>Objects are pieces of memory, with values and sets of associated operations. Everything we process in Python programs is a kind of obj</p>
+<p>The Python Conceptual Hierarchy:</p>
+<ol>
+<li>Programs are composed of modules.</li>
+<li>Modules contain statements.</li>
+<li>Statements contain expressions.</li>
+<li>Expressions create and process objects.</li>
+</ol>
+<p><img src="../images/2018-09-03-12-05-36.png" alt="Table 4-1"></p>
+<p>In formal terms, this means that Python is dynamically typed , a model that keeps track of types for you automatically instead of requiring declaration code, but it is also strongly typed, a constraint that means you can perform on an object only operations that are valid for its type.</p>
+<h2>Core Types</h2>
+<p>Immutable: number, string, tuple, bytes<br>
+Mutable: list, dictionary, set, bytearray</p>
+<p>Primitive: number<br>
+Collection:</p>
+<ul>
+<li>Sequence: string, tuple, bytes, list,  bytearray</li>
+<li>Mapping: dictionary, set</li>
+</ul>
+<p>bytearray  is a distinct hybrid of immutable bytes  strings (whose b’…’  syntax is required in 3.X and optional in 2.X) and mutable lists  (coded and displayed in [] ).</p>
+<p>generic operations that span multiple types show up as built-in functions or expressions (e.g. <code>len(X)</code> , <code>X[0]</code> ), but type-specific operations are method calls (e.g., <code>aString.upper()</code> ).</p>
+<p>Both <code>dir</code>  and <code>help</code>  also accept as arguments either a real object  (like our string S) , or the name of a data type  (like str , list , and dict ).</p>
+<p>As a notable difference, Python 2.X allows its normal and Unicode strings to be mixed in expressions as long as the normal string is all ASCII; in contrast, Python 3.X has a tighter model that never  allows its normal and byte strings to mix without explicit conversion.</p>
+<p>None of the string object’s own methods support pattern-based text processing.</p>
+<p>Unlike out-of-bounds assignments in lists, which are forbidden, assignments to new dictionary keys create those keys, fetching a nonexistent key is still a mistake. (Use the get() method)</p>
+<p>A file’s contents are always a string in your script, regardless of<br>
+the type of data the file contains:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> line <span class="keyword">in</span> open(<span class="string">'data.txt'</span>): print(line)</span><br></pre></td></tr></table></figure>
+<p>Text files represent content as normal str strings and perform<br>
+Unicode encoding and decoding automatically when writing and reading data, while  binary files represent content as a special bytes string and allow you to access file content unaltered.</p>
+<p>Sets are unordered collections of unique and immutable objects.<br>
+Decimal, Fraction, booleans</p>
+<p>As you’ll learn, in Python, we code to object interfaces (operations supported), not to types.</p>
+<h2>Numbers</h2>
+<p><img src="../images/2018-09-03-12-09-34.png" alt="Table 5-1"></p>
+<p>Floating-point numbers are implemented as C “doubles” in standard CPython, and therefore get as much precision as the C compiler used to build the Python interpreter gives to doubles.</p>
+<p>built-in calls: hex(I), oct(I), bin(I), int(str,base), X.bit_length(),round(X), X.as_integer_ratio()</p>
+<p>Internally, complex numbers are implemented as pairs of floating-point numbers</p>
+<p><img src="../images/2018-09-03-12-10-38.png" alt="Table 5-2"></p>
+<p>Comparison operators may be chained: X &lt; Y &lt; Z  produces the same result as X &lt; Y and Y &lt; Z .</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">1</span> == <span class="number">2</span> &lt; <span class="number">3</span> <span class="comment"># Same as: 1 == 2 and 2 &lt; 3</span></span><br><span class="line"><span class="keyword">False</span>    <span class="comment"># Not same as: False &lt; 3 (which means 0 &lt; 3, which is true!)</span></span><br></pre></td></tr></table></figure>
+<p>In recent Pythons, the slice expression X[I:J:K]  is equivalent to indexing with a slice object: X[slice(I, J, K)].</p>
+<p>In Python 3.X, nonnumeric mixed-type magnitude comparisons are not allowed and raise exceptions; this includes sorts by proxy.</p>
+<ul>
+<li>Operators lower in the table have higher precedence, and so bind more tightly in mixed expressions.</li>
+<li>Operators in the same row in Table 5-2  generally group from left to right when combined (except for exponentiation, which groups right to left, and comparisons, which chain left to right).</li>
+</ul>
+<p>Besides mixing operators in expressions, you can also mix numeric types:<br>
+in mixed-type numeric expressions, Python first converts operands up  to the type of the most complicated operand, and then performs the math on same-type operands. Python ranks the complexity of numeric types like so: integers are simpler than floating point numbers, which are simpler than complex numbers.<br>
+In general, Python does not convert across any other type boundaries automatically. Adding a string to an integer, for example, results in an error, unless you manually convert one or the other.</p>
+<p>In 3.X, the / now always performs  true division, returning a float result that includes any remainder, regardless of operand types. The // performs  floor division, which truncates the remainder and returns an integer for integer operands or a float if any operand is a float.</p>
+<p>The // operator truncates the result down to its floor, which means the closest whole number below the true result.</p>
+<p>Frozenset</p>
+<p>Internally, the names True  and False  are instances of bool , which is in turn just a subclass (in the object oriented sense) of the built-in integer type int . True  and False  behave exactly like the integers 1 and 0, except that they have customized printing logic.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; True + 4 # (Hmmm)</span><br><span class="line">5</span><br></pre></td></tr></table></figure>
+<p>Numpy, Scipy</p>
+<p>The dynamic typing<br>
+A variable never has any type information or constraints associated with it. The notion of type lives with objects, not names. Variables are generic in nature; they always simply refer to a particular object at a particular point in time.</p>
+<p>Variables always link to objects and never to other variables, but larger objects may link to other objects (for instance, a list object has links to the objects it contains).<br>
+These links from variables to objects are called references  in Python—that is, a reference is a kind of association, implemented as a pointer in memory</p>
+<p>Technically speaking, objects have more structure than just enough space to represent their values. Each object also has two standard header fields: a type designator  used to mark the type of the object, and a reference counter  used to determine when it’s OK to reclaim the object.</p>
+<p>reference counter, cyclic reference<br>
+sys.getrefcount(X)</p>
+<p>If a[:], a[k] appears in expression, they are copied. e.g. after b=a[:3], b refers to a new object.<br>
+If a[:], a[k] appears in left side of assignment, they referred to the original object. e.g.  after a=[0,1,2]   a[:] = [0,1], a becomes [0,1]</p>
+<p>Because everything  seems to work by assignment and references<br>
+in Python, a basic understanding of this model is useful in many different contexts. As you’ll see, it works the same in assignment statements, function arguments, for  loop variables, module imports, class attributes, and more. The good news is that there is just one  assignment model in Python;</p>
+<p>weakref</p>
+<h2>String</h2>
+<p><img src="../images/2018-09-03-12-13-34.png" alt="Table 7-1"></p>
+<p>String literal forms:</p>
+<ul>
+<li>Single quotes: ‘spa&quot;m’</li>
+<li>Double quotes: “spa’m”</li>
+<li>Triple quotes: ‘’’… spam …’’’ , “”&quot;… spam …&quot;&quot;&quot;</li>
+<li>Escape sequences: “s\tp\na\0m”</li>
+<li>Raw strings: r&quot;C:\new\test.spm&quot;</li>
+<li>Bytes literals in 3.X and 2.6+ (see Chapter 4 , Chapter 37 ): b’sp\x01am’</li>
+<li>Unicode literals in 2.X and 3.3+ (see Chapter 4 , Chapter 37 ): u’eggs\u0020spam’</li>
+</ul>
+<p>In fact, 3.X defines str strings formally as sequences of Unicode code<br>
+points, not bytes, to make this clear. There’s more on how strings are stored internally in Chapter 37 if you care to know.</p>
+<p><img src="../images/2018-09-03-12-14-52.png" alt="Table 7-2"></p>
+<p>Some escape sequences allow you to embed absolute binary values into the characters of a string.</p>
+<p>Python keeps both the string’s length and text in memory. In fact, no character terminates a string in Python</p>
+<p>Notice that Python displays nonprintable characters in hex, regardless of how they were specified.</p>
+<p>That is, r&quot;…&quot; is not a valid string literal—a raw string cannot end in<br>
+an odd number of backslashes. If you need to end a raw string with a<br>
+single backslash, you can use two and slice off the second (r’1\nb\tc\’[:-1]), tack one on manually (r’1\nb\tc’ + ‘\’), or skip the raw string syntax and just double up the backslashes in a normal string (‘1\nb\tc\’).</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; menu = &quot;&quot;&quot;spam # comments here added to string!</span><br><span class="line">... eggs # ditto</span><br><span class="line">... &quot;&quot;&quot;</span><br><span class="line">&gt;&gt;&gt; menu</span><br><span class="line">&apos;spam # comments here added to string!\neggs # ditto\n&apos;</span><br><span class="line">&gt;&gt;&gt; menu = (</span><br><span class="line">... &quot;spam\n&quot; # comments here ignored</span><br><span class="line">... &quot;eggs\n&quot; # but newlines not automatic</span><br><span class="line">... )</span><br><span class="line">&gt;&gt;&gt; menu</span><br><span class="line">&apos;spam\neggs\n&apos;</span><br></pre></td></tr></table></figure>
+<p>built-in tool: <code>ord()</code> <code>chr()</code></p>
+<p>The method call expression: object.method(arguments) is evaluated from left to right—Python will first fetch the method  of the object  and then<br>
+call it, passing in both object and the arguments</p>
+<p>string formatting expressions and string formatting method calls<br>
+ Technically, the format  built-in runs the subject object’s <code>__format__</code>  method, which the str.format  method does internally for each formatted item.<br>
+The %  expressions tend to be a bit simpler and more concise; the format  method has a handful of advanced features that the %  expression does not, but even more involved formatting still seems to be essentially a draw in terms of complexity.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from formats import commas, money</span><br></pre></td></tr></table></figure>
+<p>Types Share Operation Sets by Categories:</p>
+<ul>
+<li>numbers</li>
+<li>sequences</li>
+<li>mappings</li>
+</ul>
+<h2>Lists and Dictionaries</h2>
+<p><img src="../images/2018-09-03-12-17-54.png" alt="Table 8-1"></p>
+<p>Slice assignment, the last operation in the preceding example, replaces an entire section of a list in a single step. Because it can be a bit complex, it is perhaps best thought of as a combination of two steps:</p>
+<ol>
+<li>Deletion. The slice you specify to the left of the = is deleted.</li>
+<li>Insertion. The new items contained in the iterable object to the right of the = are inserted into the list on the left, at the place where the old slice was deleted.<br>
+Note, L[2:5]=L[3:6], for instance, works fine because the value to be inserted is fetched before the deletion<br>
+happens on the left.</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; L = [1]</span><br><span class="line">&gt;&gt;&gt; L[:0] = [2, 3, 4] # Insert all at :0, an empty slice at front</span><br><span class="line">&gt;&gt;&gt; L</span><br><span class="line">[2, 3, 4, 1]</span><br><span class="line">&gt;&gt;&gt; L[len(L):] = [5, 6, 7] # Insert all at len(L):, an empty slice at end</span><br><span class="line">&gt;&gt;&gt; L</span><br><span class="line">[2, 3, 4, 1, 5, 6, 7]</span><br><span class="line">&gt;&gt;&gt; L.extend([8, 9, 10]) # Insert all at end, named method</span><br><span class="line">&gt;&gt;&gt; L</span><br><span class="line">[2, 3, 4, 1, 5, 6, 7, 8, 9, 10]</span><br></pre></td></tr></table></figure>
+<p>The effect of <code>L.append(X)</code>  is similar to <code>L+[X]</code>, but while the former changes L  in place, the latter makes a new list.</p>
+<p>In Python 3.X, this has changed: magnitude comparison of mixed types<br>
+raises an exception instead of falling back on the fixed cross-type ordering.</p>
+<p>L.sort() vs. sorted<br>
+built-in tools: reversed</p>
+<p>Like lists, dictionaries store object references (not copies, unless you ask for them explicitly)</p>
+<p><img src="../images/2018-09-03-12-18-20.png" alt="Table 8-2"></p>
+<p>keys  in 3.X returns an iterable  object, instead of a physical list<br>
+Unlike lists, however, whenever you assign a new  dictionary key (one that hasn’t been assigned before) you create a new entry in the dictionary.</p>
+<p>In 3.X the dictionary keys , values , and items  methods all return view objects , whereas in 2.X they return actual result lists.<br>
+Besides being iterable, dictionary views also retain the original order of dictionary components, reflect future changes to the dictionary, and may support set operations. Unlike 2.X’s list results, though, dictionary views in 3.X are not carved in stone when created—they dynamically reflect future changes  made to the dictionary after the view object has been created:</p>
+<p>In set operations, views may be mixed with other views, sets, and dictionaries; dictionaries<br>
+are treated the same as their keys  views in this context:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; D = &#123;&apos;a&apos;: 1, &apos;b&apos;: 2, &apos;c&apos;: 3&#125;</span><br><span class="line">&gt;&gt;&gt; D.keys() &amp; D.keys() # Intersect keys views</span><br><span class="line">&#123;&apos;b&apos;, &apos;c&apos;, &apos;a&apos;&#125;</span><br><span class="line">&gt;&gt;&gt; D.keys() &amp; &#123;&apos;b&apos;&#125; # Intersect keys and set</span><br><span class="line">&#123;&apos;b&apos;&#125;</span><br><span class="line">&gt;&gt;&gt; D.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; Ks.sort()</span><br><span class="line">AttributeError: &apos;dict_keys&apos; object has no attribute &apos;sort&apos;</span><br></pre></td></tr></table></figure>
+<p>To work around this, in 3.X you must either convert to a list manually or use the<br>
+sorted call (introduced in Chapter 4 and covered in this chapter) on either a keys view<br>
+or the dictionary itself:</p>
+<p>OrderedDict</p>
+<h2>Tuples, files and everything else</h2>
+<p><img src="../images/2018-09-03-12-18-57.png" alt="Table 9-1"></p>
+<p>As you can see, named tuples are a tuple/class/dictionary hybrid<br>
+ (In short, named tuples build new classes that extend the tuple type, inserting a property  accessor method for each named field that maps the name to its position)<br>
+ <br>
+<img src="../images/2018-09-03-12-03-26.png" alt="Table 9-2"></p>
+<p>Empty lines in the file come back as strings containing just a newline character, not as empty strings.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; myfile.readline() # Empty string: end-of-file</span><br><span class="line">&apos;&apos;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Text files  represent content as normal str  strings, perform Unicode encoding and decoding automatically, and perform end-of-line translation by default.</li>
+<li>Binary files  represent content as a special bytes  string type and allow programs to access file content unaltered.</li>
+</ul>
+<p>pickle, shelve, json, struct</p>
+<p>In fact, when nested objects are present, Python automatically<br>
+traverses data structures to apply comparisons from left to right, and as deeply as<br>
+needed.</p>
+<p>More specifically, Python compares types as follows:</p>
+<ul>
+<li>Numbers  are compared by relative magnitude, after conversion to the common highest type if needed.</li>
+<li>Strings  are compared lexicographically (by the character set code point values returned by <code>ord</code> ), and character by character until the end or first mismatch (“abc”&lt; “ac” ).</li>
+<li>Lists  and tuples  are compared by comparing each component from left to right, and recursively for nested structures, until the end or first mismatch ([2] &gt; [1, 2] ).</li>
+<li>Sets  are equal if both contain the same items (formally, if each is a subset of the other), and set relative magnitude comparisons apply subset and superset tests.</li>
+<li>Dictionaries  compare as equal if their sorted (key, value)  lists are equal. Relative magnitude comparisons are not supported for dictionaries in Python 3.X, but they work in 2.X as though comparing sorted (key, value)  lists.</li>
+<li>Nonnumeric mixed-type magnitude comparisons (e.g., 1 &lt; ‘spam’ ) are errors in Python 3.X. They are allowed in Python 2.X, but use a fixed but arbitrary ordering rule based on type name string. By proxy, this also applies to sorts, which use comparisons internally: nonnumeric mixed-type collections cannot be sorted in 3.X.</li>
+</ul>
+<p>Python 3.X  disallows mixed-type magnitude testing, except numeric types.</p>
+<p>More generally, the notions of true and false are intrinsic properties of every  object in Python—each object is either true or false, as follows:</p>
+<ul>
+<li>Numbers are false if zero, and true otherwise.</li>
+<li>Other objects are false if empty, and true otherwise.</li>
+</ul>
+<p>That is, <em>None</em>  is something, not nothing (despite its name!)—it is a real object and a real piece of memory that is created and given a built-in name by Python itself.</p>
+<p>In fact, even types themselves are an object type in Python.<br>
+ Calls to these names are really object constructor calls, not simply conversion functions, though you can treat them as simple functions for basic usage.</p>
+<p>For classic classes in Python 2.X, all class instances are instead of the type “instance,” and we must compare instance <code>__class__</code> attributes to compare their types meaningfully.</p>
+<p>Repetition Adds One Level Deep</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>L = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>X = L * <span class="number">4</span> <span class="comment"># Like [4, 5, 6] + [4, 5, 6] + ...</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>Y = [L] * <span class="number">4</span> <span class="comment"># [L] + [L] + ... = [L, L,...]</span></span><br></pre></td></tr></table></figure>
+<p>If you remember that repetition, concatenation, and slicing copy only the top level of their operand objects, these sorts of cases make much more sense</p>
+<p>Beware of Cyclic  Data Structure</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>L = [<span class="string">'grail'</span>] <span class="comment"># Append reference to same object</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>L.append(L) <span class="comment"># Generates cycle in object: [...]</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>L</span><br><span class="line">[<span class="string">'grail'</span>, [...]]</span><br></pre></td></tr></table></figure>
+<h1>Statements and Syntax</h1>
+<h2>Assignments, Expressions, and Prints</h2>
+<ul>
+<li>Assignments create object references. (i.e. link a name with an object) They always create references to objects instead of copying the objects.</li>
+<li>Names are created when first assigned.</li>
+<li>Names must be assigned before referenced.</li>
+</ul>
+<p>Module imports, function and class definitions, for  loop variables, and function arguments are all implicit assignments.</p>
+<p><img src="../images/2018-09-03-13-40-51.png" alt="Table 11-1"></p>
+<p>sequence assignment—any sequence of names can be<br>
+assigned to any sequence of values, and Python assigns the items one at a time by position. In fact, the original tuple and list assignment forms in Python have been generalized to accept any type of sequence (really, iterable) on the right as long as it is of the same length as the sequence on the left.</p>
+<p>Multiple-target assignment: Python assigns a reference to the same object (the object farthest to the right) to all the targets on the left.</p>
+<p>In tuple/list assignment, Python creates a temporary tuple that saves the original values of the variables on the right before assigning.</p>
+<p>we can even assign nested sequences, and Python unpacks their parts according to their shape, as expected. The sequence-nesting shape of the object on the left must match that of the object on the right.</p>
+<blockquote>
+<p>This nested tuple (really, sequence) unpacking<br>
+assignment form works for function argument lists in Python 2.X (though not in 3.X)</p>
+</blockquote>
+<p>In short, a single starred name, *X, can be used in the assignment target in order to specify a more general matching against the sequence—the starred name is assigned a list, which collects all items in the sequence not assigned to other names. In fact, the starred name can appear anywhere in the target.</p>
+<blockquote>
+<p>This is similar in spirit to slicing, but not exactly the same—a sequence unpacking assignment always returns a list for multiple matched items, whereas slicing returns a sequence of the same type as the object sliced</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; a, *b = &apos;spam&apos;</span><br><span class="line">&gt;&gt;&gt; a, b</span><br><span class="line">(&apos;s&apos;, [&apos;p&apos;, &apos;a&apos;, &apos;m&apos;])</span><br><span class="line">&gt;&gt;&gt; S[0], S[1:] # Slices are type-specific, * assignment always returns a list</span><br><span class="line">(&apos;s&apos;, &apos;pam&apos;)</span><br></pre></td></tr></table></figure>
+<p>Finally, errors can still be triggered if there is more than one starred name, if there are too few values and no star (as before), and if the starred name is not itself coded inside a sequence:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; *a = seq</span><br><span class="line">SyntaxError: starred assignment target must be in a list or tuple</span><br></pre></td></tr></table></figure>
+<p>For augmented assignments, inplace operations may be applied for mutable objects as an optimization.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; L = [1, 2]</span><br><span class="line">&gt;&gt;&gt; L = L + [3] # Concatenate: slower</span><br><span class="line">&gt;&gt;&gt; L</span><br><span class="line">[1, 2, 3]</span><br><span class="line">&gt;&gt;&gt; L.append(4) # Faster, but in place</span><br><span class="line">&gt;&gt;&gt; L</span><br><span class="line">[1, 2, 3, 4]</span><br><span class="line">&gt;&gt;&gt; L += [9, 10] # Mapped to L.extend([9, 10])</span><br><span class="line">&gt;&gt;&gt; L</span><br><span class="line">[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span><br></pre></td></tr></table></figure>
+<p>Note however, that because of this equivalence += for a list is not exactly the same as a + and = in all cases—for lists += allows arbitrary sequences (just like extend), but concatenation normally does not:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; L = []</span><br><span class="line">&gt;&gt;&gt; L += &apos;spam&apos; # += and extend allow any sequence, but + does not!</span><br><span class="line">&gt;&gt;&gt; L</span><br><span class="line">[&apos;s&apos;, &apos;p&apos;, &apos;a&apos;, &apos;m&apos;]</span><br><span class="line">&gt;&gt;&gt; L = L + &apos;spam&apos;</span><br><span class="line">TypeError: can only concatenate list (not &quot;str&quot;) to list</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Although Python now supports statements like X += Y, it still does not<br>
+have C’s auto-increment/decrement operators (e.g., X++, −−X).</p>
+</blockquote>
+<h3>Naming</h3>
+<p>For portability, case also matters in the names of imported module files, even on platforms where the filesystems are case-insensitive.</p>
+<p>True, False, and None, are somewhat unusual in meaning—they also appear in the built-in scope of Python described in Chapter 17, and they are technically names assigned to objects.</p>
+<p>Names that begin with a single underscore (_X) are not imported by a from module import * statement</p>
+<p>Names that begin with two underscores and do not end with two more (__X) are localized (“mangled”) to enclosing classes.</p>
+<h3>Expression Statements</h3>
+<p>In Python, you can use an expression as a statement, too. Expressions are commonly used as statements in two situations:</p>
+<ul>
+<li>For calls to functions and methods</li>
+<li>For printing values at the interactive prompt</li>
+</ul>
+<p>A statement that is not an expression must generally appear on a line all by itself, not nested in a larger syntactic structure. For example, Python doesn’t allow you to embed assignment statements (=) in other expressions. Besides, C assignments return the value assigned, but Python assignments are just statements, not expressions.</p>
+<p>Expression statements are often used to run list methods that change a list in place:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; L = L.append(4) # But append returns None, not L</span><br><span class="line">&gt;&gt;&gt; print(L) # So we lose our list!</span><br><span class="line">None</span><br></pre></td></tr></table></figure>
+<p>Normally, whether printed output is buffered in memory or not is determined by file; passing a true value to flush forcibly flushes the stream.</p>
+<p>Because the print statement just sends text to the sys.stdout.write method, you can capture printed text in your programs by assigning sys.stdout to an object whose write method processes the text in arbitrary ways</p>
+<h2>if Tests and Syntax Rules</h2>
+<p>There is no switch or case statement in Python</p>
+<ul>
+<li>Block and statement boundaries are detected automatically.</li>
+<li>Compound statements = header + “:” + indented statements.</li>
+<li>Blank lines, spaces, and comments are usually ignored.</li>
+<li>Docstrings are ignored but are saved and displayed by tools.</li>
+</ul>
+<p>Statements may span multiple lines if you’re continuing an open syntactic<br>
+pair.</p>
+<p>Boolean operators stop evaluating (“short circuit”) as soon as a result is known. Boolean <strong>and</strong> and <strong>or</strong> operators return a true or false object in Python, not the values True or False</p>
+<p>For <code>A = Y if X else Z</code>, Python runs expression Y only if X turns out to be true, and runs expression Z only if X turns out to be false.</p>
+<p>When defining classes, we can specify their Boolean nature with either the<br>
+<strong>bool</strong> or <strong>len</strong> methods.</p>
+<h2>while and for Loops</h2>
+<p>The optional <strong>else</strong> block run if didn’t exit loop with <strong>break</strong></p>
+<p>Python doesn’t have what some languages call a “do until” loop statement. Python has no “go to” statement.</p>
+<p>Python 3.X (but not 2.X) allows ellipses coded as … (literally, three consecutive dots) to appear any place an expression can. Because ellipses do nothing by themselves, this can serve as an alternative to the pass statement,</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; X = ... # Alternative to None</span><br><span class="line">&gt;&gt;&gt; X</span><br><span class="line">Ellipsis</span><br></pre></td></tr></table></figure>
+<p>After the <strong>for</strong> loop, this loop variable normally still refers to the last item visited, which is the last item in the sequence unless the loop exits with a break statement.</p>
+<p>Even nested structures may be automatically unpacked this way in a for:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; for ((a, b), c) in [((1, 2), 3), ((4, 5), 6)]: print(a, b, c)</span><br></pre></td></tr></table></figure>
+<p>In fact, as a general rule, you should resist the temptation to count things in Python—its iteration tools automate much of the work you do to loop over collections in lower-level languages like C.</p>
+<p>built-in tools: range, zip, enumerate</p>
+<p>The zip function is more general than this example suggests. For instance,<br>
+it accepts any type of sequence (really, any iterable object, including files), and it accepts more than two arguments. Moreover, zip truncates result tuples at the length of the shortest sequence when the argument lengths differ.</p>
+<h2>Iterations and Comprehensions</h2>
+<ul>
+<li>Iterator vs. Iterable  vs. Iteration tool/context</li>
+<li>Single scan vs. multiple scan</li>
+</ul>
+<p>In some cases these two objects are the same when only a single scan is supported (e.g., files), and the iterator object is often temporary, used internally by the iteration tool. Moreover, some objects are both an iteration context tool (they iterate) and an iterable object (their results are iterable)—including Chapter 20’s generator expressions, and map and zip in Python 3.X.</p>
+<p>When the for loop begins, it first obtains an iterator from the iterable object by passing it to the iter built-in function; the object returned by iter in turn has the required next method. The iter function internally runs the <strong>iter</strong> method, much like <code>next</code> and <code>__next__</code>.</p>
+<p>For comprehensions, their full syntax allows for any number of <strong>for</strong> clauses, each of which can have an optional associated <strong>if</strong> clause.</p>
+<p>Keep in mind, though, that every built-in tool that scans from left to right across objects uses the iteration protocol.</p>
+<p>Notice that, unlike map and others, sorted returns an actual list in Python 3.X<br>
+instead of an iterable.</p>
+<p>One of the fundamental distinctions of Python 3.X is its stronger emphasis on iterators than 2.X. This, along with its Unicode model and mandated new-style classes, is one of 3.X’s most sweeping changes.</p>
+<p>Unlike <strong>range</strong>, <strong>map</strong>, <strong>zip</strong>, <strong>filter</strong> are their own iterators—after you step through their results once, they are exhausted.</p>
+<p>In Python 3.X the dictionary keys, values, and items methods return iterable view objects that generate result items one at a time.</p>
+<h2>Documentation Interlude</h2>
+<p>The PyDoc system covered here can render a module’s internal documentation as either plain text in a shell, or HTML in a web browser.</p>
+<p>The <strong>help</strong> function: press the space bar to move to the next page, Enter to go to the next line, and Q to quit:</p>
+<p>Sphinx</p>
+
+        
+        </div>
+        <!--<footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://guyong.xyz/python/notes for learning python.html" data-id="cjllxij7x0017pipycals4jte" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer> -->
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/python/notes for flunet python.html" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    (no title)
+                
+            </div>
+        </a>
+    
+    
+        <a href="/python/python async.html" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">Async</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    
+
+</section>
+            
+                
+<aside id="sidebar">
+   
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Collection/">Collection</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/algorithms/">algorithms</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cpp/">cpp</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/default/">default</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/dev/">dev</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/english/">english</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/math/">math</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/reading/">reading</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/research/">research</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web/">web</a><span class="category-list-count">13</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">58</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/original/">original</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/original/" style="font-size: 10px;">original</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://github.com/gynote/gynote.github.io">Github</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fas fa-angle-up"></div>
+</aside>
+
+            
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2018 Gu Yong<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
+        </div>
+    </div>
+</footer>
+        
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
