@@ -133,7 +133,7 @@
         <div class="outer">
             
             <section id="main">
-    <article id="post-dev/misc" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-reading/deep work" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -141,7 +141,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/dev/misc.html">Misc</a>
+            <a class="article-title" href="/reading/deep work.html">Deep Work</a>
         </h1>
     
 
@@ -150,8 +150,8 @@
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <!-- <a href="/dev/misc.html"> -->
-            <time datetime="2018-09-03T16:24:08.000Z" itemprop="datePublished">2018-09-04</time>
+        <!-- <a href="/reading/deep work.html"> -->
+            <time datetime="2018-07-27T15:58:50.000Z" itemprop="datePublished">2018-07-27</time>
         <!-- </a> -->
     </div>
 
@@ -159,7 +159,7 @@
                         
     <div class="article-category">
     	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/dev/">dev</a>
+        <a class="article-category-link" href="/categories/reading/">reading</a>
     </div>
 
                         
@@ -170,9 +170,30 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p>常见指令时间 https://zhuanlan.zhihu.com/p/30742986</p>
+            <p>亚马逊满99元赚的书，今天到货花了大概四个小时通读了一遍，觉的有不少收获，是个人当前所需要的。全书主要分为两部分：
+
+ * 深度工作理论：深度工作是什么以及深度工作的价值、意义
+ * 深度工作准则：进行深度工作的一些准则
+
+在这里我只记下一些重要的笔记，一是通过总结加深下自己的印象，二是以备以后不时之需。注意：
+
+ 1. 书中有大量丰富有趣的事例，这里都略掉了。
+ 2. 有些感想类比是个人所写（大都在以括号标出）
+
+深度工作理论
+深度工作与浮浅工作
+深度工作的特点：
+
+ 1. 无干扰
+ 2. 使个人认知能力达到极限
+ 3. 创造新的价值，提升技能
+ 4. 难以复制
+
+浮浅工作的特点：
+
+ </p>
             <p class="article-more-link">
-                <a href="/dev/misc.html#more">Read More</a>
+                <a href="/reading/deep work.html#more">Read More</a>
             </p>
         
         </div>
@@ -183,7 +204,7 @@
 
 </div>
 
-    <a data-url="https://guyong.xyz/dev/misc.html" data-id="cjlmhw3wv000y0jpys19jlakg" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/reading/deep work.html" data-id="cjln6ywxl001bfmpyihttc85n" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -259,7 +280,7 @@
 
 
 
-    <article id="post-dev/线程同步机制" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-python/python网络编程" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -267,7 +288,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/dev/线程同步机制.html">线程同步机制</a>
+            <a class="article-title" href="/python/python网络编程.html">网络编程</a>
         </h1>
     
 
@@ -276,8 +297,8 @@
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <!-- <a href="/dev/线程同步机制.html"> -->
-            <time datetime="2018-09-03T16:24:08.000Z" itemprop="datePublished">2018-09-04</time>
+        <!-- <a href="/python/python网络编程.html"> -->
+            <time datetime="2018-07-27T15:58:40.000Z" itemprop="datePublished">2018-07-27</time>
         <!-- </a> -->
     </div>
 
@@ -285,7 +306,7 @@
                         
     <div class="article-category">
     	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/dev/">dev</a>
+        <a class="article-category-link" href="/categories/python/">python</a>
     </div>
 
                         
@@ -296,21 +317,10 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p>线程基础知识
-线程同步的底层支持包括：
-
- 1. TSL （或其它）原子操作
- 2. 中断服务
-
-互斥锁Mutex
-最基本的同步机制是锁（Lock），包括 互斥锁(Mutex), Read-Write 锁, 空转锁。以Mutex为例：
-
- * 对Mutex状态的判断及修改是通过机器提供的原子性指令完成的。
- * 每个Mutex上有一个等待队列（waiting list)
- * Lock()操作在”locked” 情况下会被挂起，实际上是先空转（spin）一小会再挡土挂起（yield），当前线程会加入到Mutex的waiting list中。
- * 挂起是指将线程置于”睡眠“状态，并调用线程调试</p>
+            <p>杂记：
+网卡一般是双工的，上行下行可同时发生，传输是以字节Byte为最小单位（本质上传输的是比特流）。</p>
             <p class="article-more-link">
-                <a href="/dev/线程同步机制.html#more">Read More</a>
+                <a href="/python/python网络编程.html#more">Read More</a>
             </p>
         
         </div>
@@ -321,7 +331,7 @@
 
 </div>
 
-    <a data-url="https://guyong.xyz/dev/线程同步机制.html" data-id="cjlmhw3ww000z0jpyexyngjxr" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/python/python网络编程.html" data-id="cjln6ywxj001afmpyy9ekznfa" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -397,7 +407,7 @@
 
 
 
-    <article id="post-english/mood" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-python/python杂记" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -405,7 +415,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/english/mood.html">Mood</a>
+            <a class="article-title" href="/python/python杂记.html">杂记</a>
         </h1>
     
 
@@ -414,8 +424,8 @@
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <!-- <a href="/english/mood.html"> -->
-            <time datetime="2018-09-03T16:24:08.000Z" itemprop="datePublished">2018-09-04</time>
+        <!-- <a href="/python/python杂记.html"> -->
+            <time datetime="2018-07-27T15:58:31.000Z" itemprop="datePublished">2018-07-27</time>
         <!-- </a> -->
     </div>
 
@@ -423,7 +433,7 @@
                         
     <div class="article-category">
     	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/english/">english</a>
+        <a class="article-category-link" href="/categories/python/">python</a>
     </div>
 
                         
@@ -434,20 +444,19 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p>语气（Moods）
-语气是利用动词变化来表达“真、假”口吻的方式。依各种不同程度的“真、假”口吻，可以细分为四种语气：
+            <p>types分类
 
- * 叙述事实语气（Indicative）：表示所说的是真的
- * 条件语气（Conditional）：表示真假还不能确定
- * 假设语气（Subjunctive）：说反话，表示所说的与事实相反
- * 祈使语气（Imperative）：表示希望能成真，但尚未实现
+immutable: number, string, tuple
+mutable: list, dict, class-object
+Function arguments are passed by values: immutable objects are copied by value, while mutable objects are copied by aliasing.
 
-叙述事实语气
-一般的英语句子都是这种语气，在时态部分所学的现在式、过去式、未来式等等也都是属于叙述事实语气，所以不必多作解释。其中只有未来式要说明一下：
+classes themselves are objects.
 
- 1. I’ll go to the U.S. next</p>
+Iterable, Iterator, Generator
+
+ * Iterable: implementing iter() </p>
             <p class="article-more-link">
-                <a href="/english/mood.html#more">Read More</a>
+                <a href="/python/python杂记.html#more">Read More</a>
             </p>
         
         </div>
@@ -458,7 +467,7 @@
 
 </div>
 
-    <a data-url="https://guyong.xyz/english/mood.html" data-id="cjlmhw3wy00100jpyespvwx0y" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/python/python杂记.html" data-id="cjln6ywxg0018fmpysyb8hptv" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -534,7 +543,7 @@
 
 
 
-    <article id="post-english/words_and_phrases" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-python/python async" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -542,7 +551,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/english/words_and_phrases.html">Words and Phrases</a>
+            <a class="article-title" href="/python/python async.html">Async</a>
         </h1>
     
 
@@ -551,8 +560,8 @@
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <!-- <a href="/english/words_and_phrases.html"> -->
-            <time datetime="2018-09-03T16:24:08.000Z" itemprop="datePublished">2018-09-04</time>
+        <!-- <a href="/python/python async.html"> -->
+            <time datetime="2018-07-27T15:58:23.000Z" itemprop="datePublished">2018-07-27</time>
         <!-- </a> -->
     </div>
 
@@ -560,7 +569,7 @@
                         
     <div class="article-category">
     	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/english/">english</a>
+        <a class="article-category-link" href="/categories/python/">python</a>
     </div>
 
                         
@@ -571,14 +580,13 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p>词汇与短语笔记
- 1.  in the wake of “在…之后，紧跟”
- 2.  all in all “总之”
- 3.  “Not choice, but habit rules the unreflecting herd.” William Wordsworth said in the 19th century.
-     1）unreflecting 意为“缺乏思考的”。2) herd 常见意思是“畜群，牧群”，这里指“民众，百姓”，常含贬义。
- 4.  Among the most popular: paternity and kinship testing. Which adop</p>
+            <p>Future
+python 中的 Future 相当于 js 中的 Promise ，功能是把”事件发生“ 与”回调函数“ 分离。不仅可以先注册callback, 等“事件发生”（Future中是set_result, js中是resolve)后自动调用一个或多个callback; 还可以在 set_result后在注册callback. 内部通过保存”事件发生“这一状态来实现 Deferred 效果。
+
+Select
+python中的select module中有针对不同平台的系统函数来完成IO复用的功能，最原始的是select函数, 在大多数平台上都有。poll比 select更优化一些，</p>
             <p class="article-more-link">
-                <a href="/english/words_and_phrases.html#more">Read More</a>
+                <a href="/python/python async.html#more">Read More</a>
             </p>
         
         </div>
@@ -589,395 +597,7 @@
 
 </div>
 
-    <a data-url="https://guyong.xyz/english/words_and_phrases.html" data-id="cjlmhw3x000110jpysaus23hw" class="article-share-link"><i class="fas fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer> -->
-    </div>
-    
-</article>
-
-
-
-    <article id="post-english/writing" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/english/writing.html">Writing</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fas fa-calendar-alt"></i>
-        <!-- <a href="/english/writing.html"> -->
-            <time datetime="2018-09-03T16:24:08.000Z" itemprop="datePublished">2018-09-04</time>
-        <!-- </a> -->
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/english/">english</a>
-    </div>
-
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p>To simplify the ::ensuing:: presentation, …
-Had there been that if …</p>
-            <p class="article-more-link">
-                <a href="/english/writing.html#more">Read More</a>
-            </p>
-        
-        </div>
-        <!--<footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://guyong.xyz/english/writing.html" data-id="cjlmhw3x200120jpyrbg47u86" class="article-share-link"><i class="fas fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer> -->
-    </div>
-    
-</article>
-
-
-
-    <article id="post-math/alg" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/math/alg.html">Alg</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fas fa-calendar-alt"></i>
-        <!-- <a href="/math/alg.html"> -->
-            <time datetime="2018-09-03T16:24:08.000Z" itemprop="datePublished">2018-09-04</time>
-        <!-- </a> -->
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/math/">math</a>
-    </div>
-
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p>Recurrence
-Master Theorem
-Akra–Bazzi Method</p>
-            <p class="article-more-link">
-                <a href="/math/alg.html#more">Read More</a>
-            </p>
-        
-        </div>
-        <!--<footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://guyong.xyz/math/alg.html" data-id="cjlmhw3x300130jpyl8q2a0zz" class="article-share-link"><i class="fas fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer> -->
-    </div>
-    
-</article>
-
-
-
-    <article id="post-math/index" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/math/index.html">Index</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fas fa-calendar-alt"></i>
-        <!-- <a href="/math/index.html"> -->
-            <time datetime="2018-09-03T16:24:08.000Z" itemprop="datePublished">2018-09-04</time>
-        <!-- </a> -->
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/math/">math</a>
-    </div>
-
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p>Math Foundation
-Calculus
-如何更好地理解并记忆泰勒展开式 — by 知乎
-
-在圆上用极坐标积分（二元积分），对面积微分时为什么要用$\rho,d\rho,d\theta$ ？
-
- * 一种简单的理解是： 扇形的面积 $S=1/2\rho^2\theta$, $dS = \frac{d S}{d\theta d\rho} d\theta d\rho = \frac{\partial S}{\partial\theta \partial\rho} d\theta d\rho = \rho d\rho d\theta$
- * 一种错解是 $dS=d(1/2\rho^2\the</p>
-            <p class="article-more-link">
-                <a href="/math/index.html#more">Read More</a>
-            </p>
-        
-        </div>
-        <!--<footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://guyong.xyz/math/index.html" data-id="cjlmhw3x400140jpyoash4o8o" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/python/python async.html" data-id="cjln6ywxi0019fmpyud1jjkjd" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1071,7 +691,7 @@ Calculus
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <!-- <a href="/math/probability.html"> -->
-            <time datetime="2018-09-03T16:24:08.000Z" itemprop="datePublished">2018-09-04</time>
+            <time datetime="2018-07-27T15:58:14.000Z" itemprop="datePublished">2018-07-27</time>
         <!-- </a> -->
     </div>
 
@@ -1108,7 +728,7 @@ Calculus
 
 </div>
 
-    <a data-url="https://guyong.xyz/math/probability.html" data-id="cjlmhw3x500150jpyln3kyg85" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/math/probability.html" data-id="cjln6ywxd0015fmpyh29uxzn5" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1184,7 +804,7 @@ Calculus
 
 
 
-    <article id="post-python/notes for learning python" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-math/index" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -1192,7 +812,7 @@ Calculus
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/python/notes for learning python.html">Notes for Learning Python 5th</a>
+            <a class="article-title" href="/math/index.html">Index</a>
         </h1>
     
 
@@ -1201,8 +821,8 @@ Calculus
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <!-- <a href="/python/notes for learning python.html"> -->
-            <time datetime="2018-09-03T16:24:08.000Z" itemprop="datePublished">2018-09-04</time>
+        <!-- <a href="/math/index.html"> -->
+            <time datetime="2018-07-27T15:58:03.000Z" itemprop="datePublished">2018-07-27</time>
         <!-- </a> -->
     </div>
 
@@ -1210,7 +830,7 @@ Calculus
                         
     <div class="article-category">
     	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/python/">python</a>
+        <a class="article-category-link" href="/categories/math/">math</a>
     </div>
 
                         
@@ -1221,20 +841,16 @@ Calculus
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p>* Types and Operations * Core Types
-    * Numbers
-    * String
-    * Lists and Dictionaries
-    * Tuples, files and everything else
-   
-   
- * Statements and Syntax * Assignments, Expressions, and Prints
-    * if Tests and Syntax Rules
-    * while and for Loops
-    * Iterations and Comprehensions
-  </p>
+            <p>Math Foundation
+Calculus
+如何更好地理解并记忆泰勒展开式 — by 知乎
+
+在圆上用极坐标积分（二元积分），对面积微分时为什么要用$\rho,d\rho,d\theta$ ？
+
+ * 一种简单的理解是： 扇形的面积 $S=1/2\rho^2\theta$, $dS = \frac{d S}{d\theta d\rho} d\theta d\rho = \frac{\partial S}{\partial\theta \partial\rho} d\theta d\rho = \rho d\rho d\theta$
+ * 一种错解是 $dS=d(1/2\rho^2\the</p>
             <p class="article-more-link">
-                <a href="/python/notes for learning python.html#more">Read More</a>
+                <a href="/math/index.html#more">Read More</a>
             </p>
         
         </div>
@@ -1245,7 +861,7 @@ Calculus
 
 </div>
 
-    <a data-url="https://guyong.xyz/python/notes for learning python.html" data-id="cjlmhw3x700160jpy79v5eh5m" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/math/index.html" data-id="cjln6ywxc0014fmpyu0tbgxmz" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1321,7 +937,7 @@ Calculus
 
 
 
-    <article id="post-python/notes for flunet python" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-math/alg" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -1329,7 +945,7 @@ Calculus
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/python/notes for flunet python.html">notes for Fluent Python</a>
+            <a class="article-title" href="/math/alg.html">Alg</a>
         </h1>
     
 
@@ -1338,8 +954,8 @@ Calculus
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <!-- <a href="/python/notes for flunet python.html"> -->
-            <time datetime="2018-09-03T16:24:08.000Z" itemprop="datePublished">2018-09-04</time>
+        <!-- <a href="/math/alg.html"> -->
+            <time datetime="2018-07-27T15:57:52.000Z" itemprop="datePublished">2018-07-27</time>
         <!-- </a> -->
     </div>
 
@@ -1347,7 +963,7 @@ Calculus
                         
     <div class="article-category">
     	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/python/">python</a>
+        <a class="article-category-link" href="/categories/math/">math</a>
     </div>
 
                         
@@ -1358,18 +974,11 @@ Calculus
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p>immutable: number, string, tuple, bytes
-mutable: list, dict, set, byte array
-sequence: list, string
-
-string vs. bytes vs. byte array
-
-In each iteration of for i in a:, i get a copy of the current element
-
- * modifying i doesn’t affect a, i.e. i is not a lvalue reference of a[]
- * usea[:] as a copy o</p>
+            <p>Recurrence
+Master Theorem
+Akra–Bazzi Method</p>
             <p class="article-more-link">
-                <a href="/python/notes for flunet python.html#more">Read More</a>
+                <a href="/math/alg.html#more">Read More</a>
             </p>
         
         </div>
@@ -1380,7 +989,402 @@ In each iteration of for i in a:, i get a copy of the current element
 
 </div>
 
-    <a data-url="https://guyong.xyz/python/notes for flunet python.html" data-id="cjlmhw3x800170jpyfw0ljj26" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/math/alg.html" data-id="cjln6ywxb0013fmpyw3k10prx" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer> -->
+    </div>
+    
+</article>
+
+
+
+    <article id="post-english/writing" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/english/writing.html">Writing</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <!-- <a href="/english/writing.html"> -->
+            <time datetime="2018-07-27T15:57:39.000Z" itemprop="datePublished">2018-07-27</time>
+        <!-- </a> -->
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fas fa-folder"></i>
+        <a class="article-category-link" href="/categories/english/">english</a>
+    </div>
+
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p>To simplify the ::ensuing:: presentation, …
+Had there been that if …</p>
+            <p class="article-more-link">
+                <a href="/english/writing.html#more">Read More</a>
+            </p>
+        
+        </div>
+        <!--<footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://guyong.xyz/english/writing.html" data-id="cjln6ywx90012fmpyasyg6xbo" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer> -->
+    </div>
+    
+</article>
+
+
+
+    <article id="post-english/words_and_phrases" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/english/words_and_phrases.html">Words and Phrases</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <!-- <a href="/english/words_and_phrases.html"> -->
+            <time datetime="2018-07-27T15:57:32.000Z" itemprop="datePublished">2018-07-27</time>
+        <!-- </a> -->
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fas fa-folder"></i>
+        <a class="article-category-link" href="/categories/english/">english</a>
+    </div>
+
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p>词汇与短语笔记
+ 1.  in the wake of “在…之后，紧跟”
+ 2.  all in all “总之”
+ 3.  “Not choice, but habit rules the unreflecting herd.” William Wordsworth said in the 19th century.
+     1）unreflecting 意为“缺乏思考的”。2) herd 常见意思是“畜群，牧群”，这里指“民众，百姓”，常含贬义。
+ 4.  Among the most popular: paternity and kinship testing. Which adop</p>
+            <p class="article-more-link">
+                <a href="/english/words_and_phrases.html#more">Read More</a>
+            </p>
+        
+        </div>
+        <!--<footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://guyong.xyz/english/words_and_phrases.html" data-id="cjln6ywx80011fmpy48crpr7z" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer> -->
+    </div>
+    
+</article>
+
+
+
+    <article id="post-english/mood" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/english/mood.html">Mood</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <!-- <a href="/english/mood.html"> -->
+            <time datetime="2018-07-27T15:57:22.000Z" itemprop="datePublished">2018-07-27</time>
+        <!-- </a> -->
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fas fa-folder"></i>
+        <a class="article-category-link" href="/categories/english/">english</a>
+    </div>
+
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p>语气（Moods）
+语气是利用动词变化来表达“真、假”口吻的方式。依各种不同程度的“真、假”口吻，可以细分为四种语气：
+
+ * 叙述事实语气（Indicative）：表示所说的是真的
+ * 条件语气（Conditional）：表示真假还不能确定
+ * 假设语气（Subjunctive）：说反话，表示所说的与事实相反
+ * 祈使语气（Imperative）：表示希望能成真，但尚未实现
+
+叙述事实语气
+一般的英语句子都是这种语气，在时态部分所学的现在式、过去式、未来式等等也都是属于叙述事实语气，所以不必多作解释。其中只有未来式要说明一下：
+
+ 1. I’ll go to the U.S. next</p>
+            <p class="article-more-link">
+                <a href="/english/mood.html#more">Read More</a>
+            </p>
+        
+        </div>
+        <!--<footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://guyong.xyz/english/mood.html" data-id="cjln6ywx70010fmpy895ib822" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1473,45 +1477,45 @@ In each iteration of for i in a:, i get a copy of the current element
                     <li>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/dev/">dev</a></p>
-                            <p class="item-title"><a href="/dev/design patterns.html" class="title">Design Patterns</a></p>
-                            <p class="item-date"><time datetime="2018-09-03T16:24:08.000Z" itemprop="datePublished">2018-09-04</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/about.html" class="title">About</a></p>
-                            <p class="item-date"><time datetime="2018-09-03T16:24:08.000Z" itemprop="datePublished">2018-09-04</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/links.html" class="title">Links</a></p>
-                            <p class="item-date"><time datetime="2018-09-03T16:24:08.000Z" itemprop="datePublished">2018-09-04</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
                             <p class="item-category"></p>
                             <p class="item-title"><a href="/site-building.html" class="title">Site Building</a></p>
-                            <p class="item-date"><time datetime="2018-09-03T16:24:08.000Z" itemprop="datePublished">2018-09-04</time></p>
+                            <p class="item-date"><time datetime="2018-09-03T16:22:35.000Z" itemprop="datePublished">2018-09-04</time></p>
                         </div>
                     </li>
                 
                     <li>
                         
                         <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/stickers.html" class="title">Stickers</a></p>
-                            <p class="item-date"><time datetime="2018-09-03T16:24:08.000Z" itemprop="datePublished">2018-09-04</time></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/python/">python</a></p>
+                            <p class="item-title"><a href="/python/notes for flunet python.html" class="title">notes for Fluent Python</a></p>
+                            <p class="item-date"><time datetime="2018-09-03T16:13:37.000Z" itemprop="datePublished">2018-09-04</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Collection/">Collection</a></p>
+                            <p class="item-title"><a href="/Collection/tools.html" class="title">tools</a></p>
+                            <p class="item-date"><time datetime="2018-09-03T16:02:48.000Z" itemprop="datePublished">2018-09-04</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/python/">python</a></p>
+                            <p class="item-title"><a href="/python/notes for learning python.html" class="title">Notes for Learning Python 5th</a></p>
+                            <p class="item-date"><time datetime="2018-09-03T14:32:04.000Z" itemprop="datePublished">2018-09-03</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/cpp/">cpp</a></p>
+                            <p class="item-title"><a href="/cpp/c declarations.html" class="title">C Declaration</a></p>
+                            <p class="item-date"><time datetime="2018-09-01T14:07:56.000Z" itemprop="datePublished">2018-09-01</time></p>
                         </div>
                     </li>
                 

@@ -133,7 +133,7 @@
         <div class="outer">
             
             <section id="main">
-    <article id="post-python/python async" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-dev/线程同步机制" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -141,7 +141,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/python/python async.html">Async</a>
+            <a class="article-title" href="/dev/线程同步机制.html">线程同步机制</a>
         </h1>
     
 
@@ -150,8 +150,8 @@
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <!-- <a href="/python/python async.html"> -->
-            <time datetime="2018-09-03T16:24:08.000Z" itemprop="datePublished">2018-09-04</time>
+        <!-- <a href="/dev/线程同步机制.html"> -->
+            <time datetime="2018-07-27T15:57:10.000Z" itemprop="datePublished">2018-07-27</time>
         <!-- </a> -->
     </div>
 
@@ -159,7 +159,7 @@
                         
     <div class="article-category">
     	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/python/">python</a>
+        <a class="article-category-link" href="/categories/dev/">dev</a>
     </div>
 
                         
@@ -170,13 +170,21 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p>Future
-python 中的 Future 相当于 js 中的 Promise ，功能是把”事件发生“ 与”回调函数“ 分离。不仅可以先注册callback, 等“事件发生”（Future中是set_result, js中是resolve)后自动调用一个或多个callback; 还可以在 set_result后在注册callback. 内部通过保存”事件发生“这一状态来实现 Deferred 效果。
+            <p>线程基础知识
+线程同步的底层支持包括：
 
-Select
-python中的select module中有针对不同平台的系统函数来完成IO复用的功能，最原始的是select函数, 在大多数平台上都有。poll比 select更优化一些，</p>
+ 1. TSL （或其它）原子操作
+ 2. 中断服务
+
+互斥锁Mutex
+最基本的同步机制是锁（Lock），包括 互斥锁(Mutex), Read-Write 锁, 空转锁。以Mutex为例：
+
+ * 对Mutex状态的判断及修改是通过机器提供的原子性指令完成的。
+ * 每个Mutex上有一个等待队列（waiting list)
+ * Lock()操作在”locked” 情况下会被挂起，实际上是先空转（spin）一小会再挡土挂起（yield），当前线程会加入到Mutex的waiting list中。
+ * 挂起是指将线程置于”睡眠“状态，并调用线程调试</p>
             <p class="article-more-link">
-                <a href="/python/python async.html#more">Read More</a>
+                <a href="/dev/线程同步机制.html#more">Read More</a>
             </p>
         
         </div>
@@ -187,7 +195,7 @@ python中的select module中有针对不同平台的系统函数来完成IO复�
 
 </div>
 
-    <a data-url="https://guyong.xyz/python/python async.html" data-id="cjlmhw3xa00180jpyndmwyngz" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/dev/线程同步机制.html" data-id="cjln6ywwp000mfmpy8860iunr" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -263,7 +271,7 @@ python中的select module中有针对不同平台的系统函数来完成IO复�
 
 
 
-    <article id="post-python/python网络编程" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-dev/misc" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -271,7 +279,7 @@ python中的select module中有针对不同平台的系统函数来完成IO复�
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/python/python网络编程.html">网络编程</a>
+            <a class="article-title" href="/dev/misc.html">Misc</a>
         </h1>
     
 
@@ -280,8 +288,8 @@ python中的select module中有针对不同平台的系统函数来完成IO复�
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <!-- <a href="/python/python网络编程.html"> -->
-            <time datetime="2018-09-03T16:24:08.000Z" itemprop="datePublished">2018-09-04</time>
+        <!-- <a href="/dev/misc.html"> -->
+            <time datetime="2018-07-27T15:56:55.000Z" itemprop="datePublished">2018-07-27</time>
         <!-- </a> -->
     </div>
 
@@ -289,7 +297,7 @@ python中的select module中有针对不同平台的系统函数来完成IO复�
                         
     <div class="article-category">
     	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/python/">python</a>
+        <a class="article-category-link" href="/categories/dev/">dev</a>
     </div>
 
                         
@@ -300,10 +308,9 @@ python中的select module中有针对不同平台的系统函数来完成IO复�
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p>杂记：
-网卡一般是双工的，上行下行可同时发生，传输是以字节Byte为最小单位（本质上传输的是比特流）。</p>
+            <p>常见指令时间 https://zhuanlan.zhihu.com/p/30742986</p>
             <p class="article-more-link">
-                <a href="/python/python网络编程.html#more">Read More</a>
+                <a href="/dev/misc.html#more">Read More</a>
             </p>
         
         </div>
@@ -314,7 +321,7 @@ python中的select module中有针对不同平台的系统函数来完成IO复�
 
 </div>
 
-    <a data-url="https://guyong.xyz/python/python网络编程.html" data-id="cjlmhw3xb00190jpyglkci18g" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/dev/misc.html" data-id="cjln6ywwo000lfmpylhipxeg1" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -390,7 +397,7 @@ python中的select module中有针对不同平台的系统函数来完成IO复�
 
 
 
-    <article id="post-python/python杂记" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-dev/design patterns" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -398,7 +405,7 @@ python中的select module中有针对不同平台的系统函数来完成IO复�
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/python/python杂记.html">杂记</a>
+            <a class="article-title" href="/dev/design patterns.html">Design Patterns</a>
         </h1>
     
 
@@ -407,8 +414,8 @@ python中的select module中有针对不同平台的系统函数来完成IO复�
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <!-- <a href="/python/python杂记.html"> -->
-            <time datetime="2018-09-03T16:24:08.000Z" itemprop="datePublished">2018-09-04</time>
+        <!-- <a href="/dev/design patterns.html"> -->
+            <time datetime="2018-07-27T15:56:49.000Z" itemprop="datePublished">2018-07-27</time>
         <!-- </a> -->
     </div>
 
@@ -416,7 +423,7 @@ python中的select module中有针对不同平台的系统函数来完成IO复�
                         
     <div class="article-category">
     	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/python/">python</a>
+        <a class="article-category-link" href="/categories/dev/">dev</a>
     </div>
 
                         
@@ -427,19 +434,19 @@ python中的select module中有针对不同平台的系统函数来完成IO复�
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p>types分类
+            <p>Google研院的Peter Norvig大叔总结了23个design pattern在lisp/python等函数式语言之下的对应物。
 
-immutable: number, string, tuple
-mutable: list, dict, class-object
-Function arguments are passed by values: immutable objects are copied by value, while mutable objects are copied by aliasing.
+引用如下
 
-classes themselves are objects.
+=====================================================
 
-Iterable, Iterator, Generator
+16 of 23 patterns are either invisible or simpler, due to:
 
- * Iterable: implementing iter() </p>
+First-class types (6): Abstract-Factory, Flyweight, Factory-Method, State, Proxy, Chain-Of-Responsibility
+
+Fi</p>
             <p class="article-more-link">
-                <a href="/python/python杂记.html#more">Read More</a>
+                <a href="/dev/design patterns.html#more">Read More</a>
             </p>
         
         </div>
@@ -450,7 +457,7 @@ Iterable, Iterator, Generator
 
 </div>
 
-    <a data-url="https://guyong.xyz/python/python杂记.html" data-id="cjlmhw3xc001a0jpykrxi144u" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/dev/design patterns.html" data-id="cjln6ywwm000kfmpytdwsdgzt" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -526,7 +533,7 @@ Iterable, Iterator, Generator
 
 
 
-    <article id="post-reading/deep work" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-cpp/参考资料" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -534,7 +541,7 @@ Iterable, Iterator, Generator
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/reading/deep work.html">Deep Work</a>
+            <a class="article-title" href="/cpp/参考资料.html">参考资料</a>
         </h1>
     
 
@@ -543,8 +550,8 @@ Iterable, Iterator, Generator
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <!-- <a href="/reading/deep work.html"> -->
-            <time datetime="2018-09-03T16:24:08.000Z" itemprop="datePublished">2018-09-04</time>
+        <!-- <a href="/cpp/参考资料.html"> -->
+            <time datetime="2018-07-27T15:55:41.000Z" itemprop="datePublished">2018-07-27</time>
         <!-- </a> -->
     </div>
 
@@ -552,7 +559,7 @@ Iterable, Iterator, Generator
                         
     <div class="article-category">
     	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/reading/">reading</a>
+        <a class="article-category-link" href="/categories/cpp/">cpp</a>
     </div>
 
                         
@@ -563,30 +570,22 @@ Iterable, Iterator, Generator
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p>亚马逊满99元赚的书，今天到货花了大概四个小时通读了一遍，觉的有不少收获，是个人当前所需要的。全书主要分为两部分：
-
- * 深度工作理论：深度工作是什么以及深度工作的价值、意义
- * 深度工作准则：进行深度工作的一些准则
-
-在这里我只记下一些重要的笔记，一是通过总结加深下自己的印象，二是以备以后不时之需。注意：
-
- 1. 书中有大量丰富有趣的事例，这里都略掉了。
- 2. 有些感想类比是个人所写（大都在以括号标出）
-
-深度工作理论
-深度工作与浮浅工作
-深度工作的特点：
-
- 1. 无干扰
- 2. 使个人认知能力达到极限
- 3. 创造新的价值，提升技能
- 4. 难以复制
-
-浮浅工作的特点：
-
- </p>
+            <p>1. 入门基础
+    C++ Primer (5th)
+    The C++ Programming Language (4th)
+ 2. 实战技术
+    Effective C++
+    Effective Modern C++
+    Effective STL
+ 3. 中级教程
+    More Effective C++
+    Exceptional C++
+    More Exceptional C++
+    Exceptional C++ Style
+    C++ Coding Standards
+    C++ Templates</p>
             <p class="article-more-link">
-                <a href="/reading/deep work.html#more">Read More</a>
+                <a href="/cpp/参考资料.html#more">Read More</a>
             </p>
         
         </div>
@@ -597,7 +596,7 @@ Iterable, Iterator, Generator
 
 </div>
 
-    <a data-url="https://guyong.xyz/reading/deep work.html" data-id="cjlmhw3xe001b0jpyus0uejr1" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/cpp/参考资料.html" data-id="cjln6ywx6000zfmpy5xfw6wjc" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -673,7 +672,7 @@ Iterable, Iterator, Generator
 
 
 
-    <article id="post-research/graph theory" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-cpp/tools" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -681,7 +680,7 @@ Iterable, Iterator, Generator
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/research/graph theory.html">Graph Theory</a>
+            <a class="article-title" href="/cpp/tools.html">Tools</a>
         </h1>
     
 
@@ -690,8 +689,8 @@ Iterable, Iterator, Generator
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <!-- <a href="/research/graph theory.html"> -->
-            <time datetime="2018-09-03T16:24:08.000Z" itemprop="datePublished">2018-09-04</time>
+        <!-- <a href="/cpp/tools.html"> -->
+            <time datetime="2018-07-27T15:55:31.000Z" itemprop="datePublished">2018-07-27</time>
         <!-- </a> -->
     </div>
 
@@ -699,7 +698,7 @@ Iterable, Iterator, Generator
                         
     <div class="article-category">
     	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/research/">research</a>
+        <a class="article-category-link" href="/categories/cpp/">cpp</a>
     </div>
 
                         
@@ -710,22 +709,12 @@ Iterable, Iterator, Generator
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p>Graph theory
-Courses
- 1. Theory of Algorithms by Robert Tarjan 
+            <p>Commands
 
-Papers
- 1. Linear-Time Approximation for Maximum Weight Matching Ran Duan, Seth Pettie. 2014
-
-Matching
-Definition and theorems
-alternating path, augmenting path, blossom, blossom lemma, Berge theorem
-
-Results
- 1. Unweighted, bipartite
-</p>
+ 1. nm
+ 2. c++filt</p>
             <p class="article-more-link">
-                <a href="/research/graph theory.html#more">Read More</a>
+                <a href="/cpp/tools.html#more">Read More</a>
             </p>
         
         </div>
@@ -736,7 +725,7 @@ Results
 
 </div>
 
-    <a data-url="https://guyong.xyz/research/graph theory.html" data-id="cjlmhw3xg001c0jpy9rokw9gh" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/cpp/tools.html" data-id="cjln6ywx5000yfmpyg3wsbrqy" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -812,7 +801,7 @@ Results
 
 
 
-    <article id="post-web/index" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-cpp/Target: reference" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -820,7 +809,7 @@ Results
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/web/index.html">Index</a>
+            <a class="article-title" href="/cpp/Target: reference.html">Target:references</a>
         </h1>
     
 
@@ -829,8 +818,8 @@ Results
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <!-- <a href="/web/index.html"> -->
-            <time datetime="2018-09-03T16:24:08.000Z" itemprop="datePublished">2018-09-04</time>
+        <!-- <a href="/cpp/Target: reference.html"> -->
+            <time datetime="2018-07-27T15:55:15.000Z" itemprop="datePublished">2018-07-27</time>
         <!-- </a> -->
     </div>
 
@@ -838,7 +827,7 @@ Results
                         
     <div class="article-category">
     	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/web/">web</a>
+        <a class="article-category-link" href="/categories/cpp/">cpp</a>
     </div>
 
                         
@@ -849,29 +838,12 @@ Results
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p>html
- * introduction
-
-css
-Javascript
- * Index
- * Basics
- * Closure
- * Object oriented
- * Event loop
- * Promise
- * Others
-
-Node.js
- * Index
- * Basics
-
-Markdown
- * Index
- * My markdown renderer
- * Markdown cheatsheet (GFM)</p>
+            <p>lvalues, rvalues
+ * lvalues/rvalues are expression types, used to tell compiler whether it’s eligible to be moved from.
+ * rvalues are eligible to be moved from, but not guaranted. const rvalues are not eligible.
+ * Applying std::move to an (const) object casts it to rvalue. The returned type is (co</p>
             <p class="article-more-link">
-                <a href="/web/index.html#more">Read More</a>
+                <a href="/cpp/Target: reference.html#more">Read More</a>
             </p>
         
         </div>
@@ -882,7 +854,7 @@ Markdown
 
 </div>
 
-    <a data-url="https://guyong.xyz/web/index.html" data-id="cjlmhw3xi001d0jpyrlfdg17q" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/cpp/Target: reference.html" data-id="cjln6ywwu000pfmpyjbqkxert" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -958,7 +930,7 @@ Markdown
 
 
 
-    <article id="post-web/js" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-cpp/summary" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -966,7 +938,7 @@ Markdown
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/web/js.html">Javascript</a>
+            <a class="article-title" href="/cpp/summary.html">Summary</a>
         </h1>
     
 
@@ -975,8 +947,8 @@ Markdown
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <!-- <a href="/web/js.html"> -->
-            <time datetime="2018-09-03T16:24:08.000Z" itemprop="datePublished">2018-09-04</time>
+        <!-- <a href="/cpp/summary.html"> -->
+            <time datetime="2018-07-27T15:55:01.000Z" itemprop="datePublished">2018-07-27</time>
         <!-- </a> -->
     </div>
 
@@ -984,7 +956,7 @@ Markdown
                         
     <div class="article-category">
     	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/web/">web</a>
+        <a class="article-category-link" href="/categories/cpp/">cpp</a>
     </div>
 
                         
@@ -995,11 +967,20 @@ Markdown
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p>Javascript Notes
-1. Online version of “Exploring ES6” by Dr. Axel Rauschmayer
-If you really want to understand ES6, you have to understand how each feature works, even when you’re dealing with unusual situations and edge cases. What sets Axel Rauschmayer’s Exploring ES6 apart from other books is tha</p>
+            <p>Books and tutorials
+The Definitive C++ Book Guide and List
+
+ * Accelerated C++
+ * Essential C++
+ * Inside the C++ Object Model
+ * The Annotated C++ Reference Manual
+ * The C++ Standard (INCITS/ISO/IEC 14882-2011)
+ * The C++ Programming Language (Bjarne Stroustrup)
+
+Useful references and terms
+rvalue</p>
             <p class="article-more-link">
-                <a href="/web/js.html#more">Read More</a>
+                <a href="/cpp/summary.html#more">Read More</a>
             </p>
         
         </div>
@@ -1010,7 +991,7 @@ If you really want to understand ES6, you have to understand how each feature wo
 
 </div>
 
-    <a data-url="https://guyong.xyz/web/js.html" data-id="cjlmhw3xk001e0jpy99ptrodf" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/cpp/summary.html" data-id="cjln6ywx3000xfmpyad311tep" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1086,7 +1067,7 @@ If you really want to understand ES6, you have to understand how each feature wo
 
 
 
-    <article id="post-web/js_basics" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-cpp/stl" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -1094,7 +1075,7 @@ If you really want to understand ES6, you have to understand how each feature wo
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/web/js_basics.html">Js Basis</a>
+            <a class="article-title" href="/cpp/stl.html">STL</a>
         </h1>
     
 
@@ -1103,8 +1084,8 @@ If you really want to understand ES6, you have to understand how each feature wo
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <!-- <a href="/web/js_basics.html"> -->
-            <time datetime="2018-09-03T16:24:08.000Z" itemprop="datePublished">2018-09-04</time>
+        <!-- <a href="/cpp/stl.html"> -->
+            <time datetime="2018-07-27T15:54:53.000Z" itemprop="datePublished">2018-07-27</time>
         <!-- </a> -->
     </div>
 
@@ -1112,7 +1093,7 @@ If you really want to understand ES6, you have to understand how each feature wo
                         
     <div class="article-category">
     	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/web/">web</a>
+        <a class="article-category-link" href="/categories/cpp/">cpp</a>
     </div>
 
                         
@@ -1123,14 +1104,27 @@ If you really want to understand ES6, you have to understand how each feature wo
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p>1. Basics
- * scripting language (interpreted, not complied)
- * object-oriented (inheritance, encapsulation, polymorphism)
- * prototype-based (also called classless, prototype-oriented, or instance-based)
-   prototype is essentially object, which can be modified dynamically, while “class” can’t
- * dy</p>
+            <p>The C++ standard library contains mainly:
+
+ * Input/Output
+   
+   
+ * Containers
+   
+   
+ * Iterators
+   
+   
+ * Algorithms
+   
+   
+
+The most fundamental property of any algorithm is the list of operations it requires from its iterator(s).
+Iterator categories
+
+ * Input iterator (e.g. istream_iterato</p>
             <p class="article-more-link">
-                <a href="/web/js_basics.html#more">Read More</a>
+                <a href="/cpp/stl.html#more">Read More</a>
             </p>
         
         </div>
@@ -1141,7 +1135,7 @@ If you really want to understand ES6, you have to understand how each feature wo
 
 </div>
 
-    <a data-url="https://guyong.xyz/web/js_basics.html" data-id="cjlmhw3xl001f0jpy9e7gg37o" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/cpp/stl.html" data-id="cjln6ywx2000wfmpy8xxxau3r" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1217,7 +1211,7 @@ If you really want to understand ES6, you have to understand how each feature wo
 
 
 
-    <article id="post-web/js_event_loop" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-cpp/index" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -1225,7 +1219,7 @@ If you really want to understand ES6, you have to understand how each feature wo
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/web/js_event_loop.html">Js Eventloop</a>
+            <a class="article-title" href="/cpp/index.html">Index</a>
         </h1>
     
 
@@ -1234,8 +1228,8 @@ If you really want to understand ES6, you have to understand how each feature wo
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <!-- <a href="/web/js_event_loop.html"> -->
-            <time datetime="2018-09-03T16:24:08.000Z" itemprop="datePublished">2018-09-04</time>
+        <!-- <a href="/cpp/index.html"> -->
+            <time datetime="2018-07-27T15:54:16.000Z" itemprop="datePublished">2018-07-27</time>
         <!-- </a> -->
     </div>
 
@@ -1243,7 +1237,7 @@ If you really want to understand ES6, you have to understand how each feature wo
                         
     <div class="article-category">
     	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/web/">web</a>
+        <a class="article-category-link" href="/categories/cpp/">cpp</a>
     </div>
 
                         
@@ -1254,9 +1248,23 @@ If you really want to understand ES6, you have to understand how each feature wo
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p>Concurrency model and Event Loop</p>
+            <p>Basics
+Building Process of C++
+Functions
+Initialization
+
+Classes
+ 1. Three programing patterns * procedual programing
+     * abstract data
+     * object oriented
+     * general programing
+    
+    
+ 2. Main features of object oriented programing * Incapsulation
+     * Inheritance
+     * Polymorphism</p>
             <p class="article-more-link">
-                <a href="/web/js_event_loop.html#more">Read More</a>
+                <a href="/cpp/index.html#more">Read More</a>
             </p>
         
         </div>
@@ -1267,7 +1275,7 @@ If you really want to understand ES6, you have to understand how each feature wo
 
 </div>
 
-    <a data-url="https://guyong.xyz/web/js_event_loop.html" data-id="cjlmhw3xn001g0jpyw2byw93e" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/cpp/index.html" data-id="cjln6ywwz000tfmpy7otpiwub" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1343,7 +1351,7 @@ If you really want to understand ES6, you have to understand how each feature wo
 
 
 
-    <article id="post-web/js_closure" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-cpp/functions" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -1351,7 +1359,7 @@ If you really want to understand ES6, you have to understand how each feature wo
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/web/js_closure.html">Js Closures</a>
+            <a class="article-title" href="/cpp/functions.html">Function</a>
         </h1>
     
 
@@ -1360,8 +1368,8 @@ If you really want to understand ES6, you have to understand how each feature wo
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <!-- <a href="/web/js_closure.html"> -->
-            <time datetime="2018-09-03T16:24:08.000Z" itemprop="datePublished">2018-09-04</time>
+        <!-- <a href="/cpp/functions.html"> -->
+            <time datetime="2018-07-27T15:53:49.000Z" itemprop="datePublished">2018-07-27</time>
         <!-- </a> -->
     </div>
 
@@ -1369,7 +1377,7 @@ If you really want to understand ES6, you have to understand how each feature wo
                         
     <div class="article-category">
     	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/web/">web</a>
+        <a class="article-category-link" href="/categories/cpp/">cpp</a>
     </div>
 
                         
@@ -1380,15 +1388,15 @@ If you really want to understand ES6, you have to understand how each feature wo
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p>Closure
-How do JavaScript closures work under the hood[1]
+            <p>Overloading
+ 1. type of parameters ( conversion )
+ 2. number of parateters
+ 3. const keyword
 
-This is the best article I’ve read that illustrats how “closures” works and what is going on behind the scene when they’re used.
-
-1. scope objects
-Each function object has a “scope” property that points to the scope the function is defined. </p>
+ * C++ allows member methods to be overloaded on the basis of const type. Overloading on the basis of const type can be useful when a function return reference or pointer.
+ * C++ allows functions to be over</p>
             <p class="article-more-link">
-                <a href="/web/js_closure.html#more">Read More</a>
+                <a href="/cpp/functions.html#more">Read More</a>
             </p>
         
         </div>
@@ -1399,7 +1407,7 @@ Each function object has a “scope” property that points to the scope the fun
 
 </div>
 
-    <a data-url="https://guyong.xyz/web/js_closure.html" data-id="cjlmhw3xp001h0jpyxxsfx7h0" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/cpp/functions.html" data-id="cjln6ywwy000sfmpyfyy2bdco" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1492,45 +1500,45 @@ Each function object has a “scope” property that points to the scope the fun
                     <li>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/dev/">dev</a></p>
-                            <p class="item-title"><a href="/dev/design patterns.html" class="title">Design Patterns</a></p>
-                            <p class="item-date"><time datetime="2018-09-03T16:24:08.000Z" itemprop="datePublished">2018-09-04</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/about.html" class="title">About</a></p>
-                            <p class="item-date"><time datetime="2018-09-03T16:24:08.000Z" itemprop="datePublished">2018-09-04</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/links.html" class="title">Links</a></p>
-                            <p class="item-date"><time datetime="2018-09-03T16:24:08.000Z" itemprop="datePublished">2018-09-04</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
                             <p class="item-category"></p>
                             <p class="item-title"><a href="/site-building.html" class="title">Site Building</a></p>
-                            <p class="item-date"><time datetime="2018-09-03T16:24:08.000Z" itemprop="datePublished">2018-09-04</time></p>
+                            <p class="item-date"><time datetime="2018-09-03T16:22:35.000Z" itemprop="datePublished">2018-09-04</time></p>
                         </div>
                     </li>
                 
                     <li>
                         
                         <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/stickers.html" class="title">Stickers</a></p>
-                            <p class="item-date"><time datetime="2018-09-03T16:24:08.000Z" itemprop="datePublished">2018-09-04</time></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/python/">python</a></p>
+                            <p class="item-title"><a href="/python/notes for flunet python.html" class="title">notes for Fluent Python</a></p>
+                            <p class="item-date"><time datetime="2018-09-03T16:13:37.000Z" itemprop="datePublished">2018-09-04</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Collection/">Collection</a></p>
+                            <p class="item-title"><a href="/Collection/tools.html" class="title">tools</a></p>
+                            <p class="item-date"><time datetime="2018-09-03T16:02:48.000Z" itemprop="datePublished">2018-09-04</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/python/">python</a></p>
+                            <p class="item-title"><a href="/python/notes for learning python.html" class="title">Notes for Learning Python 5th</a></p>
+                            <p class="item-date"><time datetime="2018-09-03T14:32:04.000Z" itemprop="datePublished">2018-09-03</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/cpp/">cpp</a></p>
+                            <p class="item-title"><a href="/cpp/c declarations.html" class="title">C Declaration</a></p>
+                            <p class="item-date"><time datetime="2018-09-01T14:07:56.000Z" itemprop="datePublished">2018-09-01</time></p>
                         </div>
                     </li>
                 
