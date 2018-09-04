@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Markdown | GYNote</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="1. Introduction Markdown is a plain text format for writing structured documents.  The overriding design goal for Markdown’s formatting syntax is to make it as readable as possible. The idea is that a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown">
+<meta property="og:url" content="https://guyong.xyz/web/markdown.html">
+<meta property="og:site_name" content="GYNote">
+<meta property="og:description" content="1. Introduction Markdown is a plain text format for writing structured documents.  The overriding design goal for Markdown’s formatting syntax is to make it as readable as possible. The idea is that a">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://cloud.githubusercontent.com/assets/1908863/14398210/0e408954-fda8-11e5-9eb4-562d7c0ca431.gif">
+<meta property="og:image" content="http://i.imgur.com/rwIPIA8.gif">
+<meta property="og:updated_time" content="2018-06-26T15:06:24.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Markdown">
+<meta name="twitter:description" content="1. Introduction Markdown is a plain text format for writing structured documents.  The overriding design goal for Markdown’s formatting syntax is to make it as readable as possible. The idea is that a">
+<meta name="twitter:image" content="https://cloud.githubusercontent.com/assets/1908863/14398210/0e408954-fda8-11e5-9eb4-562d7c0ca431.gif">
+    
+
+    
+        <link rel="alternate" href="/" title="GYNote" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/css/images/favicon.png" />
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome5/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/libs/font-awesome5/css/fa-brands.min.css">
+    <link rel="stylesheet" href="/libs/font-awesome5/css/fa-solid.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">GYNote</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/categories">Categories</a>
+                
+                    <a class="main-nav-link" href="/tags">Tags</a>
+                
+                    <a class="main-nav-link" href="/archives">Archives</a>
+                
+                    <a class="main-nav-link" href="/links.html">Links</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fas fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/categories">Categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">Tags</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">Archives</a></td>
+                
+                    <td><a class="main-nav-link" href="/links.html">Links</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            <section id="main"><article id="post-web/markdown" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+            Markdown
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <!-- <a href="/web/markdown.html"> -->
+            <time datetime="2018-06-26T15:06:24.000Z" itemprop="datePublished">2018-06-26</time>
+        <!-- </a> -->
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fas fa-folder"></i>
+        <a class="article-category-link" href="/categories/web/">web</a>
+    </div>
+
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h2 id="1.-introduction">1. Introduction</h2>
+<p>Markdown is a plain text format for writing structured documents.</p>
+<blockquote>
+<p>The overriding design goal for Markdown’s formatting syntax is to make it as readable as possible. The idea is that a Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions.</p>
+</blockquote>
+<p>John Gruber’s <a href="http://daringfireball.net/projects/markdown/syntax" target="_blank" rel="noopener">canonical description of Markdown’s syntax</a> does not specify the syntax unambiguously. A group of fans of Markdown propose a standard unambiguous syntax specification for Markdown: the <a href="http://commonmark.org" target="_blank" rel="noopener">CommonMark</a> sepc.</p>
+<h2 id="2.-prlimilaries-of-commonmark">2. Prlimilaries of CommonMark</h2>
+<p>Below are some important points, for detail refer to <a href="http://spec.commonmark.org/" target="_blank" rel="noopener">http://spec.commonmark.org/</a></p>
+<h3 id="blocks-and-inlines">Blocks and inlines</h3>
+<ul>
+<li>
+<p>We can think of a document as a sequence of <strong>blocks</strong>—structural elements like paragraphs, block quotations, lists, headings, rules, and code blocks. Some blocks (like block quotes and list items) contain other blocks; others (like headings and paragraphs) contain <strong>inline</strong> content—text, links, emphasized text, images, code, and so on.</p>
+</li>
+<li>
+<p>Indicators of block structure always take precedence over indicators of inline structure. So, for example, the following is a list with two items, not a list with one item containing a code span:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- `one</span><br><span class="line">- two`</span><br></pre></td></tr></table></figure>
+<p>produces</p>
+<ul>
+<li>`one</li>
+<li>two`</li>
+</ul>
+</li>
+<li>
+<p>Blocks can be divided into two types: <strong>container blocks</strong> and <strong>leaf blocks</strong>.<br>
+Leaf blocks includes:</p>
+<ul>
+<li>Thematic breaks</li>
+<li>ATX headings and setext headings</li>
+<li>Indented code blocks and Fenced code blocks</li>
+<li>Html blocks</li>
+<li>Link reference definitions</li>
+<li>Paragraphs</li>
+<li>Blank lines</li>
+</ul>
+<p>Container blocks includes:</p>
+<ul>
+<li>Block quotes</li>
+<li>List items</li>
+<li>Lists</li>
+</ul>
+</li>
+<li>
+<p>Inlines are parsed sequentially from the beginning of the character stream to the end (left to right, in left-to-right languages). It includes:</p>
+<ul>
+<li>Backslash escapes</li>
+<li>Entity and numeric character references</li>
+<li>Code spans: Code span backticks have higher precedence than any other inline constructs except HTML tags and autolinks.</li>
+<li>Emphasis and strong emphasis</li>
+<li>Links (inline links vs. reference links)</li>
+<li>Images</li>
+<li>Autolinks</li>
+<li>Raw HTML</li>
+<li>Hard line breaks (line break preceded by two or more spaces)</li>
+<li>Soft line breaks (regular line break)</li>
+<li>Textual content</li>
+</ul>
+</li>
+</ul>
+<h3 id="parsing-strategy">Parsing strategy</h3>
+<p>Parsing has two phases:</p>
+<ul>
+<li>
+<p>In the first phase, lines of input are consumed and the block structure of the document—its division into paragraphs, block quotes, list items, and so on—is constructed. Text is assigned to these blocks but not parsed. Link reference definitions are parsed and a map of links is constructed.</p>
+</li>
+<li>
+<p>In the second phase, the raw text contents of paragraphs and headings are parsed into sequences of Markdown inline elements (strings, code spans, links, emphasis, and so on), using the map of link references constructed in phase 1.</p>
+</li>
+</ul>
+<p>At each point in processing, the document is represented as a tree of blocks. The root of the tree is a document block. The document may have any number of other blocks as children. These children may, in turn, have other blocks as children.</p>
+<p>In phase 1, the last child of a block is normally considered open, meaning that subsequent lines of input can alter its contents. (Blocks that are not open are closed.) Once all of the input has been parsed, all open blocks are closed. Then in phase 2, We “walk the tree,” visiting every node, and parse raw string contents of paragraphs and headings as inlines.</p>
+<h2 id="github-flavored-markdown">Github flavored Markdown</h2>
+<p><a href="https://help.github.com/categories/writing-on-github/" target="_blank" rel="noopener">GFM info page</a><br>
+<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank" rel="noopener">GFM cheatsheet</a><br>
+Below are some features not included in CommonMark spec.</p>
+<ol>
+<li>
+<p>Strikethrough uses two tildes. <s>Scratch this.</s></p>
+</li>
+<li>
+<p>Syntax highlighting (only support fenced code blocks)</p>
+</li>
+<li>
+<p>Tables</p>
+</li>
+<li>
+<p>Task list</p>
+<ul>
+<li><input type="checkbox" id="checkbox0" checked="true"><label for="checkbox0">Finish my changes</label></li>
+<li><input type="checkbox" id="checkbox1"><label for="checkbox1">Push my commits to GitHub</label></li>
+<li><input type="checkbox" id="checkbox2"><label for="checkbox2">Open a pull request</label></li>
+</ul>
+<p>If a task list item description begins with a parenthesis, you’ll need to escape it with :</p>
+<ul>
+<li><input type="checkbox" id="checkbox3"><label for="checkbox3">(Optional) Open a followup issue</label></li>
+</ul>
+</li>
+</ol>
+<h2 id="remarkable">Remarkable</h2>
+<p>Refer to <a href="https://github.com/jonschlinkert/remarkable" target="_blank" rel="noopener">remarkable on github</a> for details.<br>
+Supports the CommonMark spec + syntax extensions + sugar (URL autolinking, typographer).</p>
+<h3 id="syntax-extensions">Syntax extensions</h3>
+<p>Enabled by default:</p>
+<ul>
+<li><a href="http://johnmacfarlane.net/pandoc/README.html#footnotes" target="_blank" rel="noopener">Footnotes</a></li>
+<li><a href="https://help.github.com/articles/github-flavored-markdown/#tables" target="_blank" rel="noopener">Tables</a> (GFM)</li>
+<li><a href="https://help.github.com/articles/github-flavored-markdown/#strikethrough" target="_blank" rel="noopener">&lt;del&gt;</a><br>
+(GFM strikethrough) - <code>~~deleted text~~</code></li>
+</ul>
+<p>Disabled by default:</p>
+<ul>
+<li><a href="http://johnmacfarlane.net/pandoc/README.html#superscripts-and-subscripts" target="_blank" rel="noopener">&lt;sup&gt;</a> - <code>19^th^</code> 19^th^</li>
+<li><a href="http://johnmacfarlane.net/pandoc/README.html#superscripts-and-subscripts" target="_blank" rel="noopener">&lt;sub&gt;</a> - <code>H~2~O</code> H~2~O</li>
+<li><a href="https://michelf.ca/projects/php-markdown/extra/#abbr" target="_blank" rel="noopener">abbreviations</a></li>
+<li><strong>&lt;ins&gt;</strong> - <code>++inserted text++</code> (experimental)</li>
+<li><strong>&lt;mark&gt;</strong> - <code>==marked text==</code> (experimental)</li>
+</ul>
+<p><strong>HEADS UP!</strong>: Experimental extensions can be changed later for something like <a href="http://criticmarkup.com/" target="_blank" rel="noopener">Critic Markup</a>, but you will still be able to use old-style rules via external plugins if you prefer.</p>
+<h2 id="markdown-preview-enhanced">Markdown-preview-enhanced</h2>
+<p>Refer to <a href="https://atom.io/packages/markdown-preview-enhanced" target="_blank" rel="noopener">Markdown Preview Enhanced</a> for details.<br>
+This atom plugin uses <strong>remarkable</strong> to render markdown. Here is how it works:</p>
+<ul>
+<li><a href="https://github.com/jonschlinkert/remarkable" target="_blank" rel="noopener">remarkable</a> to convert markdown to html.</li>
+<li><a href="https://github.com/Khan/KaTeX" target="_blank" rel="noopener">KaTeX</a> or <a href="https://github.com/mathjax/MathJax" target="_blank" rel="noopener">MathJax</a> to render math expressions. (<a href="https://github.com/Khan/KaTeX/wiki/Function-Support-in-KaTeX" target="_blank" rel="noopener">KaTeX Supported functions/symbols</a>)
+<ul>
+<li>expression within <code>$...$</code> will be rendered normally.</li>
+<li>expression within <code>$$...$$</code> will be rendered in displayMode.</li>
+<li>if you want to enable math highlighting, try <a href="https://atom.io/packages/language-gfm-enhanced" target="_blank" rel="noopener">language-gfm-enhanced</a> package.</li>
+<li>You can choose your math rendering method from <a href="#settings-panel">settings panel</a>.<br>
+<strong>MathJax</strong> supports more symbols, but it has slower rendering speed compared to <strong>KaTeX</strong>.</li>
+<li>
+<img src="https://cloud.githubusercontent.com/assets/1908863/14398210/0e408954-fda8-11e5-9eb4-562d7c0ca431.gif">
+</li>
+</ul>
+</li>
+<li><a href="https://github.com/knsv/mermaid" target="_blank" rel="noopener">mermaid</a> to render flowchart and sequence diagram.
+<ul>
+<li>code block within <code>{mermaid}</code> notation will be rendered by <a href="https://github.com/knsv/mermaid" target="_blank" rel="noopener">mermaid</a></li>
+<li>check <a href="http://knsv.github.io/mermaid/#flowcharts-basic-syntax" target="_blank" rel="noopener">mermaid doc</a> for more information about how to create flowchart and sequence diagram</li>
+<li><img src="http://i.imgur.com/rwIPIA8.gif" alt="mermaid"></li>
+</ul>
+</li>
+<li><a href="http://plantuml.com/" target="_blank" rel="noopener">PlantUML</a> to create multiple kinds of graph. (<strong>Java</strong> is required)
+<ul>
+<li>You can install <a href="http://www.graphviz.org/" target="_blank" rel="noopener">Graphviz</a> (not required) to generate all diagram types.</li>
+<li>code block within <code>{puml}</code> or <code>{plantuml}</code> notation will be rendered by <a href="http://plantuml.com/" target="_blank" rel="noopener">PlantUML</a>.</li>
+</ul>
+</li>
+<li><a href="http://wavedrom.com/" target="_blank" rel="noopener">WaveDrom</a> to create digital timing diagram.
+<ul>
+<li>code block within <code>{wavedrom}</code> notation will be rendered by <a href="https://github.com/drom/wavedrom" target="_blank" rel="noopener">wavedrom</a>.</li>
+</ul>
+</li>
+<li><a href="https://github.com/mdaines/viz.js" target="_blank" rel="noopener">Viz.js</a> to render <a href="https://en.wikipedia.org/wiki/DOT_(graph_description_language)" target="_blank" rel="noopener">dot language</a> graph.
+<ul>
+<li>code block within <code>{viz}</code> notation will be rendered by <a href="https://github.com/mdaines/viz.js" target="_blank" rel="noopener">Viz.js</a>.</li>
+<li>add <code>engine:[engine_name]</code> in the first line of code block with <code>{viz}</code> to choose different render engine</li>
+</ul>
+</li>
+<li><a href="https://github.com/hakimel/reveal.js" target="_blank" rel="noopener">reveal.js</a> to render beautiful presentations.
+<ul>
+<li><a href="https://rawgit.com/shd101wyy/markdown-preview-enhanced/master/docs/presentation-intro.html" target="_blank" rel="noopener">Click here</a> to see the introduction.<br>
+In addition, it fetaures:</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>toc generation</li>
+<li>Task list (GFM)</li>
+<li>Front matter</li>
+</ul>
+<h2 id="regex-in-c%2B%2B">regex in c++</h2>
+<p>js regex -&gt; c++ regex 转换规则:</p>
+<ol>
+<li>所有的\变成\，除了: \u</li>
+<li>&quot;变成\”</li>
+</ol>
+<p>注意：</p>
+<ol>
+<li>c++ 不支持forward reference, nested reference, lookbehind<br>
+例如：</li>
+<li>JS regex中有12个特殊的转义字符(metacharacters)<br>
+\ ^ $ . | ? * + ( ) [ {<br>
+在表示literal字符时，要在前面加\转义，相应的c++中则加\</li>
+<li>]  } / 等字符前面可加\也可以不加，相应的c++中前面可加\也可以不加</li>
+<li>back reference中\1，在c++中需要变成\1</li>
+</ol>
+
+        
+        </div>
+        <!--<footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://guyong.xyz/web/markdown.html" data-id="cjln8j5w3001lv9py7tjfzfsp" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer> -->
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/Collection/articles.html" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    (no title)
+                
+            </div>
+        </a>
+    
+    
+        <a href="/web/md_cheatsheet.html" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">markdown cheatsheet</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    
+
+</section>
+            
+                
+<aside id="sidebar">
+   
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">recent</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/site-building.html" class="title">Site Building</a></p>
+                            <p class="item-date"><time datetime="2018-09-04T04:42:51.000Z" itemprop="datePublished">2018-09-04</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/python/">python</a></p>
+                            <p class="item-title"><a href="/python/notes for flunet python.html" class="title">notes for Fluent Python</a></p>
+                            <p class="item-date"><time datetime="2018-09-03T16:13:37.000Z" itemprop="datePublished">2018-09-04</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Collection/">Collection</a></p>
+                            <p class="item-title"><a href="/Collection/tools.html" class="title">tools</a></p>
+                            <p class="item-date"><time datetime="2018-09-03T16:02:48.000Z" itemprop="datePublished">2018-09-04</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/python/">python</a></p>
+                            <p class="item-title"><a href="/python/notes for learning python.html" class="title">Notes for Learning Python 5th</a></p>
+                            <p class="item-date"><time datetime="2018-09-03T14:32:04.000Z" itemprop="datePublished">2018-09-03</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/cpp/">cpp</a></p>
+                            <p class="item-title"><a href="/cpp/c declarations.html" class="title">C Declaration</a></p>
+                            <p class="item-date"><time datetime="2018-09-01T14:07:56.000Z" itemprop="datePublished">2018-09-01</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/original/" style="font-size: 10px;">original</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://github.com/gynote/gynote.github.io">Github</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fas fa-angle-up"></div>
+</aside>
+
+            
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2018 Gu Yong<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
+        </div>
+    </div>
+</footer>
+        
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>

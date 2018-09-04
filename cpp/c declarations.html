@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="utf-8">
+    
+    <title>C Declaration | GYNote</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="How to scramble a declaration In C, a type T can be one of the follows:   1. Base Type BT     BT x;     Base type BT ca be primitive types (int, double) and composite types (struct, union)  2. Array o">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C Declaration">
+<meta property="og:url" content="https://guyong.xyz/cpp/c declarations.html">
+<meta property="og:site_name" content="GYNote">
+<meta property="og:description" content="How to scramble a declaration In C, a type T can be one of the follows:   1. Base Type BT     BT x;     Base type BT ca be primitive types (int, double) and composite types (struct, union)  2. Array o">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-09-01T14:07:56.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C Declaration">
+<meta name="twitter:description" content="How to scramble a declaration In C, a type T can be one of the follows:   1. Base Type BT     BT x;     Base type BT ca be primitive types (int, double) and composite types (struct, union)  2. Array o">
+    
+
+    
+        <link rel="alternate" href="/" title="GYNote" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/css/images/favicon.png" />
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome5/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/libs/font-awesome5/css/fa-brands.min.css">
+    <link rel="stylesheet" href="/libs/font-awesome5/css/fa-solid.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">GYNote</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/categories">Categories</a>
+                
+                    <a class="main-nav-link" href="/tags">Tags</a>
+                
+                    <a class="main-nav-link" href="/archives">Archives</a>
+                
+                    <a class="main-nav-link" href="/links.html">Links</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fas fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/categories">Categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">Tags</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">Archives</a></td>
+                
+                    <td><a class="main-nav-link" href="/links.html">Links</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            <section id="main"><article id="post-cpp/c declarations" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+            C Declaration
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <!-- <a href="/cpp/c declarations.html"> -->
+            <time datetime="2018-09-01T14:07:56.000Z" itemprop="datePublished">2018-09-01</time>
+        <!-- </a> -->
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fas fa-folder"></i>
+        <a class="article-category-link" href="/categories/cpp/">cpp</a>
+    </div>
+
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+                <div id="toc" class="toc-article">
+                <strong class="toc-title">Catalogue</strong>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#how-to-scramble-a-declaration"><span class="toc-number">1.</span> <span class="toc-text">How to scramble a declaration</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#basic-rules-for-legal-declarations"><span class="toc-number">1.1.</span> <span class="toc-text">Basic rules for legal declarations</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#precedence-rule"><span class="toc-number">1.2.</span> <span class="toc-text">Precedence rule</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#unscramble-steps"><span class="toc-number">1.3.</span> <span class="toc-text">Unscramble steps</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#references"><span class="toc-number">1.4.</span> <span class="toc-text">References</span></a></li></ol></li></ol>
+                </div>
+            
+            <h2 id="how-to-scramble-a-declaration">How to scramble a declaration</h2>
+<p>In C, a <strong>type T</strong> can be one of the follows:</p>
+<ol>
+<li>Base Type BT<br>
+<code>BT x;</code><br>
+Base type <code>BT</code> ca be primitive types (int, double) and composite types (struct, union)</li>
+<li>Array of type AT<br>
+<code>AT x[];</code></li>
+<li>Function returning type FT<br>
+<code>FT x()</code></li>
+<li>Pointer to type PT<br>
+<code>PT *x</code>;</li>
+</ol>
+<h3 id="basic-rules-for-legal-declarations">Basic rules for legal declarations</h3>
+<ul>
+<li>a function can’t return a function, so you’ll never see <code>foo()()</code></li>
+<li>a function can’t return an array, so you’ll never see <code>foo()[]</code></li>
+<li>an array can’t hold a function, so you’ll never see <code>foo[]()</code></li>
+</ul>
+<p>It can be inferred that:</p>
+<ul>
+<li>AT can’t be FT</li>
+<li>FT can’t be AT, FT</li>
+</ul>
+<h3 id="precedence-rule">Precedence rule</h3>
+<p>To unscramble a declaration, we also need the <strong>precedence rule</strong>:</p>
+<ol>
+<li>parentheses grouping together parts of a declaration</li>
+<li>the postfix operators:
+<ul>
+<li>parentheses <code>()</code> indicating a function</li>
+<li>square brackets <code>[]</code> indicating an array</li>
+</ul>
+</li>
+<li>the prefix operator: the asterisk denoting “pointing to”</li>
+</ol>
+<p>Now, it’s time to unscramble a declaration</p>
+<ol>
+<li>First, we should find the identifier <em>x</em>, the declaration is interpreted as “<em>x</em> is …”. <em>x</em> can be any kind: BT, AT, FT, PT</li>
+<li>By <strong>precedence rules</strong>, we should check first whether <em>x</em> is an array or function by looking to the right. (We still use <em>x</em> to denote the parts we have got)
+<ul>
+<li>If it’s an array, we get an AT <em>x[]</em>, which can be BT, AT, PT. So we should check whether <em>x[]</em> is an array again and again.  When we can’t get an array, it can be BT, PT.</li>
+<li>Or if it’s a function, we get an FT <em>x()</em>, which can be BT,PT.</li>
+</ul>
+</li>
+<li>Check whether <em>x</em> is a pointer by looking to the left. If it is, <em>*x</em> can be any kind. So go to step 2.</li>
+<li>The remaining part must be BT.</li>
+</ol>
+<blockquote>
+<p>Note that there can be grouping parentheses, as well as <code>const</code> and  <code>voatile</code>. We ignore them above.</p>
+</blockquote>
+<h3 id="unscramble-steps">Unscramble steps</h3>
+<ol>
+<li>Go to the leftmost identifier, say “<em>identifier</em> is”</li>
+<li>Look at the next token to the right. If it is a square bracket, for each pair, say “array of”. Go to step 4</li>
+<li>Or if it is an opening parenthesis, read up to the closing parenthesis, say “function returning”</li>
+<li>If the token to the left is an opening parenthesis, this is the opening parenthesis grouping together part of the declaration we have already dealt with. Read up to the balancing parenthesis, start again at step 2</li>
+<li>If the token to the left is any of <code>const</code>, <code>volatile</code>, <code>*</code>, keep reading tokens to the left, until it’s not one of these three. Go to step 4.</li>
+<li>The tokens that remain form the basic type of the declaration.</li>
+</ol>
+<h3 id="references">References</h3>
+<ol>
+<li><a href="https://book.douban.com/subject/1784687/" target="_blank" rel="noopener">Expert C programming</a></li>
+</ol>
+
+        
+        </div>
+        <!--<footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://guyong.xyz/cpp/c declarations.html" data-id="cjln8j5ug000kv9py0qbel4eh" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer> -->
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/python/notes for learning python.html" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    Notes for Learning Python 5th
+                
+            </div>
+        </a>
+    
+    
+        <a href="/cpp/misc.html" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">Misc</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    
+
+</section>
+            
+                
+<aside id="sidebar">
+   
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">recent</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/site-building.html" class="title">Site Building</a></p>
+                            <p class="item-date"><time datetime="2018-09-04T04:42:51.000Z" itemprop="datePublished">2018-09-04</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/python/">python</a></p>
+                            <p class="item-title"><a href="/python/notes for flunet python.html" class="title">notes for Fluent Python</a></p>
+                            <p class="item-date"><time datetime="2018-09-03T16:13:37.000Z" itemprop="datePublished">2018-09-04</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Collection/">Collection</a></p>
+                            <p class="item-title"><a href="/Collection/tools.html" class="title">tools</a></p>
+                            <p class="item-date"><time datetime="2018-09-03T16:02:48.000Z" itemprop="datePublished">2018-09-04</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/python/">python</a></p>
+                            <p class="item-title"><a href="/python/notes for learning python.html" class="title">Notes for Learning Python 5th</a></p>
+                            <p class="item-date"><time datetime="2018-09-03T14:32:04.000Z" itemprop="datePublished">2018-09-03</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/cpp/">cpp</a></p>
+                            <p class="item-title"><a href="/cpp/c declarations.html" class="title">C Declaration</a></p>
+                            <p class="item-date"><time datetime="2018-09-01T14:07:56.000Z" itemprop="datePublished">2018-09-01</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/original/" style="font-size: 10px;">original</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://github.com/gynote/gynote.github.io">Github</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fas fa-angle-up"></div>
+</aside>
+
+            
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2018 Gu Yong<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
+        </div>
+    </div>
+</footer>
+        
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
