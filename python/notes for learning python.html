@@ -25,7 +25,8 @@
 <meta property="og:image" content="https://guyong.xyz/images/2018-09-03-12-18-57.png">
 <meta property="og:image" content="https://guyong.xyz/images/2018-09-03-12-03-26.png">
 <meta property="og:image" content="https://guyong.xyz/images/2018-09-03-13-40-51.png">
-<meta property="og:updated_time" content="2018-09-04T15:57:35.000Z">
+<meta property="og:image" content="https://guyong.xyz/images/2018-09-04-20-04-02.png">
+<meta property="og:updated_time" content="2018-09-04T16:12:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Notes for Learning Python 5th">
 <meta name="twitter:description" content="* Types and Operations * Core Types     * Numbers     * String     * Lists and Dictionaries     * Tuples, files and everything else          * Statements and Syntax * Assignments, Expressions, and Pri">
@@ -168,7 +169,7 @@
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <!-- <a href="/python/notes for learning python.html"> -->
-            <time datetime="2018-09-04T15:57:35.000Z" itemprop="datePublished">2018-09-04</time>
+            <time datetime="2018-09-04T16:12:39.000Z" itemprop="datePublished">2018-09-05</time>
         <!-- </a> -->
     </div>
 
@@ -188,7 +189,7 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <p><div class="table-of-contents"><ul><li><a href="#types-and-operations">Types and Operations</a><ul><li><a href="#core-types">Core Types</a></li><li><a href="#numbers">Numbers</a></li><li><a href="#string">String</a></li><li><a href="#lists-and-dictionaries">Lists and Dictionaries</a></li><li><a href="#tuples%2C-files-and-everything-else">Tuples, files and everything else</a></li></ul></li><li><a href="#statements-and-syntax">Statements and Syntax</a><ul><li><a href="#assignments%2C-expressions%2C-and-prints">Assignments, Expressions, and Prints</a></li><li><a href="#if-tests-and-syntax-rules">if Tests and Syntax Rules</a></li><li><a href="#while-and-for-loops">while and for Loops</a></li><li><a href="#iterations-and-comprehensions">Iterations and Comprehensions</a></li><li><a href="#documentation-interlude">Documentation Interlude</a></li></ul></li><li><a href="#functions-and-generators">Functions and Generators</a><ul><li><a href="#function-basics">Function Basics</a></li><li><a href="#scopes">Scopes</a></li></ul></li></ul></div></p>
+            <p><div class="table-of-contents"><ul><li><a href="#types-and-operations">Types and Operations</a><ul><li><a href="#core-types">Core Types</a></li><li><a href="#numbers">Numbers</a></li><li><a href="#string">String</a></li><li><a href="#lists-and-dictionaries">Lists and Dictionaries</a></li><li><a href="#tuples%2C-files-and-everything-else">Tuples, files and everything else</a></li></ul></li><li><a href="#statements-and-syntax">Statements and Syntax</a><ul><li><a href="#assignments%2C-expressions%2C-and-prints">Assignments, Expressions, and Prints</a></li><li><a href="#if-tests-and-syntax-rules">if Tests and Syntax Rules</a></li><li><a href="#while-and-for-loops">while and for Loops</a></li><li><a href="#iterations-and-comprehensions">Iterations and Comprehensions</a></li><li><a href="#documentation-interlude">Documentation Interlude</a></li></ul></li><li><a href="#functions-and-generators">Functions and Generators</a><ul><li><a href="#function-basics">Function Basics</a></li><li><a href="#scopes">Scopes</a></li><li><a href="#arguments">Arguments</a></li><li><a href="#advanced-function-topics">Advanced Function Topics</a></li><li><a href="#comprehensions-and-generations">Comprehensions and Generations</a></li><li><a href="#the-benchmarking-interlude">The benchmarking Interlude</a></li></ul></li><li><a href="#part-v.-modules-and-packages">Part V. Modules and Packages</a><ul><li><a href="#module-coding-basics">Module Coding Basics</a></li><li><a href="#module-packages">Module Packages</a></li></ul></li></ul></div></p>
 <h1 id="types-and-operations">Types and Operations</h1>
 <p>Objects are pieces of memory, with values and sets of associated operations. Everything we process in Python programs is a kind of obj</p>
 <p>The Python Conceptual Hierarchy:</p>
@@ -504,150 +505,176 @@ code determines the scope of the name’s visibility to your code.</p>
 names used in both the top level of a class itself as well as the top level of method functions nested within it, classes themselves are skipped by scope lookups—their names must be fetched as object attributes.</p>
 <h3 id="the-global%2Fnonlocal-statement">The global/nonlocal Statement</h3>
 <p>The global statement consists of the keyword global, followed by one or more names separated by commas. All the listed names will be mapped to the enclosing module’s scope when assigned or referenced within the function body.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">global x</span><br><span class="line">``` </span><br><span class="line">The name x do not need even exist in the enclosing module</span><br><span class="line">before the function runs; in this case, the first assignment in the function creates x in the module.</span><br><span class="line"></span><br><span class="line">If, on the other hand, X is declared nonlocal within the function in 3.X (only), the assignment changes the name X in the closest enclosing function’s local scope. The name X must have been defined in at least one enclosing function.</span><br></pre></td></tr></table></figure>
-<p>def f1():<br>
-x = 88<br>
-def f2(x=x): # Remember enclosing scope X with defaults<br>
-print(x)<br>
-f2()<br>
-f1() # Prints 88</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Because the second x is evaluated before Python steps into the nested def, it still refers to the x in f1.</span><br></pre></td></tr></table></figure>
-<p>def func():<br>
-x = 4<br>
-action = (lambda n, x=x: x ** n) # Pass x in manually<br>
-return action</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Loop variables may require defaults, not scopes, Compare</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">global x</span><br></pre></td></tr></table></figure>
+<p>The name x do not need even exist in the enclosing module<br>
+before the function runs; in this case, the first assignment in the function creates x in the module.</p>
+<p>If, on the other hand, X is declared nonlocal within the function in 3.X (only), the assignment changes the name X in the closest enclosing function’s local scope. The name X must have been defined in at least one enclosing function.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def f1():</span><br><span class="line">x = 88</span><br><span class="line">def f2(x=x): # Remember enclosing scope X with defaults</span><br><span class="line">print(x)</span><br><span class="line">f2()</span><br><span class="line">f1() # Prints 88</span><br></pre></td></tr></table></figure>
+<p>Because the second x is evaluated before Python steps into the nested def, it still refers to the x in f1.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def func():</span><br><span class="line">x = 4</span><br><span class="line">action = (lambda n, x=x: x ** n) # Pass x in manually</span><br><span class="line">return action</span><br></pre></td></tr></table></figure>
+<p>Loop variables may require defaults, not scopes, Compare</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; def makeActions():</span><br><span class="line">acts = []</span><br><span class="line">for i in range(5): # Tries to remember each i</span><br><span class="line">acts.append(lambda x: i ** x) # But all remember same last i!</span><br><span class="line">return acts</span><br></pre></td></tr></table></figure>
+<p>with</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; def makeActions():</span><br><span class="line">acts = []</span><br><span class="line">for i in range(5): # Use defaults instead</span><br><span class="line">acts.append(lambda x, i=i: i ** x) # Remember current i</span><br><span class="line">return acts</span><br></pre></td></tr></table></figure>
+<p>Because defaults are implemented as single objects attached to functions, mutable defaults retain state from call to call, rather than being initialized anew on each call.</p>
+<p>Unlike global, nonlocal names must already exist in the enclosing function’s scope when declared. In fact, they are checked at function definition time before either an enclosing or nested function is called.</p>
+<p>Nonlocal both allows assignment to names in enclosing function scopes and limits scope lookups for such names to enclosing defs.</p>
+<p>Python uses naming conventions in both 2.X and 3.X that ensure that the arbitrary names you assign as function attributes won’t clash with names related to internal implementation.</p>
+<p>To summarize: globals, nonlocals, classes, and function attributes all offer changeable state-retention options.</p>
+<h2 id="arguments">Arguments</h2>
+<p>In Python 2.X, it’s also possible to automatically unpack tuples in arguments passed to a function.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">def f((a,(b,c)))</span><br></pre></td></tr></table></figure>
+<p>This def syntax is no longer supported in Python 3.X. Instead, code this function as:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">def f(T): (a, (b, c)) = T</span><br></pre></td></tr></table></figure>
+<p>Tuple unpacking argument syntax is also disallowed by 3.X in lambda<br>
+function argument lists. Somewhat asymmetrically, tuple unpacking assignment is still automatic in 3.X for loops targets</p>
+<p>By default, arguments are matched by position, from left to right, and you must pass exactly as many arguments as there are argument names in the function header.</p>
+<p><img src="../images/2018-09-04-20-04-02.png" alt="Table 18-1"></p>
+<p>In a function call, arguments must appear in this order: any positional arguments or the  *iterable form, followed by any keyword arguments or the **dict form. If we see *iterable and **dict as being unpacked to positional arguments and keyword arguments, the order becomes: any positional arguments, followed by any keyword arguments. In a broad sense, there are only two arguments: positional and keyword.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def foo(a,b,c,d,e,f,g):</span><br><span class="line">  print(&apos;ok&apos;)</span><br><span class="line">b=[2]</span><br><span class="line">x = &#123;&apos;d&apos;:4,&apos;e&apos;:5&#125;</span><br><span class="line">y = &#123;&apos;f&apos;:6&#125;</span><br><span class="line">foo(1,*b,3,**x,g=7,**y)  //ok</span><br></pre></td></tr></table></figure>
 <blockquote>
+<p>In a function header, we use the term “parameter” instead of “argument”</p>
+</blockquote>
+<p>In a function header, parameters must appear in this order: any normal parameter(name); followed by any default parameters (name=value); followed by the *name (or * in 3.X) form; followed by any name or name=value keyword-only arguments (in 3.X); followed by the **name form</p>
+<p>We can use a * character by itself in the arguments list to indicate that a function does not accept a variable-length argument list but still expects all arguments following the * to be passed as keywords.</p>
+<p>The <em>name=value</em> form has two meaning:</p>
+<ul>
+<li>before the form *name, it’s positional with default value</li>
+<li>after the form *name, it’s keyword-only with default value</li>
+</ul>
+<p>There can be at most one *name parameter, which collects all remaining positional arguments (including those in *iterabe). Similarly, There can be at most one **dict parameter, which collects all remaining keyword arguments (including those in **dict arguments).</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">def foo(a,b=3,*c,d,**e):</span><br><span class="line">    print(b,e)</span><br><span class="line">x = [3,4]</span><br><span class="line">y = &#123;&apos;d&apos;:5,&apos;e&apos;:6,&apos;f&apos;:7&#125;</span><br><span class="line">foo(1,2,*x,**y)   # 2 &#123;&apos;e&apos;: 6, &apos;f&apos;: 7&#125;</span><br></pre></td></tr></table></figure>
+<p>The steps that Python internally carries out to match arguments before<br>
+assignment can roughly be described as follows:</p>
+<ol>
+<li>Assign nonkeyword arguments by position.</li>
+<li>Assign keyword arguments by matching names.</li>
+<li>Assign extra nonkeyword arguments to *name tuple.</li>
+<li>Assign extra keyword arguments to **name dictionary.</li>
+<li>Assign default values to unassigned arguments in header.</li>
+</ol>
 <blockquote>
+<p>Note that in both function call and header, the <em>name = value</em> form are not assignments.</p>
+</blockquote>
+<p>The default parameters are attached to function objects, if you code<br>
+a default to be a mutable object (e.g., def f(a=[])), the same, single<br>
+mutable object is reused every time the function is later called—even if<br>
+it is changed in place within the function.</p>
+<p>Below is a tracer function example:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">def tracer(func, *pargs, **kargs): # Accept arbitrary arguments</span><br><span class="line">  print(&apos;calling:&apos;, func.__name__)</span><br><span class="line">  return func(*pargs, **kargs) # Pass along arbitrary arguments</span><br></pre></td></tr></table></figure>
+<h2 id="advanced-function-topics">Advanced Function Topics</h2>
+<p>In fact, recursion is not used nearly as often in Python as in<br>
+more esoteric languages like Prolog or Lisp, because Python emphasizes simpler procedural statements like loops, which are usually more natural.</p>
+<p>On the other hand, recursion—or equivalent explicit stack-based algorithms we’ll meet shortly—can be required to traverse arbitrarily shaped structures.</p>
+<p>Also note that standard Python limits the depth of its runtime call stack—crucial to recursive call programs—to trap infinite recursion errors. To expand it, use the <strong>sys</strong> module:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; sys.getrecursionlimit() # 1000 calls deep default</span><br><span class="line">1000</span><br><span class="line">&gt;&gt;&gt; sys.setrecursionlimit(10000) # Allow deeper nesting</span><br><span class="line">&gt;&gt;&gt; help(sys.setrecursionlimit) # Read more about it</span><br></pre></td></tr></table></figure>
+<h3 id="function-attributes-and-annotations">Function attributes and annotations</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; func.__code__</span><br><span class="line">&gt;&gt;&gt; func.__code__.co_varnames</span><br></pre></td></tr></table></figure>
+<p>Python’s own implementation-related data stored on functions follows naming conventions that prevent them from clashing with the more arbitrary attribute names you might assign yourself. In 3.X, all function internals’ names have leading and trailing double underscores (“__X__”);</p>
+<p>Attributes are related to objects instead of scopes (and must be referenced through the function name within its code).</p>
+<p>Python provides special syntax for specifying annotations, but it doesn’t do anything with them itself; annotations are completely optional, and when present are simply attached to the function object’s <strong>annotations</strong> attribute for use by other tools. Syntactically, function annotations are coded in def header lines, as arbitrary expressions associated with arguments and return values.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; def func(a: &apos;spam&apos;, b: (1, 10), c: float) -&gt; int:</span><br><span class="line">return a + b + c</span><br><span class="line">&gt;&gt;&gt; func(1, 2, 3)</span><br><span class="line">6</span><br><span class="line">&gt;&gt;&gt; func.__annotations__</span><br><span class="line">&#123;&apos;c&apos;: &lt;class &apos;float&apos;&gt;, &apos;b&apos;: (1, 10), &apos;a&apos;: &apos;spam&apos;, &apos;return&apos;: &lt;class &apos;int&apos;&gt;&#125;</span><br></pre></td></tr></table></figure>
+<p>Finally, note that annotations work only in def statements, not lambda expressions.</p>
+<ul>
+<li><strong>lambda</strong> is an expression, not a statement.</li>
+<li>lambda’s body is a single expression, not a block of statements.</li>
+<li>Defaults work on lambda arguments, just like in a def.</li>
+<li>The code in a lambda body also follows the same scope lookup rules as code inside a def. lambda expressions introduce a local scope much like a nested def, which automatically sees names in enclosing functions, the module, and the built-in scope (via the LEGB rule)</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; ((lambda x: (lambda y: x + y))(99))(4)</span><br><span class="line">103</span><br></pre></td></tr></table></figure>
+<p>useful library: functools, operator</p>
+<h2 id="comprehensions-and-generations">Comprehensions and Generations</h2>
+<p>map calls can be twice as fast as equivalent for loops, and list comprehensions are often faster than map calls.</p>
+<p>Generator function vs. Generator vs. Generator expression</p>
+<ul>
+<li><em>send</em> advances to the next item</li>
+<li><em>yield</em> is now an expression form, it must be enclose in parentheses unless it’s the only item on the right ride of the assignment statement.</li>
+<li>methods: <em>throw</em>, <em>close</em></li>
+<li><em>yield from</em></li>
+</ul>
+<p>Generator expressions may also run slightly slower than list comprehensions in practice, so they are probably best used only for very large result sets, or applications that cannot wait for full results generation.</p>
+<p>A subtle but important point: both generator functions and generator expressions are their own iterators and thus support just one active iteration.</p>
+<p>Python 3.X localizes loop variables in all four forms—temporary loop variable names in generator, set, dictionary, and list comprehensions are local to the expression.</p>
+<p>In general, list comprehensions are usually the quickest of the bunch; map beats list comprehensions in Python only when all tools must call functions; for loops tend to be slower than comprehensions; and generator functions and expressions are slower than comprehensions by a constant factor. Under</p>
+<h2 id="the-benchmarking-interlude">The benchmarking Interlude</h2>
+<p>Timeing modules: time, timer, profile, timeit, <a href="http://pystone.py" target="_blank" rel="noopener">pystone.py</a></p>
+<h1 id="part-v.-modules-and-packages">Part V. Modules and Packages</h1>
+<p>Modules are processed with two statements and one important function:</p>
+<ul>
+<li>import: Lets a client (importer) fetch a module as a whole</li>
+<li>from: Allows clients to fetch particular names from a module</li>
+<li>imp.reload (reload in 2.X): Provides a way to reload a module’s code without stopping Python</li>
+</ul>
+<p>In Python, cross-file module linking is not resolved until such import statements are executed at runtime; their net effect is to assign module names—simple variables like b—to loaded module objects. In fact, the module name used in an import statement serves two purposes: it identifies the external file to be loaded, but it also becomes a variable assigned to the loaded module.</p>
+<p>Similarly, objects defined by a module are also created at runtime, as the import is executing: import literally runs statements in the target file one at a time to create its contents.</p>
+<p>In python, imports perform three distinct steps the first time a program imports a given file:</p>
+<ol>
+<li>Find the module’s file.</li>
+<li>Compile it to byte code (if needed).</li>
+<li>Run the module’s code to build the objects it defines.</li>
+</ol>
+<p>Bear in mind that all three of these steps are carried out only the first time a module is imported during a program’s execution; later imports of the same module in a program run bypass all of these steps and simply fetch the already loaded module object in memory. Technically, Python does this by storing loaded modules in a table named <strong>sys.mod</strong> ules and checking there at the start of an import operation. If the module is not present, a three-step process begins. (see <strong>imp.reload</strong>)</p>
 <blockquote>
-<p>def makeActions():<br>
-acts = []<br>
-for i in range(5): # Tries to remember each i<br>
-acts.append(lambda x: i ** x) # But all remember same last i!<br>
-return acts</p>
+<p>Python keeps already imported modules in the built-in <strong>sys.modules</strong> dictionary so it can keep track of what’s been loaded.</p>
 </blockquote>
-</blockquote>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">with</span><br></pre></td></tr></table></figure>
+<p>Notice that compilation happens when a file is being imported. Because of this, you will not usually see a .pyc byte code file for the top-level file of your program, unless it is also imported elsewhere—only imported files leave behind .pyc files on your machine.</p>
+<h3 id="the-module-search-path">The Module Search Path</h3>
+<p>Roughly, Python’s module search path is composed of the concatenation of these major components, some of which are preset for you and some of which you can tailor to tell Python where to look:</p>
+<ol>
+<li>The home directory of the program (subdirectories not included)</li>
+<li>PYTHONPATH directories (if set)</li>
+<li>Standard library directories</li>
+<li>The contents of any .pth files (if present)</li>
+<li>The site-packages home of third-party extensions</li>
+</ol>
+<p>Ultimately, the concatenation of these four components becomes <strong>sys.path</strong>, a mutable list of directory. The first and<br>
+third elements of the search path are defined automatically. Because Python searches the concatenation of these components from first to last, though, the second and fourth elements can be used to extend the path to include your own source code directories.</p>
+<p>By modifying the sys.path list, you can modify the search path for all future imports made in a program’s run. Such changes last only for the duration of the script, however; PYTHONPATH and .pth files offer more permanent ways to modify the path—the first per user, and the second per installation.</p>
+<p>Python automatically selects any type that matches a module’s name. For same names with different extensions, Python follows a standard picking order, though this order is not guaranteed to stay the same over time or across implementations.</p>
+<p>By using import hooks, archived files are automatically extracted at import time when a  .zip file is selected from the module import search path.</p>
+<p>For details, see the builtin <strong>importlib.__import__</strong> function</p>
+<p>Third-party extensions for Python typically use the <strong>distutils</strong> tools in the standard library to automatically install themselves, so no path configuration is required to use their code.</p>
+<p>Systems that use distutils generally come with a <a href="http://setup.py" target="_blank" rel="noopener">setup.py</a> script, which is run to install them; this script imports and uses distutils modules to place such systems in a directory that is automatically part of the module search path (usually in the Lib\site-packages subdirectory of the Python install tree, wherever that resides on the target machine).</p>
+<h2 id="module-coding-basics">Module Coding Basics</h2>
+<h3 id="module-filenames">Module Filenames</h3>
+<p>The .py is technically optional for top-level files that will be run but not imported.</p>
+<p>In fact, both the names of module files and the names of directories used in<br>
+package imports (discussed in the next chapter) must conform to the rules for variable names presented.</p>
+<p><strong>import</strong> fetches the module as a whole, so you<br>
+must qualify to fetch its names; in contrast, <strong>from</strong> fetches (or copies) specific names out of the module.</p>
+<p>In Python 3.X, the from …* statement form described here can be used<br>
+only at the top level of a module file, not within a function.</p>
+<p>Just like def, import and from are executable statements, not compile-time declarations. They may be nested in if tests, to select among options; appear in function defs, to be loaded only on calls (subject to the preceding note); be used in try statements, to provide defaults; and so on.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from small import x, y # Copy two names out</span><br><span class="line">&gt;&gt;&gt; x = 42 # Changes local x only</span><br><span class="line">&gt;&gt;&gt; y[0] = 42 # Changes shared mutable in place</span><br></pre></td></tr></table></figure>
+<p>At least conceptually, a from statement like this one:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from module import name1, name2 # Copy these two names out (only)</span><br></pre></td></tr></table></figure>
+<p>is equivalent to this statement sequence:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import module # Fetch the module object</span><br><span class="line">name1 = module.name1 # Copy names out by assignment</span><br><span class="line">name2 = module.name2</span><br><span class="line">del module # Get rid of the module name</span><br></pre></td></tr></table></figure>
+<p>The <strong>from</strong> always imports the entire module into memory if it has not yet been imported, regardless of how many names it copies out of the file. There is no way to load just part of a module file.</p>
+<p>Moreover, the from module import * form really can corrupt namespaces and make names difficult to understand, especially when applied to more than one file.</p>
+<p>Probably the best real-world advice here is to generally prefer import to from for simple modules, to explicitly list the variables you want in most from statements, and to limit the from * form to just one import per file.</p>
+<p>The <strong>as</strong> extension works in both import and from as a simple renaming tool.</p>
+<p>In fact, internally, module namespaces are stored as dictionary objects.</p>
+<p>The LEGB scope rule applies only to bare, unqualified names—it may be used for the leftmost name in a name path, but later names after dots search specific objects instead.</p>
+<p>lexical scoping notion—in Python, the scopes surrounding<br>
+a piece of code are completely determined by the code’s physical position in your file. Scopes are never influenced by function calls or module imports.</p>
+<p>import operations never give upward visibility to code in imported files<br>
+—an imported file cannot see names in the importing file. In some sense, although imports do not nest namespaces upward, they do nest downward.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(mod2.mod3.X) # Nested mod3&apos;s X</span><br></pre></td></tr></table></figure>
+<h3 id="reloading-modules">Reloading Modules</h3>
+<p>The <strong>reload</strong> function forces an already loaded module’s code to be reloaded and rerun. Assignments in the file’s new code change the existing module object in place.</p>
 <blockquote>
-<blockquote>
-<blockquote>
-<p>def makeActions():<br>
-acts = []<br>
-for i in range(5): # Use defaults instead<br>
-acts.append(lambda x, i=i: i ** x) # Remember current i<br>
-return acts</p>
+<p>Note that reload currently only works on modules<br>
+written in Python;</p>
 </blockquote>
-</blockquote>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Because defaults are implemented as single objects attached to functions, mutable defaults retain state from call to call, rather than being initialized anew on each call.</span><br><span class="line"></span><br><span class="line">Unlike global, nonlocal names must already exist in the enclosing function’s scope when declared. In fact, they are checked at function definition time before either an enclosing or nested function is called.</span><br><span class="line"></span><br><span class="line">Nonlocal both allows assignment to names in enclosing function scopes and limits scope lookups for such names to enclosing defs.</span><br><span class="line"></span><br><span class="line">Python uses naming conventions in both 2.X and 3.X that ensure that the arbitrary names you assign as function attributes won’t clash with names related to internal implementation.</span><br><span class="line"></span><br><span class="line">To summarize: globals, nonlocals, classes, and function attributes all offer changeable state-retention options.</span><br><span class="line"></span><br><span class="line">## Arguments</span><br><span class="line">In Python 2.X, it’s also possible to automatically unpack tuples in arguments passed to a function.</span><br></pre></td></tr></table></figure>
-<p>def f((a,(b,c)))</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">This def syntax is no longer supported in Python 3.X. Instead, code this function as:</span><br></pre></td></tr></table></figure>
-<p>def f(T): (a, (b, c)) = T</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Tuple unpacking argument syntax is also disallowed by 3.X in lambda</span><br><span class="line">function argument lists. Somewhat asymmetrically, tuple unpacking assignment is still automatic in 3.X for loops targets</span><br><span class="line"></span><br><span class="line">By default, arguments are matched by position, from left to right, and you must pass exactly as many arguments as there are argument names in the function header.</span><br><span class="line"></span><br><span class="line">![Table 18-1](../.pastes/2018-09-04-20-04-02.png)</span><br><span class="line"></span><br><span class="line">In a function call, arguments must appear in this order: any positional arguments or the  *iterable form, followed by any keyword arguments or the **dict form. If we see *iterable and **dict as being unpacked to positional arguments and keyword arguments, the order becomes: any positional arguments, followed by any keyword arguments. In a broad sense, there are only two arguments: positional and keyword.</span><br></pre></td></tr></table></figure>
-<p>def foo(a,b,c,d,e,f,g):<br>
-print(‘ok’)<br>
-b=[2]<br>
-x = {‘d’:4,‘e’:5}<br>
-y = {‘f’:6}<br>
-foo(1,*b,3,**x,g=7,**y)  //ok</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&gt; In a function header, we use the term &quot;parameter&quot; instead of &quot;argument&quot;</span><br><span class="line"></span><br><span class="line">In a function header, parameters must appear in this order: any normal parameter(name); followed by any default parameters (name=value); followed by the *name (or \* in 3.X) form; followed by any name or name=value keyword-only arguments (in 3.X); followed by the **name form</span><br><span class="line"></span><br><span class="line">We can use a * character by itself in the arguments list to indicate that a function does not accept a variable-length argument list but still expects all arguments following the * to be passed as keywords.</span><br><span class="line"></span><br><span class="line">The *name=value* form has two meaning:</span><br><span class="line">- before the form *name, it&apos;s positional with default value</span><br><span class="line">- after the form *name, it&apos;s keyword-only with default value</span><br><span class="line"></span><br><span class="line">There can be at most one *name parameter, which collects all remaining positional arguments (including those in *iterabe). Similarly, There can be at most one *\*dict parameter, which collects all remaining keyword arguments (including those in *\*dict arguments).</span><br></pre></td></tr></table></figure>
-<p>def foo(a,b=3,*c,d,**e):<br>
-print(b,e)<br>
-x = [3,4]<br>
-y = {‘d’:5,‘e’:6,‘f’:7}<br>
-foo(1,2,*x,**y)   # 2 {‘e’: 6, ‘f’: 7}</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">The steps that Python internally carries out to match arguments before</span><br><span class="line">assignment can roughly be described as follows:</span><br><span class="line">1. Assign nonkeyword arguments by position.</span><br><span class="line">2. Assign keyword arguments by matching names.</span><br><span class="line">3. Assign extra nonkeyword arguments to *name tuple.</span><br><span class="line">4. Assign extra keyword arguments to **name dictionary.</span><br><span class="line">5. Assign default values to unassigned arguments in header.</span><br><span class="line"></span><br><span class="line">&gt; Note that in both function call and header, the *name = value* form are not assignments.</span><br><span class="line"></span><br><span class="line">The default parameters are attached to function objects, if you code</span><br><span class="line">a default to be a mutable object (e.g., def f(a=[])), the same, single</span><br><span class="line">mutable object is reused every time the function is later called—even if</span><br><span class="line">it is changed in place within the function.</span><br><span class="line"></span><br><span class="line">Below is a tracer function example:</span><br></pre></td></tr></table></figure>
-<p>def tracer(func, *pargs, **kargs): # Accept arbitrary arguments<br>
-print(‘calling:’, func.<strong>name</strong>)<br>
-return func(*pargs, **kargs) # Pass along arbitrary arguments</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## Advanced Function Topics</span><br><span class="line">In fact, recursion is not used nearly as often in Python as in</span><br><span class="line">more esoteric languages like Prolog or Lisp, because Python emphasizes simpler procedural statements like loops, which are usually more natural.</span><br><span class="line"></span><br><span class="line">On the other hand, recursion—or equivalent explicit stack-based algorithms we’ll meet shortly—can be required to traverse arbitrarily shaped structures.</span><br><span class="line"></span><br><span class="line">Also note that standard Python limits the depth of its runtime call stack—crucial to recursive call programs—to trap infinite recursion errors. To expand it, use the **sys** module:</span><br></pre></td></tr></table></figure>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>sys.getrecursionlimit() # 1000 calls deep default<br>
-1000</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>sys.setrecursionlimit(10000) # Allow deeper nesting<br>
-help(sys.setrecursionlimit) # Read more about it</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### Function attributes and annotations</span><br></pre></td></tr></table></figure>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>func.<strong>code</strong><br>
-func.<strong>code</strong>.co_varnames</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Python’s own implementation-related data stored on functions follows naming conventions that prevent them from clashing with the more arbitrary attribute names you might assign yourself. In 3.X, all function internals’ names have leading and trailing double underscores (“_\_X__”);</span><br><span class="line"></span><br><span class="line">Attributes are related to objects instead of scopes (and must be referenced through the function name within its code).</span><br><span class="line"></span><br><span class="line">Python provides special syntax for specifying annotations, but it doesn’t do anything with them itself; annotations are completely optional, and when present are simply attached to the function object’s __annotations__ attribute for use by other tools. Syntactically, function annotations are coded in def header lines, as arbitrary expressions associated with arguments and return values.</span><br></pre></td></tr></table></figure>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>def func(a: ‘spam’, b: (1, 10), c: float) -&gt; int:<br>
-return a + b + c</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>func(1, 2, 3)<br>
-6</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>func.<strong>annotations</strong><br>
-{‘c’: &lt;class ‘float’&gt;, ‘b’: (1, 10), ‘a’: ‘spam’, ‘return’: &lt;class ‘int’&gt;}</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Finally, note that annotations work only in def statements, not lambda expressions.</span><br><span class="line"></span><br><span class="line">- **lambda** is an expression, not a statement.</span><br><span class="line">- lambda’s body is a single expression, not a block of statements.</span><br><span class="line">- Defaults work on lambda arguments, just like in a def.</span><br><span class="line">- The code in a lambda body also follows the same scope lookup rules as code inside a def. lambda expressions introduce a local scope much like a nested def, which automatically sees names in enclosing functions, the module, and the built-in scope (via the LEGB rule)</span><br></pre></td></tr></table></figure>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>((lambda x: (lambda y: x + y))(99))(4)<br>
-103</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">useful library: functools, operator</span><br><span class="line"></span><br><span class="line">## Comprehensions and Generations</span><br><span class="line">map calls can be twice as fast as equivalent for loops, and list comprehensions are often faster than map calls.</span><br><span class="line"></span><br><span class="line">Generator function vs. Generator vs. Generator expression</span><br><span class="line">- *send* advances to the next item  </span><br><span class="line">- *yield* is now an expression form, it must be enclose in parentheses unless it&apos;s the only item on the right ride of the assignment statement.</span><br><span class="line">- methods: *throw*, *close*</span><br><span class="line">- *yield from*</span><br><span class="line"></span><br><span class="line">Generator expressions may also run slightly slower than list comprehensions in practice, so they are probably best used only for very large result sets, or applications that cannot wait for full results generation.</span><br><span class="line"></span><br><span class="line">A subtle but important point: both generator functions and generator expressions are their own iterators and thus support just one active iteration.</span><br><span class="line"></span><br><span class="line">Python 3.X localizes loop variables in all four forms—temporary loop variable names in generator, set, dictionary, and list comprehensions are local to the expression.</span><br><span class="line"></span><br><span class="line">In general, list comprehensions are usually the quickest of the bunch; map beats list comprehensions in Python only when all tools must call functions; for loops tend to be slower than comprehensions; and generator functions and expressions are slower than comprehensions by a constant factor. Under</span><br><span class="line"></span><br><span class="line">## The benchmarking Interlude</span><br><span class="line">Timeing modules: time, timer, profile, timeit, pystone.py</span><br><span class="line"></span><br><span class="line">#  Part V. Modules and Packages</span><br><span class="line">Modules are processed with two statements and one important function:</span><br><span class="line">- import: Lets a client (importer) fetch a module as a whole</span><br><span class="line">- from: Allows clients to fetch particular names from a module</span><br><span class="line">- imp.reload (reload in 2.X): Provides a way to reload a module’s code without stopping Python</span><br><span class="line"></span><br><span class="line">In Python, cross-file module linking is not resolved until such import statements are executed at runtime; their net effect is to assign module names—simple variables like b—to loaded module objects. In fact, the module name used in an import statement serves two purposes: it identifies the external file to be loaded, but it also becomes a variable assigned to the loaded module.</span><br><span class="line"></span><br><span class="line">Similarly, objects defined by a module are also created at runtime, as the import is executing: import literally runs statements in the target file one at a time to create its contents.</span><br><span class="line"></span><br><span class="line">In python, imports perform three distinct steps the first time a program imports a given file:</span><br><span class="line">1. Find the module’s file.</span><br><span class="line">2. Compile it to byte code (if needed).</span><br><span class="line">3. Run the module’s code to build the objects it defines.</span><br><span class="line"></span><br><span class="line">Bear in mind that all three of these steps are carried out only the first time a module is imported during a program’s execution; later imports of the same module in a program run bypass all of these steps and simply fetch the already loaded module object in memory. Technically, Python does this by storing loaded modules in a table named **sys.mod** ules and checking there at the start of an import operation. If the module is not present, a three-step process begins. (see **imp.reload**)</span><br><span class="line">&gt; Python keeps already imported modules in the built-in **sys.modules** dictionary so it can keep track of what’s been loaded.</span><br><span class="line"></span><br><span class="line">Notice that compilation happens when a file is being imported. Because of this, you will not usually see a .pyc byte code file for the top-level file of your program, unless it is also imported elsewhere—only imported files leave behind .pyc files on your machine.</span><br><span class="line"></span><br><span class="line">### The Module Search Path</span><br><span class="line">Roughly, Python’s module search path is composed of the concatenation of these major components, some of which are preset for you and some of which you can tailor to tell Python where to look:</span><br><span class="line">1. The home directory of the program (subdirectories not included)</span><br><span class="line">2. PYTHONPATH directories (if set)</span><br><span class="line">3. Standard library directories</span><br><span class="line">4. The contents of any .pth files (if present)</span><br><span class="line">5. The site-packages home of third-party extensions</span><br><span class="line"></span><br><span class="line">Ultimately, the concatenation of these four components becomes **sys.path**, a mutable list of directory. The first and</span><br><span class="line">third elements of the search path are defined automatically. Because Python searches the concatenation of these components from first to last, though, the second and fourth elements can be used to extend the path to include your own source code directories.</span><br><span class="line"></span><br><span class="line">By modifying the sys.path list, you can modify the search path for all future imports made in a program’s run. Such changes last only for the duration of the script, however; PYTHONPATH and .pth files offer more permanent ways to modify the path—the first per user, and the second per installation.</span><br><span class="line"></span><br><span class="line">Python automatically selects any type that matches a module’s name. For same names with different extensions, Python follows a standard picking order, though this order is not guaranteed to stay the same over time or across implementations. </span><br><span class="line"></span><br><span class="line">By using import hooks, archived files are automatically extracted at import time when a  .zip file is selected from the module import search path.</span><br><span class="line"></span><br><span class="line">For details, see the builtin **importlib._\_import__** function</span><br><span class="line"></span><br><span class="line">Third-party extensions for Python typically use the **distutils** tools in the standard library to automatically install themselves, so no path configuration is required to use their code.</span><br><span class="line"></span><br><span class="line">Systems that use distutils generally come with a setup.py script, which is run to install them; this script imports and uses distutils modules to place such systems in a directory that is automatically part of the module search path (usually in the Lib\site-packages subdirectory of the Python install tree, wherever that resides on the target machine).</span><br><span class="line"></span><br><span class="line">## Module Coding Basics</span><br><span class="line">### Module Filenames</span><br><span class="line">The .py is technically optional for top-level files that will be run but not imported.</span><br><span class="line"></span><br><span class="line">In fact, both the names of module files and the names of directories used in</span><br><span class="line">package imports (discussed in the next chapter) must conform to the rules for variable names presented.</span><br><span class="line"></span><br><span class="line">**import** fetches the module as a whole, so you</span><br><span class="line">must qualify to fetch its names; in contrast, **from** fetches (or copies) specific names out of the module.</span><br><span class="line"></span><br><span class="line">In Python 3.X, the from ...* statement form described here can be used</span><br><span class="line">only at the top level of a module file, not within a function.</span><br><span class="line"></span><br><span class="line">Just like def, import and from are executable statements, not compile-time declarations. They may be nested in if tests, to select among options; appear in function defs, to be loaded only on calls (subject to the preceding note); be used in try statements, to provide defaults; and so on.</span><br></pre></td></tr></table></figure>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>from small import x, y # Copy two names out<br>
-x = 42 # Changes local x only<br>
-y[0] = 42 # Changes shared mutable in place</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">At least conceptually, a from statement like this one:</span><br></pre></td></tr></table></figure>
-<p>from module import name1, name2 # Copy these two names out (only)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">is equivalent to this statement sequence:</span><br></pre></td></tr></table></figure>
-<p>import module # Fetch the module object<br>
-name1 = module.name1 # Copy names out by assignment<br>
-name2 = module.name2<br>
-del module # Get rid of the module name</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">The **from** always imports the entire module into memory if it has not yet been imported, regardless of how many names it copies out of the file. There is no way to load just part of a module file.</span><br><span class="line"></span><br><span class="line">Moreover, the from module import * form really can corrupt namespaces and make names difficult to understand, especially when applied to more than one file.</span><br><span class="line"></span><br><span class="line">Probably the best real-world advice here is to generally prefer import to from for simple modules, to explicitly list the variables you want in most from statements, and to limit the from * form to just one import per file.</span><br><span class="line"></span><br><span class="line">The **as** extension works in both import and from as a simple renaming tool.</span><br><span class="line"></span><br><span class="line">In fact, internally, module namespaces are stored as dictionary objects.</span><br><span class="line"></span><br><span class="line">The LEGB scope rule applies only to bare, unqualified names—it may be used for the leftmost name in a name path, but later names after dots search specific objects instead.</span><br><span class="line"></span><br><span class="line">lexical scoping notion—in Python, the scopes surrounding</span><br><span class="line">a piece of code are completely determined by the code’s physical position in your file. Scopes are never influenced by function calls or module imports.</span><br><span class="line"></span><br><span class="line">import operations never give upward visibility to code in imported files</span><br><span class="line">—an imported file cannot see names in the importing file. In some sense, although imports do not nest namespaces upward, they do nest downward.</span><br></pre></td></tr></table></figure>
-<p>print(mod2.mod3.X) # Nested mod3’s X</p>
-<pre><code>### Reloading Modules
-The **reload** function forces an already loaded module’s code to be reloaded and rerun. Assignments in the file’s new code change the existing module object in place.
-
-&gt; Note that reload currently only works on modules
-written in Python;
-
-Because reload expects an object, a module must have been previously imported successfully before you can reload it.
-
-When you call reload, Python rereads the module file’s source code and reruns its toplevel statements. Perhaps the most important thing to know about reload is that it changes a module object in place; it does not delete and re-create the module object.
-- Reloads impact all clients that use **import** to fetch modules
-- Reloads impact future from clients only. Clients that used from to fetch attributes in the past won’t be affected by a reload; they’ll still have references to the old objects fetched before the reload.
-- Reloads apply to a single module only. You must run them on each module you wish to update, unless you use code or tools that apply reloads transitively.
-## Module Packages
-</code></pre>
+<p>Because reload expects an object, a module must have been previously imported successfully before you can reload it.</p>
+<p>When you call reload, Python rereads the module file’s source code and reruns its toplevel statements. Perhaps the most important thing to know about reload is that it changes a module object in place; it does not delete and re-create the module object.</p>
+<ul>
+<li>Reloads impact all clients that use <strong>import</strong> to fetch modules</li>
+<li>Reloads impact future from clients only. Clients that used from to fetch attributes in the past won’t be affected by a reload; they’ll still have references to the old objects fetched before the reload.</li>
+<li>Reloads apply to a single module only. You must run them on each module you wish to update, unless you use code or tools that apply reloads transitively.</li>
+</ul>
+<h2 id="module-packages">Module Packages</h2>
 
         
         </div>
@@ -658,7 +685,7 @@ When you call reload, Python rereads the module file’s source code and reruns 
 
 </div>
 
-    <a data-url="https://guyong.xyz/python/notes for learning python.html" data-id="cjln8ne990019wspysiv04xba" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/python/notes for learning python.html" data-id="cjlnx04ea001a2ipyp4jnzieu" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -765,7 +792,7 @@ When you call reload, Python rereads the module file’s source code and reruns 
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/python/">python</a></p>
                             <p class="item-title"><a href="/python/notes for learning python.html" class="title">Notes for Learning Python 5th</a></p>
-                            <p class="item-date"><time datetime="2018-09-04T15:57:35.000Z" itemprop="datePublished">2018-09-04</time></p>
+                            <p class="item-date"><time datetime="2018-09-04T16:12:39.000Z" itemprop="datePublished">2018-09-05</time></p>
                         </div>
                     </li>
                 
