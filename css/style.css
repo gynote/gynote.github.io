@@ -138,7 +138,7 @@ code {
   background-color: #f8f8f8;
 }
 .outer {
-  max-width: 1120px;
+  max-width: 1020px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -185,16 +185,13 @@ code {
   #main {
     display: inline;
     float: left;
-    width: 80%;
-    margin: 0 0.909090909090909%;
+    width: 98%;
+    margin: 0 1%;
   }
 }
 @media screen and (min-width: 800px) and (max-width: 1199px) {
   #main {
-    display: inline;
-    float: left;
-    width: 80%;
-    margin: 0 0.909090909090909%;
+    width: 100%;
   }
 }
 @media screen and (min-width: 560px) and (max-width: 799px) {
@@ -643,8 +640,8 @@ code {
 #profile {
   display: inline;
   float: left;
-  width: 25.454545454545453%;
-  margin: 0 0.909090909090909%;
+  width: 28.000000000000004%;
+  margin: 0 1%;
   display: none;
   margin-bottom: 40px;
 }
@@ -1702,16 +1699,16 @@ a.article-title:hover {
   #sidebar {
     display: inline;
     float: left;
-    width: 16.363636363636363%;
-    margin: 0 0.909090909090909%;
+    width: 18%;
+    margin: 0 1%;
   }
 }
 @media screen and (min-width: 800px) and (max-width: 1199px) {
   #sidebar {
     display: inline;
     float: left;
-    width: 16.363636363636363%;
-    margin: 0 0.909090909090909%;
+    width: 18%;
+    margin: 0 1%;
   }
 }
 .widget {
@@ -2192,10 +2189,4 @@ a.article-title:hover {
 }
 .highlight .code .emphasis {
   font-style: italic;
-}
-#main {
-  float: right;
-}
-#profile {
-  float: right;
 }
