@@ -3,19 +3,19 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Draft | GYNote</title>
+    <title>GYNote</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Blog requirements  * article meta: tags, times, title, excerpt  GFM doesn’t support:   * fontawesome  * toc  * math  * sup, sub, mark  * footnotes  * abbreviation">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Draft">
+    <meta name="description" content="Draft 1 2   string s1 = regex_replace(s,regex(&quot;\\r(\\n|\\xc2\\x85)?|(\\xe2\\x90\\xa4|\\xe2\\x80\\xa8|\\xc2\\x85)&quot;),&quot;\n&quot;); s1 = regex_replace(s1,regex(&quot;\\x00&quot;),&quot;\xef\xbf\xbd&quot;);   Unicode 尽可能选择utf-8, 当作">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GYNote">
 <meta property="og:url" content="https://guyong.xyz/default/draft.html">
 <meta property="og:site_name" content="GYNote">
-<meta property="og:description" content="Blog requirements  * article meta: tags, times, title, excerpt  GFM doesn’t support:   * fontawesome  * toc  * math  * sup, sub, mark  * footnotes  * abbreviation">
+<meta property="og:description" content="Draft 1 2   string s1 = regex_replace(s,regex(&quot;\\r(\\n|\\xc2\\x85)?|(\\xe2\\x90\\xa4|\\xe2\\x80\\xa8|\\xc2\\x85)&quot;),&quot;\n&quot;); s1 = regex_replace(s1,regex(&quot;\\x00&quot;),&quot;\xef\xbf\xbd&quot;);   Unicode 尽可能选择utf-8, 当作">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-28T16:57:18.000Z">
+<meta property="og:updated_time" content="2018-10-05T12:18:03.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Draft">
-<meta name="twitter:description" content="Blog requirements  * article meta: tags, times, title, excerpt  GFM doesn’t support:   * fontawesome  * toc  * math  * sup, sub, mark  * footnotes  * abbreviation">
+<meta name="twitter:title" content="GYNote">
+<meta name="twitter:description" content="Draft 1 2   string s1 = regex_replace(s,regex(&quot;\\r(\\n|\\xc2\\x85)?|(\\xe2\\x90\\xa4|\\xe2\\x80\\xa8|\\xc2\\x85)&quot;),&quot;\n&quot;); s1 = regex_replace(s1,regex(&quot;\\x00&quot;),&quot;\xef\xbf\xbd&quot;);   Unicode 尽可能选择utf-8, 当作">
     
 
     
@@ -61,11 +61,9 @@
             </a>
             <nav id="main-nav">
                 
-                    <a class="main-nav-link" href="/categories">Categories</a>
+                    <a class="main-nav-link" href="/cpp/">Cpp</a>
                 
-                    <a class="main-nav-link" href="/tags">Tags</a>
-                
-                    <a class="main-nav-link" href="/archives">Archives</a>
+                    <a class="main-nav-link" href="/math/">Math</a>
                 
                     <a class="main-nav-link" href="/links.html">Links</a>
                 
@@ -114,11 +112,9 @@
         <table class="menu outer">
             <tr>
                 
-                    <td><a class="main-nav-link" href="/categories">Categories</a></td>
+                    <td><a class="main-nav-link" href="/cpp/">Cpp</a></td>
                 
-                    <td><a class="main-nav-link" href="/tags">Tags</a></td>
-                
-                    <td><a class="main-nav-link" href="/archives">Archives</a></td>
+                    <td><a class="main-nav-link" href="/math/">Math</a></td>
                 
                     <td><a class="main-nav-link" href="/links.html">Links</a></td>
                 
@@ -136,45 +132,28 @@
 
         <div class="outer">
             
-            <section id="main"><article id="post-default/draft" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
     <div class="article-inner">
         
-        
-            <header class="article-header">
-                
-    
-        <h1 class="article-title" itemprop="name">
-            Draft
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fas fa-calendar-alt"></i>
-        <!-- <a href="/default/draft.html"> -->
-            <time datetime="2018-07-27T04:04:35.000Z" itemprop="datePublished">2018-07-27</time>
-        <!-- </a> -->
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/default/">default</a>
-    </div>
-
-                        
-                    </div>
-                
-            </header>
         
         
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2 id="blog-requirements">Blog requirements</h2>
+            <h1 id="draft">Draft</h1>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> s1 = regex_replace(s,regex(<span class="string">"\\r(\\n|\\xc2\\x85)?|(\\xe2\\x90\\xa4|\\xe2\\x80\\xa8|\\xc2\\x85)"</span>),<span class="string">"\n"</span>);</span><br><span class="line">s1 = regex_replace(s1,regex(<span class="string">"\\x00"</span>),<span class="string">"\xef\xbf\xbd"</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="unicode">Unicode</h2>
+<p>尽可能选择utf-8, 当作单字节处理, 不要转成u32, u16. regex_replace 一个utf-8字符可以通过regex_replace 多个\x字符来完成.<br>
+由utf-8的编码规则可知, 任一ASCII中的字符的编码都不可能是其它任意字符编码的一部分. 可以说, utf-8编码是prefix, infix, postfix 编码. 因此, 处理utf-8字符时完全可以当作多个单字节来处理.<br>
+c++中\u好像只能用在u32string, u16string中, 不能用于utf-8. utf-8可以用\x. \x 可以出现在任意字符串中, 但 \U和\u只能出现在 u16“”, u32“” 中. utf-8, utf-16, utf-32 对应的c++ type 分别是unsigned char, unsigned short, unsigned int (int_32)<br>
+<a href="http://kunststube.net/encoding/" target="_blank" rel="noopener">What Every Programmer Absolutely, Positively Needs To Know About Encodings And Character Sets To Work With Text</a><br>
+<a href="http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html" target="_blank" rel="noopener">字符编码笔记：ASCII，Unicode 和 UTF-8 (阮一峰)</a><br>
+<a href="https://r12a.github.io/app-conversion/" target="_blank" rel="noopener">online converter</a></p>
+<h2 id="javascript">Javascript</h2>
+<p><a href="https://acemood.github.io/2016/02/01/event-loop-in-javascript" target="_blank" rel="noopener">I/O Models and event loop in javascript</a></p>
+<h2 id="c%2B%2B">C++</h2>
+<p><a href="https://stackoverflow.com/questions/17511496/how-to-create-a-shared-library-with-cmake" target="_blank" rel="noopener">How to create a shared library with cmake?</a></p>
+<h2 id="blog-requirements">Blog requirements</h2>
 <ul>
 <li><input type="checkbox" id="checkbox0"><label for="checkbox0">article meta: tags, times, title, excerpt</label></li>
 </ul>
@@ -197,7 +176,7 @@
 
 </div>
 
-    <a data-url="https://guyong.xyz/default/draft.html" data-id="cjlxwvymv000ji5pyev9ckjkc" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://guyong.xyz/default/draft.html" data-id="cjnkesxup000fchpymtmigcvf" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -270,25 +249,6 @@
     </div>
     
         
-<nav id="article-nav">
-    
-        <a href="/site-building.html" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Newer</strong>
-            <div class="article-nav-title">
-                
-                    Site Building
-                
-            </div>
-        </a>
-    
-    
-        <a href="/default/review_paper.html" id="article-nav-older" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">review paper</div>
-        </a>
-    
-</nav>
-
 
     
 </article>
@@ -303,7 +263,7 @@
         <footer id="footer">
     <div class="outer">
         <div id="footer-info" class="inner">
-            &copy; 2018 Gu Yong<br>
+            &copy; 2020 Gu Yong<br>
             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
         </div>
     </div>
